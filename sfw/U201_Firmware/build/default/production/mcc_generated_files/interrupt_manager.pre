@@ -21228,10 +21228,10 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 96 "mcc_generated_files/pin_manager.h"
+# 256 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 108
+# 268
 void PIN_MANAGER_IOC(void);
 
 # 13 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdint.h"
@@ -21326,6 +21326,125 @@ typedef uint16_t uintptr_t;
 
 # 12 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdbool.h"
 typedef unsigned char bool;
+
+# 45 "mcc_generated_files/mtouch/mtouch_sensor.h"
+enum mtouch_sensor_names
+{
+Sensor_ANE2 = 0,
+Sensor_ANE3 = 1,
+Sensor_ANE4 = 2,
+Sensor_ANE5 = 3,
+Sensor_ANE6 = 4
+};
+
+enum mtouch_sensor_error
+{
+MTOUCH_SENSOR_ERROR_none = 0,
+MTOUCH_SENSOR_ERROR_invalid_index = -1,
+MTOUCH_SENSOR_ERROR_interrupt_notEnabled = -2,
+MTOUCH_SENSOR_ERROR_invalid_calibrate= -3,
+MTOUCH_SENSOR_ERROR_tooManyRetries = -4,
+MTOUCH_SENSOR_ERROR_scanOverrun = -5,
+MTOUCH_SENSOR_ERROR_interruptedScan = -6
+};
+
+# 70
+typedef uint16_t mtouch_sensor_sample_t;
+
+
+
+typedef uint8_t mtouch_sensor_mask_t;
+
+# 84
+enum mtouch_sensor_error MTOUCH_Sensor_Initialize (enum mtouch_sensor_names sensor);
+void MTOUCH_Sensor_Scan_Initialize (void);
+void MTOUCH_Sensor_InitializeAll (void);
+void MTOUCH_Sensor_SetSampledCallback(void (*callback)(enum mtouch_sensor_names sensor));
+bool MTOUCH_Sensor_SampleAll (void);
+
+void MTOUCH_Sensor_ADCC_Initialize (void);
+void ADCC_ThresholdISR_mTouch (void);
+bool MTOUCH_Sensor_isSampling (void);
+bool MTOUCH_Sensor_isActive (enum mtouch_sensor_names sensor);
+bool MTOUCH_Sensor_wasSampled (enum mtouch_sensor_names sensor);
+bool MTOUCH_Sensor_isCalibrated (enum mtouch_sensor_names sensor);
+bool MTOUCH_Sensor_isEnabled (enum mtouch_sensor_names sensor);
+void MTOUCH_Sensor_Sampled_ResetAll (void);
+void MTOUCH_Sensor_Disable (enum mtouch_sensor_names sensor);
+void MTOUCH_Sensor_Enable (enum mtouch_sensor_names sensor);
+void MTOUCH_Sensor_Calibrate (enum mtouch_sensor_names sensor);
+mtouch_sensor_sample_t MTOUCH_Sensor_RawSample_Get (enum mtouch_sensor_names sensor);
+uint8_t MTOUCH_Sensor_AdditionalCap_Get (enum mtouch_sensor_names sensor);
+uint8_t MTOUCH_Sensor_AcquisitionTime_Get(enum mtouch_sensor_names sensor);
+uint8_t MTOUCH_Sensor_PreChargeTime_Get (enum mtouch_sensor_names sensor);
+
+void MTOUCH_Sensor_NotifyInterruptOccurred(void);
+
+# 50 "mcc_generated_files/mtouch/mtouch_button.h"
+enum mtouch_button_names
+{
+Button0 = 0,
+Button1 = 1,
+Button2 = 2,
+Button3 = 3,
+Button4 = 4
+};
+
+# 78
+typedef uint8_t mtouch_buttonmask_t;
+
+typedef uint16_t mtouch_button_statecounter_t;
+
+# 86
+typedef uint16_t mtouch_button_baselinecounter_t;
+
+
+
+typedef uint16_t mtouch_button_reading_t;
+
+
+
+
+typedef uint32_t mtouch_button_baseline_t;
+
+# 103
+typedef int8_t mtouch_button_deviation_t;
+
+
+
+typedef uint8_t mtouch_button_threshold_t;
+
+
+
+typedef uint8_t mtouch_button_scaling_t;
+
+# 122
+void MTOUCH_Button_SetPressedCallback (void (*callback)(enum mtouch_button_names button));
+void MTOUCH_Button_SetNotPressedCallback(void (*callback)(enum mtouch_button_names button));
+
+void MTOUCH_Button_Initialize (enum mtouch_button_names button);
+void MTOUCH_Button_InitializeAll (void);
+void MTOUCH_Button_ServiceAll (void);
+void MTOUCH_Button_Tick (void);
+
+mtouch_button_deviation_t MTOUCH_Button_Deviation_Get (enum mtouch_button_names button);
+mtouch_button_reading_t MTOUCH_Button_Reading_Get (enum mtouch_button_names button);
+mtouch_button_reading_t MTOUCH_Button_Baseline_Get (enum mtouch_button_names button);
+mtouch_button_scaling_t MTOUCH_Button_Scaling_Get (enum mtouch_button_names button);
+void MTOUCH_Button_Scaling_Set (enum mtouch_button_names button,mtouch_button_scaling_t scaling);
+mtouch_button_threshold_t MTOUCH_Button_Threshold_Get (enum mtouch_button_names button);
+void MTOUCH_Button_Threshold_Set (enum mtouch_button_names button,mtouch_button_threshold_t threshold);
+
+bool MTOUCH_Button_isPressed (enum mtouch_button_names button);
+bool MTOUCH_Button_isInitialized (enum mtouch_button_names button);
+mtouch_buttonmask_t MTOUCH_Button_Buttonmask_Get(void);
+uint8_t MTOUCH_Button_State_Get (enum mtouch_button_names button);
+
+# 52 "mcc_generated_files/mtouch/mtouch.h"
+void MTOUCH_Initialize (void);
+bool MTOUCH_Service_Mainloop (void);
+void MTOUCH_Tick (void);
+bool MTOUCH_Service_isInProgress (void);
 
 # 4 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\__size_t.h"
 typedef unsigned size_t;
@@ -21428,17 +21547,17 @@ void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 383
 void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
-# 70 "mcc_generated_files/mcc.h"
+# 71 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 83
+# 84
 void OSCILLATOR_Initialize(void);
 
-# 96
+# 97
 void PMD_Initialize(void);
 
 # 52 "mcc_generated_files/interrupt_manager.c"
-void INTERRUPT_Initialize(void)
+void INTERRUPT_Initialize (void)
 {
 
 INTCONbits.IPEN = 1;
@@ -21452,9 +21571,12 @@ IPR3bits.TX2IP = 1;
 IPR3bits.RC2IP = 1;
 
 
+IPR1bits.ADTIP = 1;
+
+
 }
 
-void interrupt INTERRUPT_InterruptManagerHigh(void)
+void interrupt INTERRUPT_InterruptManagerHigh (void)
 {
 
 if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
@@ -21464,6 +21586,10 @@ EUSART2_TxDefaultInterruptHandler();
 else if(PIE3bits.RC2IE == 1 && PIR3bits.RC2IF == 1)
 {
 EUSART2_RxDefaultInterruptHandler();
+}
+else if(PIE1bits.ADTIE == 1 && PIR1bits.ADTIF == 1)
+{
+ADCC_ThresholdISR_mTouch();
 }
 else
 {

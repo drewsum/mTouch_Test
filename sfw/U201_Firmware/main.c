@@ -83,6 +83,16 @@ void main(void)
             
         }
         
+        // Service the mTouch API
+        MTOUCH_Service_Mainloop();
+        
+        // Act on buttons presses, light LED if button is pressed
+        LATFbits.LATF0 = ~MTOUCH_Button_State_Get(Button0);
+        LATFbits.LATF1 = ~MTOUCH_Button_State_Get(Button1);
+        LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
+        LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
+        LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
+        
         // Twiddle thumbs
         NOP();
         

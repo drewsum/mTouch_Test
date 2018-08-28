@@ -3,6 +3,63 @@
 [d edition pro ]
 [d chip 18LF67K40 ]
 [d frameptr 4065 ]
+"90 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
+[e E17378 mtouch_button_names `uc
+Button0 0
+Button1 1
+Button2 2
+Button3 3
+Button4 4
+]
+"147 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[e E17513 mtouch_sensor_names `uc
+Sensor_ANE2 0
+Sensor_ANE3 1
+Sensor_ANE4 2
+Sensor_ANE5 3
+Sensor_ANE6 4
+]
+"190
+[e E17519 mtouch_sensor_error `c
+MTOUCH_SENSOR_ERROR_none 0
+MTOUCH_SENSOR_ERROR_invalid_index -1
+MTOUCH_SENSOR_ERROR_interrupt_notEnabled -2
+MTOUCH_SENSOR_ERROR_invalid_calibrate -3
+MTOUCH_SENSOR_ERROR_tooManyRetries -4
+MTOUCH_SENSOR_ERROR_scanOverrun -5
+MTOUCH_SENSOR_ERROR_interruptedScan -6
+]
+"85 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
+[e E17454 mtouch_button_names `uc
+Button0 0
+Button1 1
+Button2 2
+Button3 3
+Button4 4
+]
+[e E17394 mtouch_sensor_names `uc
+Sensor_ANE2 0
+Sensor_ANE3 1
+Sensor_ANE4 2
+Sensor_ANE5 3
+Sensor_ANE6 4
+]
+[e E17516 mtouch_button_state `uc
+MTOUCH_BUTTON_STATE_initializing 0
+MTOUCH_BUTTON_STATE_notPressed 1
+MTOUCH_BUTTON_STATE_pressed 2
+]
+"302
+[e E17520 mtouch_button_hysteresis_thresholds `uc
+HYST_50_PERCENT 1
+HYST_25_PERCENT 2
+HYST_12_5_PERCENT 3
+HYST_6_25_PERCENT 4
+HYST_MAX 5
+]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+[v i2_abs abs `(i  1 e 2 0 ]
 "464 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
 [v _printf printf `(i  1 e 2 0 ]
 [v i2_printf printf `(i  1 e 2 0 ]
@@ -16,6 +73,8 @@
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "20 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
+"27 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "245
@@ -52,14 +111,132 @@
 [v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
 "52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
-"68
+"71
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `II(v  1 e 1 0 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"59
+"60
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"73
+"74
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"75 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch.c
+[v _MTOUCH_Initialize MTOUCH_Initialize `(v  1 e 1 0 ]
+"89
+[v _MTOUCH_Service_Mainloop MTOUCH_Service_Mainloop `(uc  1 e 1 0 ]
+"116
+[v _MTOUCH_Tick MTOUCH_Tick `(v  1 e 1 0 ]
+"126
+[v _MTOUCH_needReburst MTOUCH_needReburst `(uc  1 s 1 MTOUCH_needReburst ]
+"178 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
+[v _MTOUCH_Button_Initialize MTOUCH_Button_Initialize `(v  1 e 1 0 ]
+"190
+[v _MTOUCH_Button_InitializeAll MTOUCH_Button_InitializeAll `(v  1 e 1 0 ]
+"208
+[v _MTOUCH_Button_ServiceAll MTOUCH_Button_ServiceAll `(v  1 e 1 0 ]
+"219
+[v _Button_Service Button_Service `(v  1 s 1 Button_Service ]
+"236
+[v _Button_State_Initializing Button_State_Initializing `(v  1 s 1 Button_State_Initializing ]
+"256
+[v _Button_State_NotPressed Button_State_NotPressed `(v  1 s 1 Button_State_NotPressed ]
+"292
+[v _Button_State_Pressed Button_State_Pressed `(v  1 s 1 Button_State_Pressed ]
+"316
+[v _MTOUCH_Button_Tick MTOUCH_Button_Tick `(v  1 e 1 0 ]
+"324
+[v _Button_Tick_helper Button_Tick_helper `(v  1 s 1 Button_Tick_helper ]
+"377
+[v _MTOUCH_Button_isPressed MTOUCH_Button_isPressed `(uc  1 e 1 0 ]
+"402
+[v _Button_Deviation_Update Button_Deviation_Update `(v  1 s 1 Button_Deviation_Update ]
+"451
+[v _Button_Reading_Update Button_Reading_Update `(v  1 s 1 Button_Reading_Update ]
+"465
+[v _Button_Reading_Update_Helper Button_Reading_Update_Helper `(v  1 s 1 Button_Reading_Update_Helper ]
+"478
+[v _Button_Baseline_Initialize Button_Baseline_Initialize `(v  1 s 1 Button_Baseline_Initialize ]
+"484
+[v _Button_Baseline_Update Button_Baseline_Update `(v  1 s 1 Button_Baseline_Update ]
+"508
+[v _Button_Baseline_Get_helper Button_Baseline_Get_helper `(ui  1 s 2 Button_Baseline_Get_helper ]
+"513
+[v _MTOUCH_Button_State_Get MTOUCH_Button_State_Get `(uc  1 e 1 0 ]
+"528
+[v _Button_DefaultCallback Button_DefaultCallback `(v  1 s 1 Button_DefaultCallback ]
+"189 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_Initialize MTOUCH_Sensor_Initialize `(E17519  1 e 1 0 ]
+"222
+[v _Sensor_SetTrisBit Sensor_SetTrisBit `(v  1 s 1 Sensor_SetTrisBit ]
+[v i2_Sensor_SetTrisBit Sensor_SetTrisBit `(v  1 s 1 i2_Sensor_SetTrisBit ]
+"251
+[v _MTOUCH_Sensor_ADCC_Initialize MTOUCH_Sensor_ADCC_Initialize `(v  1 e 1 0 ]
+"290
+[v _MTOUCH_Sensor_InitializeAll MTOUCH_Sensor_InitializeAll `(v  1 e 1 0 ]
+"302
+[v _MTOUCH_Sensor_SampleAll MTOUCH_Sensor_SampleAll `(uc  1 e 1 0 ]
+"327
+[v _MTOUCH_Sensor_Scan_Initialize MTOUCH_Sensor_Scan_Initialize `(v  1 e 1 0 ]
+"339
+[v _Sensor_scheduleNextScan Sensor_scheduleNextScan `(v  1 s 1 Sensor_scheduleNextScan ]
+[v i2_Sensor_scheduleNextScan Sensor_scheduleNextScan `(v  1 s 1 i2_Sensor_scheduleNextScan ]
+"402
+[v _Sensor_autoCalibration Sensor_autoCalibration `(E17519  1 s 1 Sensor_autoCalibration ]
+"450
+[v _Sensor_postAcquisitionProcess Sensor_postAcquisitionProcess `(v  1 s 1 Sensor_postAcquisitionProcess ]
+"476
+[v _ADCC_ThresholdISR_mTouch ADCC_ThresholdISR_mTouch `(v  1 e 1 0 ]
+"488
+[v _MTOUCH_Sensor_Service MTOUCH_Sensor_Service `T(v  1 s 1 MTOUCH_Sensor_Service ]
+"520
+[v _Sensor_setSamplePeriod Sensor_setSamplePeriod `(v  1 s 1 Sensor_setSamplePeriod ]
+"532
+[v _MTOUCH_Sensor_RawSample_Get MTOUCH_Sensor_RawSample_Get `(ui  1 e 2 0 ]
+"542
+[v _Sensor_RawSample_Update Sensor_RawSample_Update `(v  1 s 1 Sensor_RawSample_Update ]
+"559
+[v _medianFilter medianFilter `(ui  1 s 2 medianFilter ]
+"595
+[v _Sensor_FrequencyHopping Sensor_FrequencyHopping `(v  1 s 1 Sensor_FrequencyHopping ]
+"615
+[v _Sensor_FrequencyHopping_Autotune_Process Sensor_FrequencyHopping_Autotune_Process `(v  1 s 1 Sensor_FrequencyHopping_Autotune_Process ]
+"691
+[v _Sensor_DefaultCallback Sensor_DefaultCallback `(v  1 s 1 Sensor_DefaultCallback ]
+"711
+[v _MTOUCH_Sensor_Enable MTOUCH_Sensor_Enable `(v  1 e 1 0 ]
+"717
+[v _MTOUCH_Sensor_isEnabled MTOUCH_Sensor_isEnabled `(uc  1 e 1 0 ]
+[v i2_MTOUCH_Sensor_isEnabled MTOUCH_Sensor_isEnabled `(uc  1 e 1 0 ]
+"725
+[v _Sensor_isEnabled Sensor_isEnabled `(uc  1 s 1 Sensor_isEnabled ]
+"740
+[v _Sensor_setActive Sensor_setActive `T(v  1 s 1 Sensor_setActive ]
+"745
+[v _Sensor_setInactive Sensor_setInactive `T(v  1 s 1 Sensor_setInactive ]
+"764
+[v _MTOUCH_Sensor_Calibrate MTOUCH_Sensor_Calibrate `(v  1 e 1 0 ]
+"772
+[v _MTOUCH_Sensor_isCalibrated MTOUCH_Sensor_isCalibrated `(uc  1 e 1 0 ]
+"780
+[v _Sensor_isCalibrated Sensor_isCalibrated `T(uc  1 s 1 Sensor_isCalibrated ]
+[v i2_Sensor_isCalibrated Sensor_isCalibrated `T(uc  1 s 1 i2_Sensor_isCalibrated ]
+"785
+[v _Sensor_setCalibrated Sensor_setCalibrated `T(v  1 s 1 Sensor_setCalibrated ]
+"791
+[v _Sensor_setCalibratAcqTime Sensor_setCalibratAcqTime `T(v  1 s 1 Sensor_setCalibratAcqTime ]
+"798
+[v _Sensor_isCalibratingAcqTime Sensor_isCalibratingAcqTime `T(uc  1 s 1 Sensor_isCalibratingAcqTime ]
+[v i2_Sensor_isCalibratingAcqTime Sensor_isCalibratingAcqTime `T(uc  1 s 1 i2_Sensor_isCalibratingAcqTime ]
+"811
+[v _MTOUCH_Sensor_Sampled_ResetAll MTOUCH_Sensor_Sampled_ResetAll `(v  1 e 1 0 ]
+"820
+[v _MTOUCH_Sensor_wasSampled MTOUCH_Sensor_wasSampled `(uc  1 e 1 0 ]
+[v i2_MTOUCH_Sensor_wasSampled MTOUCH_Sensor_wasSampled `(uc  1 e 1 0 ]
+"828
+[v _Sensor_Sampled_Reset Sensor_Sampled_Reset `T(v  1 s 1 Sensor_Sampled_Reset ]
+"833
+[v _Sensor_setSampled Sensor_setSampled `T(v  1 s 1 Sensor_setSampled ]
+"838
+[v _MTOUCH_Sensor_isSampling MTOUCH_Sensor_isSampling `(uc  1 e 1 0 ]
 "57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "8 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
@@ -83,6 +260,18 @@
 ]
 [u S72 . 1 `S60 1 . 1 0 `S63 1 . 1 0 `S65 1 . 1 0 ]
 [v _RX2PPSbits RX2PPSbits `VES72  1 e 1 @3601 ]
+[s S165 . 1 `uc 1 ADIP 1 0 :1:0 
+`uc 1 ADTIP 1 0 :1:1 
+`uc 1 . 1 0 :4:2 
+`uc 1 CSWIP 1 0 :1:6 
+`uc 1 OSCFIP 1 0 :1:7 
+]
+"4060
+[s S171 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIP 1 0 :1:7 
+]
+[u S174 . 1 `S165 1 . 1 0 `S171 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES174  1 e 1 @3616 ]
 [s S133 . 1 `uc 1 SSP1IP 1 0 :1:0 
 `uc 1 BCL1IP 1 0 :1:1 
 `uc 1 SSP2IP 1 0 :1:2 
@@ -100,7 +289,19 @@
 ]
 [u S147 . 1 `S133 1 . 1 0 `S142 1 . 1 0 ]
 [v _IPR3bits IPR3bits `VES147  1 e 1 @3618 ]
-[s S165 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[s S264 . 1 `uc 1 ADIE 1 0 :1:0 
+`uc 1 ADTIE 1 0 :1:1 
+`uc 1 . 1 0 :4:2 
+`uc 1 CSWIE 1 0 :1:6 
+`uc 1 OSCFIE 1 0 :1:7 
+]
+"4608
+[s S270 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIE 1 0 :1:7 
+]
+[u S273 . 1 `S264 1 . 1 0 `S270 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES273  1 e 1 @3626 ]
+[s S187 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -110,20 +311,32 @@
 `uc 1 RC2IE 1 0 :1:7 
 ]
 "4722
-[s S174 . 1 `uc 1 RXB0IE 1 0 :1:0 
+[s S196 . 1 `uc 1 RXB0IE 1 0 :1:0 
 `uc 1 RXB1IE 1 0 :1:1 
 `uc 1 TXB0IE 1 0 :1:2 
 `uc 1 TXB1IE 1 0 :1:3 
 `uc 1 TXB2IE 1 0 :1:4 
 ]
-[s S180 . 1 `uc 1 . 1 0 :1:0 
+[s S202 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIE 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIE 1 0 :1:4 
 ]
-[u S185 . 1 `S165 1 . 1 0 `S174 1 . 1 0 `S180 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES185  1 e 1 @3628 ]
-[s S210 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S207 . 1 `S187 1 . 1 0 `S196 1 . 1 0 `S202 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES207  1 e 1 @3628 ]
+[s S286 . 1 `uc 1 ADIF 1 0 :1:0 
+`uc 1 ADTIF 1 0 :1:1 
+`uc 1 . 1 0 :4:2 
+`uc 1 CSWIF 1 0 :1:6 
+`uc 1 OSCFIF 1 0 :1:7 
+]
+"5153
+[s S292 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PSPIF 1 0 :1:7 
+]
+[u S295 . 1 `S286 1 . 1 0 `S292 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES295  1 e 1 @3636 ]
+[s S232 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -133,13 +346,13 @@
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "5260
-[s S219 . 1 `uc 1 . 1 0 :1:0 
+[s S241 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIF 1 0 :1:4 
 ]
-[u S224 . 1 `S210 1 . 1 0 `S219 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES224  1 e 1 @3638 ]
+[u S246 . 1 `S232 1 . 1 0 `S241 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES246  1 e 1 @3638 ]
 "6184
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @3651 ]
 "6324
@@ -190,8 +403,32 @@
 [v _ODCONE ODCONE `VEuc  1 e 1 @3757 ]
 "11894
 [v _WPUE WPUE `VEuc  1 e 1 @3758 ]
+[s S849 . 1 `uc 1 WPUE0 1 0 :1:0 
+`uc 1 WPUE1 1 0 :1:1 
+`uc 1 WPUE2 1 0 :1:2 
+`uc 1 WPUE3 1 0 :1:3 
+`uc 1 WPUE4 1 0 :1:4 
+`uc 1 WPUE5 1 0 :1:5 
+`uc 1 WPUE6 1 0 :1:6 
+`uc 1 WPUE7 1 0 :1:7 
+]
+"11911
+[u S858 . 1 `S849 1 . 1 0 ]
+[v _WPUEbits WPUEbits `VES858  1 e 1 @3758 ]
 "11956
 [v _ANSELE ANSELE `VEuc  1 e 1 @3759 ]
+[s S870 . 1 `uc 1 ANSELE0 1 0 :1:0 
+`uc 1 ANSELE1 1 0 :1:1 
+`uc 1 ANSELE2 1 0 :1:2 
+`uc 1 ANSELE3 1 0 :1:3 
+`uc 1 ANSELE4 1 0 :1:4 
+`uc 1 ANSELE5 1 0 :1:5 
+`uc 1 ANSELE6 1 0 :1:6 
+`uc 1 ANSELE7 1 0 :1:7 
+]
+"11973
+[u S879 . 1 `S870 1 . 1 0 ]
+[v _ANSELEbits ANSELEbits `VES879  1 e 1 @3759 ]
 "12142
 [v _ODCONF ODCONF `VEuc  1 e 1 @3762 ]
 "12204
@@ -218,7 +455,7 @@
 [v _SP2BRGH SP2BRGH `VEuc  1 e 1 @3828 ]
 "17011
 [v _RC2STA RC2STA `VEuc  1 e 1 @3829 ]
-[s S371 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S456 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -228,19 +465,19 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "17044
-[s S380 . 1 `uc 1 . 1 0 :6:0 
+[s S465 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_92 1 0 :1:6 
 ]
-[s S383 . 1 `uc 1 . 1 0 :6:0 
+[s S468 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC92 1 0 :1:6 
 ]
-[s S386 . 1 `uc 1 RCD82 1 0 :1:0 
+[s S471 . 1 `uc 1 RCD82 1 0 :1:0 
 ]
-[u S388 . 1 `S371 1 . 1 0 `S380 1 . 1 0 `S383 1 . 1 0 `S386 1 . 1 0 ]
-[v _RC2STAbits RC2STAbits `VES388  1 e 1 @3829 ]
+[u S473 . 1 `S456 1 . 1 0 `S465 1 . 1 0 `S468 1 . 1 0 `S471 1 . 1 0 ]
+[v _RC2STAbits RC2STAbits `VES473  1 e 1 @3829 ]
 "17185
 [v _TX2STA TX2STA `VEuc  1 e 1 @3830 ]
-[s S337 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S422 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -250,15 +487,78 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "17214
-[s S346 . 1 `uc 1 . 1 0 :6:0 
+[s S431 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_92 1 0 :1:6 
 ]
-[s S349 . 1 `uc 1 TXD82 1 0 :1:0 
+[s S434 . 1 `uc 1 TXD82 1 0 :1:0 
 ]
-[u S351 . 1 `S337 1 . 1 0 `S346 1 . 1 0 `S349 1 . 1 0 ]
-[v _TX2STAbits TX2STAbits `VES351  1 e 1 @3830 ]
+[u S436 . 1 `S422 1 . 1 0 `S431 1 . 1 0 `S434 1 . 1 0 ]
+[v _TX2STAbits TX2STAbits `VES436  1 e 1 @3830 ]
 "17341
 [v _BAUD2CON BAUD2CON `VEuc  1 e 1 @3831 ]
+"26126
+[v _ADCLK ADCLK `VEuc  1 e 1 @3927 ]
+"26184
+[v _ADREF ADREF `VEuc  1 e 1 @3928 ]
+"26225
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @3929 ]
+"26264
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @3930 ]
+"26341
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @3931 ]
+"26412
+[v _ADACQ ADACQ `VEuc  1 e 1 @3932 ]
+"26482
+[v _ADCAP ADCAP `VEuc  1 e 1 @3933 ]
+"26534
+[v _ADPRE ADPRE `VEuc  1 e 1 @3934 ]
+"26604
+[v _ADPCH ADPCH `VEuc  1 e 1 @3935 ]
+"26662
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @3936 ]
+[s S1013 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+"26697
+[s S1022 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+]
+[s S1026 . 1 `uc 1 DONE 1 0 :1:0 
+]
+[s S1028 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+]
+[s S1030 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+]
+[s S1032 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 ADCAL 1 0 :1:7 
+]
+[u S1035 . 1 `S1013 1 . 1 0 `S1022 1 . 1 0 `S1026 1 . 1 0 `S1028 1 . 1 0 `S1030 1 . 1 0 `S1032 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1035  1 e 1 @3936 ]
+"27108
+[v _ADRPT ADRPT `VEuc  1 e 1 @3942 ]
+"27255
+[v _ADSTPTL ADSTPTL `VEuc  1 e 1 @3944 ]
+"27325
+[v _ADSTPTH ADSTPTH `VEuc  1 e 1 @3945 ]
+"27402
+[v _ADLTHL ADLTHL `VEuc  1 e 1 @3946 ]
+"27472
+[v _ADLTHH ADLTHH `VEuc  1 e 1 @3947 ]
+"27549
+[v _ADUTHL ADUTHL `VEuc  1 e 1 @3948 ]
+"27619
+[v _ADUTHH ADUTHH `VEuc  1 e 1 @3949 ]
+"27836
+[v _ADACC ADACC `VEus  1 e 2 @3952 ]
+"27983
+[v _ADFLTR ADFLTR `VEus  1 e 2 @3954 ]
 "28477
 [v _LATA LATA `VEuc  1 e 1 @3961 ]
 "28589
@@ -271,6 +571,27 @@
 [v _LATE LATE `VEuc  1 e 1 @3965 ]
 "29037
 [v _LATF LATF `VEuc  1 e 1 @3966 ]
+[s S625 . 1 `uc 1 LATF0 1 0 :1:0 
+`uc 1 LATF1 1 0 :1:1 
+`uc 1 LATF2 1 0 :1:2 
+`uc 1 LATF3 1 0 :1:3 
+`uc 1 LATF4 1 0 :1:4 
+`uc 1 LATF5 1 0 :1:5 
+`uc 1 LATF6 1 0 :1:6 
+`uc 1 LATF7 1 0 :1:7 
+]
+"29064
+[s S634 . 1 `uc 1 LF0 1 0 :1:0 
+`uc 1 LF1 1 0 :1:1 
+`uc 1 LF2 1 0 :1:2 
+`uc 1 LF3 1 0 :1:3 
+`uc 1 LF4 1 0 :1:4 
+`uc 1 LF5 1 0 :1:5 
+`uc 1 LF6 1 0 :1:6 
+`uc 1 LF7 1 0 :1:7 
+]
+[u S643 . 1 `S625 1 . 1 0 `S634 1 . 1 0 ]
+[v _LATFbits LATFbits `VES643  1 e 1 @3966 ]
 "29149
 [v _LATG LATG `VEuc  1 e 1 @3967 ]
 "29238
@@ -285,6 +606,18 @@
 [v _TRISD TRISD `VEuc  1 e 1 @3972 ]
 "29826
 [v _TRISE TRISE `VEuc  1 e 1 @3973 ]
+[s S907 . 1 `uc 1 TRISE0 1 0 :1:0 
+`uc 1 TRISE1 1 0 :1:1 
+`uc 1 TRISE2 1 0 :1:2 
+`uc 1 TRISE3 1 0 :1:3 
+`uc 1 TRISE4 1 0 :1:4 
+`uc 1 TRISE5 1 0 :1:5 
+`uc 1 TRISE6 1 0 :1:6 
+`uc 1 TRISE7 1 0 :1:7 
+]
+"29848
+[u S916 . 1 `S907 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES916  1 e 1 @3973 ]
 "29948
 [v _TRISF TRISF `VEuc  1 e 1 @3974 ]
 "30010
@@ -315,6 +648,9 @@
 "40517
 "40517
 [v _INTCONbits INTCONbits `VES111  1 e 1 @4082 ]
+"42489
+"42489
+[v _GIE GIE `VEb  1 e 0 @32663 ]
 "62 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 [v _eusart2TxHead eusart2TxHead `VEuc  1 e 1 0 ]
 "63
@@ -337,54 +673,95 @@
 [v _EUSART2_TxDefaultInterruptHandler EUSART2_TxDefaultInterruptHandler `*.38(v  1 e 3 0 ]
 "87
 [v _EUSART2_RxDefaultInterruptHandler EUSART2_RxDefaultInterruptHandler `*.38(v  1 e 3 0 ]
+"47 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch.c
+[v _mtouch_time_toScan mtouch_time_toScan `uc  1 s 1 mtouch_time_toScan ]
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+"85 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
+[v _mtouch_button_init mtouch_button_init `C[5]S1477  1 e 80 0 ]
+"129
+[v _mtouch_button mtouch_button `[5]S1477  1 s 80 mtouch_button ]
+"156
+[v _callback_pressed callback_pressed `*.38(v  1 s 3 callback_pressed ]
+"157
+[v _callback_notPressed callback_notPressed `*.38(v  1 s 3 callback_notPressed ]
+"165
+[v _Button_StateMachine Button_StateMachine `[3]*.38(v  1 e 9 0 ]
+"147 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v _callback_sampled callback_sampled `*.38(v  1 s 3 callback_sampled ]
+"154
+[v _sensor_medianBuffer sensor_medianBuffer `[5][3]ui  1 s 30 sensor_medianBuffer ]
+"155
+[v _packet_sample packet_sample `[5]ui  1 s 10 packet_sample ]
+"156
+[v _currentScanSensor currentScanSensor `E17513  1 s 1 currentScanSensor ]
+"157
+[v _sampling_flag sampling_flag `uc  1 s 1 sampling_flag ]
+"158
+[v _scanInterrupted scanInterrupted `VEuc  1 s 1 scanInterrupted ]
+"165
+[v _freq_index freq_index `uc  1 s 1 freq_index ]
+"166
+[v _freq_hop freq_hop `[3]uc  1 s 3 freq_hop ]
+"167
+[v _sample_delay sample_delay `uc  1 s 1 sample_delay ]
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+"174
+[v _mtouch_sensor_init mtouch_sensor_init `C[5]S828  1 e 45 0 ]
+"182
+[v _mtouch_sensor mtouch_sensor `[5]S828  1 s 45 mtouch_sensor ]
 "51 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.h
 [v _line line `[64]uc  1 e 64 0 ]
 "58 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"90
+"101
 } 0
 "8 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
 [v _ringBufferPull ringBufferPull `(v  1 e 1 0 ]
 {
 "20
-[v ringBufferPull@index_572 index `i  1 a 2 39 ]
+[v ringBufferPull@index_724 index `i  1 a 2 14 ]
 "13
-[v ringBufferPull@index index `i  1 a 2 41 ]
+[v ringBufferPull@index index `i  1 a 2 16 ]
 "10
-[v ringBufferPull@charNumber charNumber `i  1 a 2 37 ]
+[v ringBufferPull@charNumber charNumber `i  1 a 2 12 ]
 "46
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 {
 "6
-[v strlen@cp cp `*.39Cuc  1 a 2 29 ]
+[v strlen@cp cp `*.39Cuc  1 a 2 4 ]
 "4
-[v strlen@s s `*.39Cuc  1 p 2 25 ]
+[v strlen@s s `*.39Cuc  1 p 2 0 ]
 "13
 } 0
 "7 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_LUT.c
 [v _ringBufferLUT ringBufferLUT `(v  1 e 1 0 ]
 {
-[v ringBufferLUT@line line `*.39uc  1 p 2 32 ]
+[v ringBufferLUT@line line `*.39uc  1 p 2 7 ]
 "105
 } 0
 "33 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
 {
 "35
-[v strcmp@r r `c  1 a 1 30 ]
+[v strcmp@r r `c  1 a 1 5 ]
 "33
-[v strcmp@s1 s1 `*.39Cuc  1 p 2 25 ]
-[v strcmp@s2 s2 `*.32Cuc  1 p 2 27 ]
+[v strcmp@s1 s1 `*.39Cuc  1 p 2 0 ]
+[v strcmp@s2 s2 `*.32Cuc  1 p 2 2 ]
 "42
 } 0
 "130 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 [v _EUSART2_Read EUSART2_Read `(uc  1 e 1 0 ]
 {
 "132
-[v EUSART2_Read@readValue readValue `uc  1 a 1 25 ]
+[v EUSART2_Read@readValue readValue `uc  1 a 1 0 ]
 "148
 } 0
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
@@ -396,11 +773,11 @@
 [v _printf printf `(i  1 e 2 0 ]
 {
 "466
-[v printf@ap ap `[1]*.39v  1 a 2 29 ]
+[v printf@ap ap `[1]*.39v  1 a 2 4 ]
 "499
-[v printf@c c `c  1 a 1 31 ]
+[v printf@c c `c  1 a 1 6 ]
 "464
-[v printf@f f `*.32Cuc  1 p 2 27 ]
+[v printf@f f `*.32Cuc  1 p 2 2 ]
 "1541
 } 0
 "178 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
@@ -409,7 +786,7 @@
 [v putch@txData txData `uc  1 a 1 wreg ]
 [v putch@txData txData `uc  1 a 1 wreg ]
 "180
-[v putch@txData txData `uc  1 a 1 26 ]
+[v putch@txData txData `uc  1 a 1 1 ]
 "181
 } 0
 "150
@@ -417,33 +794,94 @@
 {
 [v EUSART2_Write@txData txData `uc  1 a 1 wreg ]
 [v EUSART2_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART2_Write@txData txData `uc  1 a 1 25 ]
+[v EUSART2_Write@txData txData `uc  1 a 1 0 ]
 "171
 } 0
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"57
+"58
 } 0
-"73
+"74
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
-"87
+"88
 } 0
 "57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "126
 } 0
-"59 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mcc.c
+"60 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"71
+"72
+} 0
+"75 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch.c
+[v _MTOUCH_Initialize MTOUCH_Initialize `(v  1 e 1 0 ]
+{
+"81
+} 0
+"327 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_Scan_Initialize MTOUCH_Sensor_Scan_Initialize `(v  1 e 1 0 ]
+{
+"331
+} 0
+"251
+[v _MTOUCH_Sensor_ADCC_Initialize MTOUCH_Sensor_ADCC_Initialize `(v  1 e 1 0 ]
+{
+"287
+} 0
+"290
+[v _MTOUCH_Sensor_InitializeAll MTOUCH_Sensor_InitializeAll `(v  1 e 1 0 ]
+{
+"292
+[v MTOUCH_Sensor_InitializeAll@sensor sensor `E17513  1 a 1 11 ]
+"300
+} 0
+"189
+[v _MTOUCH_Sensor_Initialize MTOUCH_Sensor_Initialize `(E17519  1 e 1 0 ]
+{
+[v MTOUCH_Sensor_Initialize@sensor sensor `E17513  1 a 1 wreg ]
+[v MTOUCH_Sensor_Initialize@sensor sensor `E17513  1 a 1 wreg ]
+[v MTOUCH_Sensor_Initialize@sensor sensor `E17513  1 a 1 2 ]
+"220
+} 0
+"711
+[v _MTOUCH_Sensor_Enable MTOUCH_Sensor_Enable `(v  1 e 1 0 ]
+{
+[v MTOUCH_Sensor_Enable@sensor sensor `E17513  1 a 1 wreg ]
+[v MTOUCH_Sensor_Enable@sensor sensor `E17513  1 a 1 wreg ]
+"713
+[v MTOUCH_Sensor_Enable@sensor sensor `E17513  1 a 1 0 ]
+"715
+} 0
+"190 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
+[v _MTOUCH_Button_InitializeAll MTOUCH_Button_InitializeAll `(v  1 e 1 0 ]
+{
+"192
+[v MTOUCH_Button_InitializeAll@button button `E17454  1 a 1 11 ]
+"200
+} 0
+"27 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+{
+"31
+[v memcpy@s s `*.32Cuc  1 a 2 9 ]
+"30
+[v memcpy@d d `*.39uc  1 a 2 7 ]
+"32
+[v memcpy@tmp tmp `uc  1 a 1 6 ]
+"27
+[v memcpy@d1 d1 `*.39v  1 p 2 0 ]
+[v memcpy@s1 s1 `*.32Cv  1 p 2 2 ]
+[v memcpy@n n `ui  1 p 2 4 ]
+"41
 } 0
 "52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
-"66
+"69
 } 0
 "77 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 [v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
@@ -453,19 +891,406 @@
 "258
 [v _EUSART2_SetTxInterruptHandler EUSART2_SetTxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART2_SetTxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 25 ]
+[v EUSART2_SetTxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
 "260
 } 0
 "262
 [v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART2_SetRxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 25 ]
+[v EUSART2_SetRxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 0 ]
 "264
 } 0
-"68 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/interrupt_manager.c
+"89 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch.c
+[v _MTOUCH_Service_Mainloop MTOUCH_Service_Mainloop `(uc  1 e 1 0 ]
+{
+"109
+} 0
+"126
+[v _MTOUCH_needReburst MTOUCH_needReburst `(uc  1 s 1 MTOUCH_needReburst ]
+{
+"128
+[v MTOUCH_needReburst@needReburst needReburst `uc  1 a 1 0 ]
+"131
+} 0
+"116
+[v _MTOUCH_Tick MTOUCH_Tick `(v  1 e 1 0 ]
+{
+"119
+} 0
+"316 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
+[v _MTOUCH_Button_Tick MTOUCH_Button_Tick `(v  1 e 1 0 ]
+{
+"318
+[v MTOUCH_Button_Tick@i i `uc  1 a 1 4 ]
+"323
+} 0
+"324
+[v _Button_Tick_helper Button_Tick_helper `(v  1 s 1 Button_Tick_helper ]
+{
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Tick_helper@button button `*.39S1477  1 p 2 0 ]
+"335
+} 0
+"811 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_Sampled_ResetAll MTOUCH_Sensor_Sampled_ResetAll `(v  1 e 1 0 ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+"813
+[v MTOUCH_Sensor_Sampled_ResetAll@sensor sensor `*.39S828  1 a 2 2 ]
+"818
+} 0
+"828
+[v _Sensor_Sampled_Reset Sensor_Sampled_Reset `T(v  1 s 1 Sensor_Sampled_Reset ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v Sensor_Sampled_Reset@sensor sensor `*.39S828  1 p 2 0 ]
+"831
+} 0
+"302
+[v _MTOUCH_Sensor_SampleAll MTOUCH_Sensor_SampleAll `(uc  1 e 1 0 ]
+{
+"304
+[v MTOUCH_Sensor_SampleAll@sensor sensor `E17513  1 a 1 21 ]
+"319
+} 0
+"339
+[v _Sensor_scheduleNextScan Sensor_scheduleNextScan `(v  1 s 1 Sensor_scheduleNextScan ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+"341
+[v Sensor_scheduleNextScan@sensor sensor `*.39S828  1 a 2 6 ]
+"342
+[v Sensor_scheduleNextScan@skipScan skipScan `uc  1 a 1 5 ]
+"343
+[v Sensor_scheduleNextScan@state state `uc  1 a 1 4 ]
+"393
+} 0
+"798
+[v _Sensor_isCalibratingAcqTime Sensor_isCalibratingAcqTime `T(uc  1 s 1 Sensor_isCalibratingAcqTime ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v Sensor_isCalibratingAcqTime@sensor sensor `*.39S828  1 p 2 0 ]
+"802
+} 0
+"780
+[v _Sensor_isCalibrated Sensor_isCalibrated `T(uc  1 s 1 Sensor_isCalibrated ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v Sensor_isCalibrated@sensor sensor `*.39S828  1 p 2 0 ]
+"783
+} 0
+"222
+[v _Sensor_SetTrisBit Sensor_SetTrisBit `(v  1 s 1 Sensor_SetTrisBit ]
+{
+[v Sensor_SetTrisBit@sensor sensor `E17513  1 a 1 wreg ]
+[v Sensor_SetTrisBit@sensor sensor `E17513  1 a 1 wreg ]
+[v Sensor_SetTrisBit@TrisBit TrisBit `uc  1 p 1 0 ]
+[v Sensor_SetTrisBit@sensor sensor `E17513  1 a 1 1 ]
+"243
+} 0
+"717
+[v _MTOUCH_Sensor_isEnabled MTOUCH_Sensor_isEnabled `(uc  1 e 1 0 ]
+{
+[v MTOUCH_Sensor_isEnabled@sensor sensor `E17513  1 a 1 wreg ]
+[v MTOUCH_Sensor_isEnabled@sensor sensor `E17513  1 a 1 wreg ]
+"719
+[v MTOUCH_Sensor_isEnabled@sensor sensor `E17513  1 a 1 0 ]
+"723
+} 0
+"595
+[v _Sensor_FrequencyHopping Sensor_FrequencyHopping `(v  1 s 1 Sensor_FrequencyHopping ]
+{
+"597
+[v Sensor_FrequencyHopping@sensor sensor `E17513  1 a 1 20 ]
+"607
+} 0
+"520
+[v _Sensor_setSamplePeriod Sensor_setSamplePeriod `(v  1 s 1 Sensor_setSamplePeriod ]
+{
+"526
+} 0
+"450
+[v _Sensor_postAcquisitionProcess Sensor_postAcquisitionProcess `(v  1 s 1 Sensor_postAcquisitionProcess ]
+{
+[v Sensor_postAcquisitionProcess@name name `E17513  1 a 1 wreg ]
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+"452
+[v Sensor_postAcquisitionProcess@sensor sensor `*.39S828  1 a 2 18 ]
+"450
+[v Sensor_postAcquisitionProcess@name name `E17513  1 a 1 wreg ]
+"452
+[v Sensor_postAcquisitionProcess@name name `E17513  1 a 1 17 ]
+"468
+} 0
+"745
+[v _Sensor_setInactive Sensor_setInactive `T(v  1 s 1 Sensor_setInactive ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v Sensor_setInactive@sensor sensor `*.39S828  1 p 2 0 ]
+"748
+} 0
+"740
+[v _Sensor_setActive Sensor_setActive `T(v  1 s 1 Sensor_setActive ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v Sensor_setActive@sensor sensor `*.39S828  1 p 2 0 ]
+"743
+} 0
+"725
+[v _Sensor_isEnabled Sensor_isEnabled `(uc  1 s 1 Sensor_isEnabled ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v Sensor_isEnabled@sensor sensor `*.39S828  1 p 2 0 ]
+"731
+} 0
+"542
+[v _Sensor_RawSample_Update Sensor_RawSample_Update `(v  1 s 1 Sensor_RawSample_Update ]
+{
+"544
+[v Sensor_RawSample_Update@result result `ui  1 a 2 9 ]
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+"542
+[v Sensor_RawSample_Update@sensor sensor `*.39S828  1 p 2 7 ]
+"556
+} 0
+"559
+[v _medianFilter medianFilter `(ui  1 s 2 medianFilter ]
+{
+[v medianFilter@sensor sensor `E17513  1 a 1 wreg ]
+[v medianFilter@sensor sensor `E17513  1 a 1 wreg ]
+"561
+[v medianFilter@bufferIndex bufferIndex `[5]uc  1 s 5 bufferIndex ]
+"563
+[v medianFilter@sensor sensor `E17513  1 a 1 6 ]
+"593
+} 0
+"691
+[v _Sensor_DefaultCallback Sensor_DefaultCallback `(v  1 s 1 Sensor_DefaultCallback ]
+{
+} 0
+"615
+[v _Sensor_FrequencyHopping_Autotune_Process Sensor_FrequencyHopping_Autotune_Process `(v  1 s 1 Sensor_FrequencyHopping_Autotune_Process ]
+{
+"620
+[v Sensor_FrequencyHopping_Autotune_Process@maxVariance maxVariance `ui  1 a 2 13 ]
+[v Sensor_FrequencyHopping_Autotune_Process@variance variance `ui  1 a 2 11 ]
+"618
+[v Sensor_FrequencyHopping_Autotune_Process@frequencyIndex frequencyIndex `uc  1 a 1 17 ]
+"617
+[v Sensor_FrequencyHopping_Autotune_Process@sensor sensor `E17513  1 a 1 16 ]
+"619
+[v Sensor_FrequencyHopping_Autotune_Process@selectedFrequency selectedFrequency `uc  1 a 1 15 ]
+[v Sensor_FrequencyHopping_Autotune_Process@newfrequencyFound newfrequencyFound `uc  1 a 1 10 ]
+"623
+[v Sensor_FrequencyHopping_Autotune_Process@varianceOverLimitCounter varianceOverLimitCounter `[3]uc  1 s 3 varianceOverLimitCounter ]
+"684
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 0 ]
+"9
+} 0
+"838 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_isSampling MTOUCH_Sensor_isSampling `(uc  1 e 1 0 ]
+{
+"841
+} 0
+"208 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
+[v _MTOUCH_Button_ServiceAll MTOUCH_Button_ServiceAll `(v  1 e 1 0 ]
+{
+"210
+[v MTOUCH_Button_ServiceAll@button button `E17454  1 a 1 20 ]
+"217
+} 0
+"219
+[v _Button_Service Button_Service `(v  1 s 1 Button_Service ]
+{
+[v Button_Service@name name `E17454  1 a 1 wreg ]
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+"221
+[v Button_Service@button button `*.39S1477  1 a 2 18 ]
+"219
+[v Button_Service@name name `E17454  1 a 1 wreg ]
+"221
+[v Button_Service@name name `E17454  1 a 1 17 ]
+"234
+} 0
+"820 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_wasSampled MTOUCH_Sensor_wasSampled `(uc  1 e 1 0 ]
+{
+[v MTOUCH_Sensor_wasSampled@sensor sensor `E17513  1 a 1 wreg ]
+[v MTOUCH_Sensor_wasSampled@sensor sensor `E17513  1 a 1 wreg ]
+"822
+[v MTOUCH_Sensor_wasSampled@sensor sensor `E17513  1 a 1 0 ]
+"826
+} 0
+"772
+[v _MTOUCH_Sensor_isCalibrated MTOUCH_Sensor_isCalibrated `(uc  1 e 1 0 ]
+{
+[v MTOUCH_Sensor_isCalibrated@sensor sensor `E17513  1 a 1 wreg ]
+[v MTOUCH_Sensor_isCalibrated@sensor sensor `E17513  1 a 1 wreg ]
+"774
+[v MTOUCH_Sensor_isCalibrated@sensor sensor `E17513  1 a 1 0 ]
+"778
+} 0
+"256 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
+[v _Button_State_NotPressed Button_State_NotPressed `(v  1 s 1 Button_State_NotPressed ]
+{
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_State_NotPressed@button button `*.39S1477  1 p 2 9 ]
+"290
+} 0
+"236
+[v _Button_State_Initializing Button_State_Initializing `(v  1 s 1 Button_State_Initializing ]
+{
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_State_Initializing@button button `*.39S1477  1 p 2 9 ]
+"255
+} 0
+"292
+[v _Button_State_Pressed Button_State_Pressed `(v  1 s 1 Button_State_Pressed ]
+{
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_State_Pressed@button button `*.39S1477  1 p 2 9 ]
+"309
+} 0
+"178
+[v _MTOUCH_Button_Initialize MTOUCH_Button_Initialize `(v  1 e 1 0 ]
+{
+[v MTOUCH_Button_Initialize@name name `E17454  1 a 1 wreg ]
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+"180
+[v MTOUCH_Button_Initialize@button button `*.39S1477  1 a 2 2 ]
+"178
+[v MTOUCH_Button_Initialize@name name `E17454  1 a 1 wreg ]
+"180
+[v MTOUCH_Button_Initialize@name name `E17454  1 a 1 1 ]
+"188
+} 0
+"764 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_Calibrate MTOUCH_Sensor_Calibrate `(v  1 e 1 0 ]
+{
+[v MTOUCH_Sensor_Calibrate@sensor sensor `E17513  1 a 1 wreg ]
+[v MTOUCH_Sensor_Calibrate@sensor sensor `E17513  1 a 1 wreg ]
+"766
+[v MTOUCH_Sensor_Calibrate@sensor sensor `E17513  1 a 1 0 ]
+"770
+} 0
+"528 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
+[v _Button_DefaultCallback Button_DefaultCallback `(v  1 s 1 Button_DefaultCallback ]
+{
+} 0
+"484
+[v _Button_Baseline_Update Button_Baseline_Update `(v  1 s 1 Button_Baseline_Update ]
+{
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Baseline_Update@button button `*.39S1477  1 p 2 0 ]
+"498
+} 0
+"478
+[v _Button_Baseline_Initialize Button_Baseline_Initialize `(v  1 s 1 Button_Baseline_Initialize ]
+{
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Baseline_Initialize@button button `*.39S1477  1 p 2 3 ]
+"482
+} 0
+"451
+[v _Button_Reading_Update Button_Reading_Update `(v  1 s 1 Button_Reading_Update ]
+{
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Reading_Update@button button `*.39S1477  1 p 2 7 ]
+"463
+} 0
+"465
+[v _Button_Reading_Update_Helper Button_Reading_Update_Helper `(v  1 s 1 Button_Reading_Update_Helper ]
+{
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Reading_Update_Helper@button button `*.39S1477  1 p 2 3 ]
+"476
+} 0
+"532 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v _MTOUCH_Sensor_RawSample_Get MTOUCH_Sensor_RawSample_Get `(ui  1 e 2 0 ]
+{
+[v MTOUCH_Sensor_RawSample_Get@name name `E17513  1 a 1 wreg ]
+[v MTOUCH_Sensor_RawSample_Get@name name `E17513  1 a 1 wreg ]
+"534
+[v MTOUCH_Sensor_RawSample_Get@name name `E17513  1 a 1 2 ]
+"540
+} 0
+"402 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
+[v _Button_Deviation_Update Button_Deviation_Update `(v  1 s 1 Button_Deviation_Update ]
+{
+"404
+[v Button_Deviation_Update@deviation deviation `l  1 a 4 8 ]
+[s S1477 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+"402
+[v Button_Deviation_Update@button button `*.39S1477  1 p 2 0 ]
+"422
+} 0
+"513
+[v _MTOUCH_Button_State_Get MTOUCH_Button_State_Get `(uc  1 e 1 0 ]
+{
+[v MTOUCH_Button_State_Get@name name `E17454  1 a 1 wreg ]
+[v MTOUCH_Button_State_Get@name name `E17454  1 a 1 wreg ]
+"515
+[v MTOUCH_Button_State_Get@name name `E17454  1 a 1 0 ]
+"519
+} 0
+"71 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `II(v  1 e 1 0 ]
 {
-"83
+"90
 } 0
 "183 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 [v _EUSART2_Transmit_ISR EUSART2_Transmit_ISR `(v  1 e 1 0 ]
@@ -501,4 +1326,144 @@
 [v i2EUSART2_Write@txData txData `uc  1 a 1 wreg ]
 [v i2EUSART2_Write@txData txData `uc  1 a 1 0 ]
 "171
+} 0
+"476 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v _ADCC_ThresholdISR_mTouch ADCC_ThresholdISR_mTouch `(v  1 e 1 0 ]
+{
+"480
+} 0
+"488
+[v _MTOUCH_Sensor_Service MTOUCH_Sensor_Service `T(v  1 s 1 MTOUCH_Sensor_Service ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+"490
+[v MTOUCH_Sensor_Service@sensor sensor `*.39S828  1 a 2 13 ]
+"513
+} 0
+"339
+[v i2_Sensor_scheduleNextScan Sensor_scheduleNextScan `(v  1 s 1 i2_Sensor_scheduleNextScan ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v i2Sensor_scheduleNextScan@sensor Sensor_scheduleNextScan `*.39S828  1 a 2 6 ]
+[v i2Sensor_scheduleNextScan@skipScan Sensor_scheduleNextScan `uc  1 a 1 5 ]
+[v i2Sensor_scheduleNextScan@state Sensor_scheduleNextScan `uc  1 a 1 4 ]
+"393
+} 0
+"780
+[v i2_Sensor_isCalibrated Sensor_isCalibrated `T(uc  1 s 1 i2_Sensor_isCalibrated ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v i2Sensor_isCalibrated@sensor sensor `*.39S828  1 p 2 0 ]
+"783
+} 0
+"222
+[v i2_Sensor_SetTrisBit Sensor_SetTrisBit `(v  1 s 1 i2_Sensor_SetTrisBit ]
+{
+[v i2Sensor_SetTrisBit@sensor sensor `E17513  1 a 1 wreg ]
+[v i2Sensor_SetTrisBit@sensor sensor `E17513  1 a 1 wreg ]
+[v i2Sensor_SetTrisBit@TrisBit TrisBit `uc  1 p 1 0 ]
+[v i2Sensor_SetTrisBit@sensor sensor `E17513  1 a 1 1 ]
+"243
+} 0
+"820
+[v i2_MTOUCH_Sensor_wasSampled MTOUCH_Sensor_wasSampled `(uc  1 e 1 0 ]
+{
+[v i2MTOUCH_Sensor_wasSampled@sensor sensor `E17513  1 a 1 wreg ]
+[v i2MTOUCH_Sensor_wasSampled@sensor sensor `E17513  1 a 1 wreg ]
+"822
+[v i2MTOUCH_Sensor_wasSampled@sensor sensor `E17513  1 a 1 0 ]
+"826
+} 0
+"717
+[v i2_MTOUCH_Sensor_isEnabled MTOUCH_Sensor_isEnabled `(uc  1 e 1 0 ]
+{
+[v i2MTOUCH_Sensor_isEnabled@sensor sensor `E17513  1 a 1 wreg ]
+[v i2MTOUCH_Sensor_isEnabled@sensor sensor `E17513  1 a 1 wreg ]
+"719
+[v i2MTOUCH_Sensor_isEnabled@sensor sensor `E17513  1 a 1 0 ]
+"723
+} 0
+"833
+[v _Sensor_setSampled Sensor_setSampled `T(v  1 s 1 Sensor_setSampled ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v Sensor_setSampled@sensor sensor `*.39S828  1 p 2 0 ]
+"836
+} 0
+"402
+[v _Sensor_autoCalibration Sensor_autoCalibration `(E17519  1 s 1 Sensor_autoCalibration ]
+{
+"404
+[v Sensor_autoCalibration@name name `E17513  1 a 1 12 ]
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+"402
+[v Sensor_autoCalibration@sensor sensor `*.39S828  1 p 2 4 ]
+"441
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\abs.c
+[v i2_abs abs `(i  1 e 2 0 ]
+{
+[v i2abs@a a `i  1 p 2 0 ]
+"9
+} 0
+"798 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
+[v i2_Sensor_isCalibratingAcqTime Sensor_isCalibratingAcqTime `T(uc  1 s 1 i2_Sensor_isCalibratingAcqTime ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v i2Sensor_isCalibratingAcqTime@sensor sensor `*.39S828  1 p 2 0 ]
+"802
+} 0
+"785
+[v _Sensor_setCalibrated Sensor_setCalibrated `T(v  1 s 1 Sensor_setCalibrated ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v Sensor_setCalibrated@sensor sensor `*.39S828  1 p 2 0 ]
+"789
+} 0
+"791
+[v _Sensor_setCalibratAcqTime Sensor_setCalibratAcqTime `T(v  1 s 1 Sensor_setCalibratAcqTime ]
+{
+[s S828 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+`uc 1 sampled 1 8 :1:1 
+`uc 1 acitve 1 8 :1:2 
+`uc 1 calibrated 1 8 :1:3 
+`uc 1 acqTime_cal 1 8 :1:4 
+]
+[v Sensor_setCalibratAcqTime@sensor sensor `*.39S828  1 p 2 0 ]
+"796
 } 0

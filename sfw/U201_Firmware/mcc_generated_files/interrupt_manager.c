@@ -49,7 +49,7 @@
 #include "interrupt_manager.h"
 #include "mcc.h"
 
-void  INTERRUPT_Initialize(void)
+void  INTERRUPT_Initialize (void)
 {
     // Enable Interrupt Priority Vectors
     INTCONbits.IPEN = 1;
@@ -62,10 +62,13 @@ void  INTERRUPT_Initialize(void)
     // RCI - high priority
     IPR3bits.RC2IP = 1;
 
+    // ADTI - high priority
+    IPR1bits.ADTIP = 1;
+
 
 }
 
-void interrupt INTERRUPT_InterruptManagerHigh(void)
+void interrupt INTERRUPT_InterruptManagerHigh (void)
 {
    // interrupt handler
     if(PIE3bits.TX2IE == 1 && PIR3bits.TX2IF == 1)
@@ -75,6 +78,10 @@ void interrupt INTERRUPT_InterruptManagerHigh(void)
     else if(PIE3bits.RC2IE == 1 && PIR3bits.RC2IF == 1)
     {
         EUSART2_RxDefaultInterruptHandler();
+    }
+    else if(PIE1bits.ADTIE == 1 && PIR1bits.ADTIF == 1)
+    {
+        ADCC_ThresholdISR_mTouch();
     }
     else
     {

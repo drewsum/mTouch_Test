@@ -11,6 +11,9 @@
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
         <itemPath>mcc_generated_files/eusart2.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
+        <itemPath>mcc_generated_files/mtouch/mtouch.h</itemPath>
+        <itemPath>mcc_generated_files/mtouch/mtouch_sensor.h</itemPath>
+        <itemPath>mcc_generated_files/mtouch/mtouch_button.h</itemPath>
       </logicalFolder>
       <itemPath>ring_buffer_interface.h</itemPath>
       <itemPath>ring_buffer_LUT.h</itemPath>
@@ -30,6 +33,9 @@
         <itemPath>mcc_generated_files/eusart2.c</itemPath>
         <itemPath>mcc_generated_files/mcc.c</itemPath>
         <itemPath>mcc_generated_files/device_config.c</itemPath>
+        <itemPath>mcc_generated_files/mtouch/mtouch.c</itemPath>
+        <itemPath>mcc_generated_files/mtouch/mtouch_sensor.c</itemPath>
+        <itemPath>mcc_generated_files/mtouch/mtouch_button.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>ring_buffer_interface.c</itemPath>

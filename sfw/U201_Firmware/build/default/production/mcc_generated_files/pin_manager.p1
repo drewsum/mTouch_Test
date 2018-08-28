@@ -16080,8 +16080,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-[; ;pin_manager.h: 96: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 108: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 256: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 268: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
 "57 mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
@@ -16100,9 +16100,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.c: 64: LATA = 0x00;
 "64
 [e = _LATA -> -> 0 `i `uc ]
-[; ;pin_manager.c: 65: LATF = 0x00;
+[; ;pin_manager.c: 65: LATF = 0x1F;
 "65
-[e = _LATF -> -> 0 `i `uc ]
+[e = _LATF -> -> 31 `i `uc ]
 [; ;pin_manager.c: 66: LATB = 0x00;
 "66
 [e = _LATB -> -> 0 `i `uc ]
@@ -16118,9 +16118,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.c: 74: TRISE = 0xFF;
 "74
 [e = _TRISE -> -> 255 `i `uc ]
-[; ;pin_manager.c: 75: TRISF = 0xFF;
+[; ;pin_manager.c: 75: TRISF = 0xE0;
 "75
-[e = _TRISF -> -> 255 `i `uc ]
+[e = _TRISF -> -> 224 `i `uc ]
 [; ;pin_manager.c: 76: TRISA = 0xFF;
 "76
 [e = _TRISA -> -> 255 `i `uc ]
@@ -16151,9 +16151,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.c: 89: ANSELG = 0xBF;
 "89
 [e = _ANSELG -> -> 191 `i `uc ]
-[; ;pin_manager.c: 90: ANSELF = 0xFF;
+[; ;pin_manager.c: 90: ANSELF = 0xE0;
 "90
-[e = _ANSELF -> -> 255 `i `uc ]
+[e = _ANSELF -> -> 224 `i `uc ]
 [; ;pin_manager.c: 91: ANSELA = 0xFF;
 "91
 [e = _ANSELA -> -> 255 `i `uc ]
@@ -16184,9 +16184,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.c: 108: ODCONE = 0x00;
 "108
 [e = _ODCONE -> -> 0 `i `uc ]
-[; ;pin_manager.c: 109: ODCONF = 0x00;
+[; ;pin_manager.c: 109: ODCONF = 0x1F;
 "109
-[e = _ODCONF -> -> 0 `i `uc ]
+[e = _ODCONF -> -> 31 `i `uc ]
 [; ;pin_manager.c: 110: ODCONA = 0x00;
 "110
 [e = _ODCONA -> -> 0 `i `uc ]

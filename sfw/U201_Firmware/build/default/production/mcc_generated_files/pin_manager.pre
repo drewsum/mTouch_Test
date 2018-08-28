@@ -21222,10 +21222,10 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 96 "mcc_generated_files/pin_manager.h"
+# 256 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 108
+# 268
 void PIN_MANAGER_IOC(void);
 
 # 12 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdbool.h"
@@ -21239,7 +21239,7 @@ void PIN_MANAGER_Initialize(void)
 LATE = 0x00;
 LATD = 0x00;
 LATA = 0x00;
-LATF = 0x00;
+LATF = 0x1F;
 LATB = 0x00;
 LATG = 0x00;
 LATC = 0x00;
@@ -21247,7 +21247,7 @@ LATH = 0x00;
 
 # 74
 TRISE = 0xFF;
-TRISF = 0xFF;
+TRISF = 0xE0;
 TRISA = 0xFF;
 TRISG = 0x5F;
 TRISB = 0xFF;
@@ -21260,7 +21260,7 @@ ANSELD = 0xFF;
 ANSELB = 0xFF;
 ANSELE = 0xFF;
 ANSELG = 0xBF;
-ANSELF = 0xFF;
+ANSELF = 0xE0;
 ANSELA = 0xFF;
 
 # 96
@@ -21275,7 +21275,7 @@ WPUH = 0x00;
 
 # 108
 ODCONE = 0x00;
-ODCONF = 0x00;
+ODCONF = 0x1F;
 ODCONA = 0x00;
 ODCONG = 0x00;
 ODCONB = 0x00;

@@ -51,6 +51,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "interrupt_manager.h"
+#include "mtouch/mtouch.h"
 #include "eusart2.h"
 
 #define _XTAL_FREQ  64000000
