@@ -118,8 +118,8 @@ idataBANK0 CODE 0 12440 12440 C 1
 dataBANK0 BANK0 1 D5 D5 C 1
 dataCOMRAM COMRAM 1 42 42 9 1
 bssCOMRAM COMRAM 1 29 29 19 1
-mediumconst MEDIUMCONST 0 FC1A FC1A 3E6 1
-$C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
+mediumconst MEDIUMCONST 0 FBCA FBCA 436 1
+$C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
 idloc IDLOC 0 200000 200000 10 1
 init CODE 0 E4 E4 4 1
 reset_vec CODE 0 0 0 4 1
@@ -145,15 +145,15 @@ BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
 CONST 4-7 1
-CONST E8-FC19 1
+CONST E8-FBC9 1
 CONST 1247F-1247F 1
 CONST 12494-1FFFF 1
 STACK 240-DE9 1
-SMALLCONST E00-FC19 1
+SMALLCONST E00-FBC9 1
 SMALLCONST 1247F-1247F 1
 SMALLCONST 12494-1FFFF 1
 CODE 4-7 1
-CODE E8-FC19 1
+CODE E8-FBC9 1
 CODE 1247F-1247F 1
 CODE 12494-1FFFF 1
 BANK10 A00-AFF 1
@@ -166,7 +166,7 @@ BIGRAM 1D0-1FF 1
 BIGRAM 240-DE9 1
 COMRAM 50-5F 1
 EEDATA 310000-3103FF 1
-MEDIUMCONST E00-FC19 1
+MEDIUMCONST E00-FBC9 1
 MEDIUMCONST 1247F-1247F 1
 MEDIUMCONST 12494-1FFFF 1
 # %LINETAB Section
@@ -1031,9 +1031,9 @@ $dist/default/production\U201_Firmware.production.obj
 11E78 text7 CODE >50:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
 11E78 text7 CODE >53:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
 11E86 text7 CODE >56:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
-11E94 text7 CODE >65:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
-11EA2 text7 CODE >69:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
-11EB0 text7 CODE >71:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
+11E94 text7 CODE >66:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
+11EA2 text7 CODE >70:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
+11EB0 text7 CODE >72:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
 11E00 text6 CODE >130:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 11E00 text6 CODE >132:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 11E06 text6 CODE >134:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
@@ -1137,66 +1137,66 @@ $dist/default/production\U201_Firmware.production.obj
 11680 text0 CODE >91:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
 11698 text0 CODE >117:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
 1169A text0 CODE >76:C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
-11736 cinit CODE >14714:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11736 cinit CODE >14716:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11736 cinit CODE >14719:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11736 cinit CODE >14819:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11738 cinit CODE >14820:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1173A cinit CODE >14821:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1173C cinit CODE >14822:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1173E cinit CODE >14823:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11740 cinit CODE >14824:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11742 cinit CODE >14825:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11746 cinit CODE >14826:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1174A cinit CODE >14827:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1174A cinit CODE >14828:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1174C cinit CODE >14829:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11750 cinit CODE >14830:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11752 cinit CODE >14831:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11754 cinit CODE >14832:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11756 cinit CODE >14836:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11758 cinit CODE >14837:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1175A cinit CODE >14838:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1175C cinit CODE >14839:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1175E cinit CODE >14840:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11760 cinit CODE >14841:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11762 cinit CODE >14842:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11766 cinit CODE >14843:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1176A cinit CODE >14844:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1176A cinit CODE >14845:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1176C cinit CODE >14846:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11770 cinit CODE >14847:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11772 cinit CODE >14848:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11774 cinit CODE >14849:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11776 cinit CODE >14853:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1177A cinit CODE >14854:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1177C cinit CODE >14855:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1177C cinit CODE >14856:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1177E cinit CODE >14857:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11780 cinit CODE >14858:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11782 cinit CODE >14861:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11786 cinit CODE >14862:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11788 cinit CODE >14863:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11788 cinit CODE >14864:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1178A cinit CODE >14865:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1178C cinit CODE >14866:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1178E cinit CODE >14869:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11792 cinit CODE >14870:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11794 cinit CODE >14871:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11794 cinit CODE >14872:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11796 cinit CODE >14873:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-11798 cinit CODE >14874:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1179A cinit CODE >14877:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-1179E cinit CODE >14878:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-117A0 cinit CODE >14879:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-117A0 cinit CODE >14880:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-117A2 cinit CODE >14881:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-117A4 cinit CODE >14882:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-117A6 cinit CODE >14888:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-117A6 cinit CODE >14890:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-117A8 cinit CODE >14891:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-117AA cinit CODE >14892:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
-117AC cinit CODE >14893:C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.
+11736 cinit CODE >14794:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11736 cinit CODE >14796:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11736 cinit CODE >14799:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11736 cinit CODE >14899:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11738 cinit CODE >14900:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1173A cinit CODE >14901:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1173C cinit CODE >14902:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1173E cinit CODE >14903:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11740 cinit CODE >14904:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11742 cinit CODE >14905:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11746 cinit CODE >14906:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1174A cinit CODE >14907:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1174A cinit CODE >14908:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1174C cinit CODE >14909:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11750 cinit CODE >14910:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11752 cinit CODE >14911:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11754 cinit CODE >14912:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11756 cinit CODE >14916:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11758 cinit CODE >14917:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1175A cinit CODE >14918:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1175C cinit CODE >14919:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1175E cinit CODE >14920:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11760 cinit CODE >14921:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11762 cinit CODE >14922:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11766 cinit CODE >14923:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1176A cinit CODE >14924:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1176A cinit CODE >14925:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1176C cinit CODE >14926:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11770 cinit CODE >14927:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11772 cinit CODE >14928:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11774 cinit CODE >14929:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11776 cinit CODE >14933:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1177A cinit CODE >14934:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1177C cinit CODE >14935:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1177C cinit CODE >14936:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1177E cinit CODE >14937:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11780 cinit CODE >14938:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11782 cinit CODE >14941:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11786 cinit CODE >14942:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11788 cinit CODE >14943:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11788 cinit CODE >14944:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1178A cinit CODE >14945:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1178C cinit CODE >14946:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1178E cinit CODE >14949:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11792 cinit CODE >14950:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11794 cinit CODE >14951:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11794 cinit CODE >14952:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11796 cinit CODE >14953:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+11798 cinit CODE >14954:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1179A cinit CODE >14957:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+1179E cinit CODE >14958:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+117A0 cinit CODE >14959:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+117A0 cinit CODE >14960:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+117A2 cinit CODE >14961:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+117A4 cinit CODE >14962:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+117A6 cinit CODE >14968:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+117A6 cinit CODE >14970:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+117A8 cinit CODE >14971:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+117AA cinit CODE >14972:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
+117AC cinit CODE >14973:C:\Users\DREWMA~1\AppData\Local\Temp\se54.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1212,7 +1212,7 @@ $dist/default/production\U201_Firmware.production.obj
 i2_abs 1221A 0 CODE 0 text88 dist/default/production\U201_Firmware.production.obj
 ___lwmod@counter BB 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 __LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\U201_Firmware.production.obj
-__Lmediumconst FC1A 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
+__Lmediumconst FBCA 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
 __end_of_EUSART2_SetRxInterruptHandler 12440 0 CODE 0 text28 dist/default/production\U201_Firmware.production.obj
 __Hspace_0 30000C 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 __Hspace_1 240 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
@@ -1226,12 +1226,12 @@ i2Sensor_SetTrisBit@sensor 2 0 COMRAM 1 cstackCOMRAM dist/default/production\U20
 _ringBufferLUT 10000 0 CODE 0 text3 dist/default/production\U201_Firmware.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\U201_Firmware.production.obj
 _printResetMessage 11E78 0 CODE 0 text7 dist/default/production\U201_Firmware.production.obj
-__mediumconst FC1A 0 MEDIUMCONST 0 mediumconst C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
-__end_of_mtouch_sensor_init FCA2 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
+__mediumconst FBCA 0 MEDIUMCONST 0 mediumconst C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
+__end_of_mtouch_sensor_init FC52 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
 __end_ofi2_Sensor_SetTrisBit 119D8 0 CODE 0 text83 dist/default/production\U201_Firmware.production.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\U201_Firmware.production.obj
 __end_of_INTERRUPT_Initialize 12458 0 CODE 0 text25 dist/default/production\U201_Firmware.production.obj
-__end_of_mtouch_button_init FC75 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
+__end_of_mtouch_button_init FC25 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
 _PMD_Initialize 122F2 0 CODE 0 text14 dist/default/production\U201_Firmware.production.obj
 ?_abs B0 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 _sensor_medianBuffer 60 0 BANK0 1 bssBANK0 dist/default/production\U201_Firmware.production.obj
@@ -1263,12 +1263,12 @@ _WPUE EAE 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 _WPUF EB3 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 _WPUG EBB 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 _WPUH EC0 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
-___sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
+___sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
 _line 190 0 BANK1 1 bssBANK1 dist/default/production\U201_Firmware.production.obj
 _main 11602 0 CODE 0 text0 dist/default/production\U201_Firmware.production.obj
 abs@a B0 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 btemp 4F 0 COMRAM 1 temp dist/default/production\U201_Firmware.production.obj
-start E4 0 CODE 0 init C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
+start E4 0 CODE 0 init C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
 _MTOUCH_Sensor_isSampling 1248C 0 CODE 0 text53 dist/default/production\U201_Firmware.production.obj
 i2___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/production\U201_Firmware.production.obj
 Sensor_FrequencyHopping_Autotune_Process@variance BB 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
@@ -1292,7 +1292,7 @@ __Hpowerup E4 0 CODE 0 powerup dist/default/production\U201_Firmware.production.
 Button_Tick_helper@button B0 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 printf@c C7 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 printf@f BC 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
-_mtouch_sensor_init FC75 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
+_mtouch_sensor_init FC25 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
 __size_of_Sensor_FrequencyHopping 0 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 __size_of_MTOUCH_Sensor_Scan_Initialize 0 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 __end_of_medianFilter 104EC 0 CODE 0 text49 dist/default/production\U201_Firmware.production.obj
@@ -1304,15 +1304,15 @@ Button_Baseline_Update@button B0 0 BANK0 1 cstackBANK0 dist/default/production\U
 __LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\U201_Firmware.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\U201_Firmware.production.obj
-_mtouch_button_init FC25 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
+_mtouch_button_init FBD5 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
 MTOUCH_Sensor_isCalibrated@sensor B0 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 __end_of_MTOUCH_Sensor_Sampled_ResetAll 120F4 0 CODE 0 text34 dist/default/production\U201_Firmware.production.obj
 medianFilter@bufferIndex 33 0 COMRAM 1 bssCOMRAM dist/default/production\U201_Firmware.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
-intlevel0 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
-intlevel1 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
-intlevel2 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
-intlevel3 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
+__accesstop 60 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
+intlevel0 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
+intlevel1 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
+intlevel2 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
+intlevel3 0 0 CODE 0 text C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
 __size_of_EUSART2_SetTxInterruptHandler 0 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 _callback_notPressed 42 0 COMRAM 1 dataCOMRAM dist/default/production\U201_Firmware.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\U201_Firmware.production.obj
@@ -1371,9 +1371,9 @@ _ANSELF EB4 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 _ANSELG EBC 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 i2Sensor_isCalibratingAcqTime@sensor 1 0 COMRAM 1 cstackCOMRAM dist/default/production\U201_Firmware.production.obj
 Sensor_autoCalibration@name D 0 COMRAM 1 cstackCOMRAM dist/default/production\U201_Firmware.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
 _mtouch_button 140 0 BANK1 1 bssBANK1 dist/default/production\U201_Firmware.production.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
 _Sensor_isCalibratingAcqTime 12328 0 CODE 0 text38 dist/default/production\U201_Firmware.production.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\U201_Firmware.production.obj
 __CFG_BORV$VBOR_190 0 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
@@ -1414,7 +1414,7 @@ MTOUCH_Sensor_InitializeAll@sensor BB 0 BANK0 1 cstackBANK0 dist/default/product
 __size_of_EUSART2_SetRxInterruptHandler 0 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 __end_of_MTOUCH_Sensor_RawSample_Get 11F92 0 CODE 0 text68 dist/default/production\U201_Firmware.production.obj
 _Sensor_SetTrisBit 11910 0 CODE 0 text40 dist/default/production\U201_Firmware.production.obj
-_dpowers FC1B 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
+_dpowers FBCB 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
 __end_of_Button_DefaultCallback 12494 0 CODE 0 text63 dist/default/production\U201_Firmware.production.obj
 ?i2___lwdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production\U201_Firmware.production.obj
 ?i2___lwmod 8 0 COMRAM 1 cstackCOMRAM dist/default/production\U201_Firmware.production.obj
@@ -1545,7 +1545,7 @@ __Hbank12 0 0 ABS 0 bank12 dist/default/production\U201_Firmware.production.obj
 __Hbank13 0 0 ABS 0 bank13 dist/default/production\U201_Firmware.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\U201_Firmware.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\U201_Firmware.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
 i2MTOUCH_Sensor_isEnabled@sensor 1 0 COMRAM 1 cstackCOMRAM dist/default/production\U201_Firmware.production.obj
 _BAUD2CON EF7 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 __end_of_Sensor_autoCalibration 10CF4 0 CODE 0 text87 dist/default/production\U201_Firmware.production.obj
@@ -1905,8 +1905,8 @@ _Button_Reading_Update 122B0 0 CODE 0 text66 dist/default/production\U201_Firmwa
 _Button_Baseline_Update 11052 0 CODE 0 text64 dist/default/production\U201_Firmware.production.obj
 __end_of_MTOUCH_Sensor_ADCC_Initialize 11E00 0 CODE 0 text19 dist/default/production\U201_Firmware.production.obj
 __end_of_MTOUCH_Sensor_Initialize 1182A 0 CODE 0 text21 dist/default/production\U201_Firmware.production.obj
-stackhi DE9 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
-stacklo 240 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
+stackhi DE9 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
+stacklo 240 0 ABS 0 - C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\U201_Firmware.production.obj
 _OSCCON1 E43 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 _OSCCON3 E45 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
@@ -2086,7 +2086,7 @@ __Ltext89 0 0 ABS 0 text89 dist/default/production\U201_Firmware.production.obj
 __Ltext90 0 0 ABS 0 text90 dist/default/production\U201_Firmware.production.obj
 __Ltext91 0 0 ABS 0 text91 dist/default/production\U201_Firmware.production.obj
 __Ltext92 0 0 ABS 0 text92 dist/default/production\U201_Firmware.production.obj
-__ramtop E00 0 RAM 0 ramtop C:\Users\DREWMA~1\AppData\Local\Temp\sdsg.obj
+__ramtop E00 0 RAM 0 ramtop C:\Users\DREWMA~1\AppData\Local\Temp\se54.obj
 MTOUCH_Sensor_Initialize@sensor B2 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 MTOUCH_Button_Initialize@name B1 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 __Lpowerup E4 0 CODE 0 powerup dist/default/production\U201_Firmware.production.obj
@@ -2148,7 +2148,7 @@ _sampling_flag 3A 0 COMRAM 1 bssCOMRAM dist/default/production\U201_Firmware.pro
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\U201_Firmware.production.obj
 Sensor_FrequencyHopping_Autotune_Process@newfrequencyFound BA 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 Sensor_autoCalibration@sensor 5 0 COMRAM 1 cstackCOMRAM dist/default/production\U201_Firmware.production.obj
-__pmediumconst FC1A 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
+__pmediumconst FBCA 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
 ringBufferPull@index_724 D0 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 __CFG_BOREN$SBORDIS 0 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 MTOUCH_Button_Tick@i B4 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
@@ -2172,7 +2172,7 @@ _ADPCH F5F 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 _ADPRE F5E 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 _ADREF F58 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 _ADRPT F66 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
-__end_of_dpowers FC25 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
+__end_of_dpowers FBD5 0 MEDIUMCONST 0 mediumconst dist/default/production\U201_Firmware.production.obj
 _OSCEN E47 0 ABS 0 - dist/default/production\U201_Firmware.production.obj
 Button_Reading_Update@button B7 0 BANK0 1 cstackBANK0 dist/default/production\U201_Firmware.production.obj
 i2EUSART2_Write@txData 1 0 COMRAM 1 cstackCOMRAM dist/default/production\U201_Firmware.production.obj
@@ -2286,5 +2286,5 @@ bssBANK0 1 60 60 84 1
 bssBANK1 1 100 100 D0 1
 bssBANK2 1 200 200 40 1
 intcode 0 8 8 E0 1
-mediumconst 0 FC1A FC1A 3E6 1
+mediumconst 0 FBCA FBCA 436 1
 config 0 300000 300000 C 1
