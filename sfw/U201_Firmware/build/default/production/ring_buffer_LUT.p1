@@ -1,32 +1,69 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F17383 `(v ~T0 @X0 0 tf ]
-[v F17386 `(v ~T0 @X0 0 tf ]
-[p mainexit ]
-"70 mcc_generated_files/mcc.h
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"40496 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
-[s S1981 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1981 . INT0EDG INT1EDG INT2EDG INT3EDG . IPEN PEIE_GIEL GIE_GIEH ]
-"40506
-[s S1982 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1982 . . PEIE GIE ]
-"40511
-[s S1983 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1983 . . GIEL GIEH ]
-"40495
-[u S1980 `S1981 1 `S1982 1 `S1983 1 ]
-[n S1980 . . . . ]
-"40517
-[v _INTCONbits `VS1980 ~T0 @X0 0 e@4082 ]
-"114 ring_buffer_interface.h
-[v _printResetMessage `(v ~T0 @X0 0 ef ]
-"43 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h
-[v ___nop `(v ~T0 @X0 0 ef ]
-[p i ___nop ]
-"40 ring_buffer_interface.h
-[v _eusart2RxStringReady `Vuc ~T0 @X0 0 e ]
-"84
-[v _ringBufferPull `(v ~T0 @X0 0 ef ]
+[v F17493 `(v ~T0 @X0 0 tf ]
+[v F17496 `(v ~T0 @X0 0 tf ]
+"45 C:\Program Files (x86)\Microchip\xc8\v1.45\include\string.h
+[v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
+"28707 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
+[s S1341 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1341 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"28717
+[s S1342 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1342 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
+"28706
+[u S1340 `S1341 1 `S1342 1 ]
+[n S1340 . . . ]
+"28728
+[v _LATCbits `VS1340 ~T0 @X0 0 e@3963 ]
+"195 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"56 C:\Program Files (x86)\Microchip\xc8\v1.45\include\string.h
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"7 C:\Program Files (x86)\Microchip\xc8\v1.45\include\ctype.h
+[v _isdigit `(b ~T0 @X0 0 ef1`uc ]
+"53 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdlib.h
+[v _atof `(d ~T0 @X0 0 ef1`*Cuc ]
+"55
+[v _atoi `(i ~T0 @X0 0 ef1`*Cuc ]
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 16: extern void * memset(void *, int, size_t);
+[; ;string.h: 36: extern char * strcat(char *, const char *);
+[; ;string.h: 37: extern char * strcpy(char *, const char *);
+[; ;string.h: 38: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 40: extern char * strdup(const char *);
+[; ;string.h: 41: extern char * strtok(char *, const char *);
+[; ;string.h: 44: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 45: extern int strcmp(const char *, const char *);
+[; ;string.h: 46: extern int stricmp(const char *, const char *);
+[; ;string.h: 47: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 49: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 50: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 51: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 52: extern size_t strspn(const char *, const char *);
+[; ;string.h: 53: extern char * strstr(const char *, const char *);
+[; ;string.h: 54: extern char * stristr(const char *, const char *);
+[; ;string.h: 55: extern char * strerror(int);
+[; ;string.h: 56: extern size_t strlen(const char *);
+[; ;string.h: 57: extern char * strchr(const char *, int);
+[; ;string.h: 58: extern char * strichr(const char *, int);
+[; ;string.h: 59: extern char * strrchr(const char *, int);
+[; ;string.h: 60: extern char * strrichr(const char *, int);
+[; ;ctype.h: 4: extern __bit isalpha(char);
+[; ;ctype.h: 5: extern __bit isupper(char);
+[; ;ctype.h: 6: extern __bit islower(char);
+[; ;ctype.h: 7: extern __bit isdigit(char);
+[; ;ctype.h: 8: extern __bit isxdigit(char);
+[; ;ctype.h: 9: extern __bit isspace(char);
+[; ;ctype.h: 10: extern __bit ispunct(char);
+[; ;ctype.h: 11: extern __bit isalnum(char);
+[; ;ctype.h: 12: extern __bit isprint(char);
+[; ;ctype.h: 13: extern __bit isgraph(char);
+[; ;ctype.h: 14: extern __bit iscntrl(char);
+[; ;ctype.h: 17: extern char toupper(char);
+[; ;ctype.h: 18: extern char tolower(char);
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -16049,7 +16086,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;interrupt_manager.h: 133: void INTERRUPT_Initialize(void);
 [; ;interrupt_manager.h: 145: void interrupt INTERRUPT_InterruptManager(void);
-[; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;stdarg.h: 7: typedef void * va_list[1];
 [; ;stdarg.h: 10: extern void * __va_start(void);
 [; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
@@ -16082,10 +16118,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F17383 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F17493 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F17386 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F17496 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -16100,32 +16136,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.h: 70: void SYSTEM_Initialize(void);
 [; ;mcc.h: 83: void OSCILLATOR_Initialize(void);
 [; ;mcc.h: 96: void PMD_Initialize(void);
-[; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
-[; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
-[; ;string.h: 16: extern void * memset(void *, int, size_t);
-[; ;string.h: 36: extern char * strcat(char *, const char *);
-[; ;string.h: 37: extern char * strcpy(char *, const char *);
-[; ;string.h: 38: extern char * strncat(char *, const char *, size_t);
-[; ;string.h: 39: extern char * strncpy(char *, const char *, size_t);
-[; ;string.h: 40: extern char * strdup(const char *);
-[; ;string.h: 41: extern char * strtok(char *, const char *);
-[; ;string.h: 44: extern int memcmp(const void *, const void *, size_t);
-[; ;string.h: 45: extern int strcmp(const char *, const char *);
-[; ;string.h: 46: extern int stricmp(const char *, const char *);
-[; ;string.h: 47: extern int strncmp(const char *, const char *, size_t);
-[; ;string.h: 48: extern int strnicmp(const char *, const char *, size_t);
-[; ;string.h: 49: extern void * memchr(const void *, int, size_t);
-[; ;string.h: 50: extern size_t strcspn(const char *, const char *);
-[; ;string.h: 51: extern char * strpbrk(const char *, const char *);
-[; ;string.h: 52: extern size_t strspn(const char *, const char *);
-[; ;string.h: 53: extern char * strstr(const char *, const char *);
-[; ;string.h: 54: extern char * stristr(const char *, const char *);
-[; ;string.h: 55: extern char * strerror(int);
-[; ;string.h: 56: extern size_t strlen(const char *);
-[; ;string.h: 57: extern char * strchr(const char *, int);
-[; ;string.h: 58: extern char * strichr(const char *, int);
-[; ;string.h: 59: extern char * strrchr(const char *, int);
-[; ;string.h: 60: extern char * strrichr(const char *, int);
 [; ;stdlib.h: 7: typedef unsigned short wchar_t;
 [; ;stdlib.h: 15: typedef struct {
 [; ;stdlib.h: 16: int rem;
@@ -16177,65 +16187,436 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 102: extern char * ultoa(char * buf, unsigned long val, int base);
 [; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
 [; ;ring_buffer_LUT.h: 47: void ringBufferLUT(char * line);
-[; ;ring_buffer_interface.h: 40: extern volatile uint8_t eusart2RxStringReady;
-[; ;ring_buffer_interface.h: 43: extern volatile uint8_t eusart2RxCount;
-[; ;ring_buffer_interface.h: 46: extern volatile uint8_t eusart2RxHead;
-[; ;ring_buffer_interface.h: 47: extern volatile uint8_t eusart2RxTail;
-"51 ring_buffer_interface.h
-[v _line `uc ~T0 @X0 -> 64 `i e ]
-[; ;ring_buffer_interface.h: 51: char line[64];
-[; ;ring_buffer_interface.h: 84: void ringBufferPull(void);
-[; ;ring_buffer_interface.h: 114: void printResetMessage(void);
-[; ;main.c: 53: extern volatile uint8_t eusart2RxStringReady;
-[v $root$_main `(v ~T0 @X0 0 e ]
-"58 main.c
-[v _main `(v ~T0 @X0 1 ef ]
-"59
+"7 ring_buffer_LUT.c
+[v _ringBufferLUT `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;main.c: 58: void main(void)
-[; ;main.c: 59: {
-[e :U _main ]
+[; ;ring_buffer_LUT.c: 7: void ringBufferLUT(char * line) {
+[e :U _ringBufferLUT ]
+[v _line `*uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 61: SYSTEM_Initialize();
-"61
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 68: (INTCONbits.GIEH = 1);
-"68
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;main.c: 71: (INTCONbits.GIEL = 1);
-"71
-[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-[; ;main.c: 74: printResetMessage();
-"74
-[e ( _printResetMessage ..  ]
-[; ;main.c: 76: while (1)
-"76
-[e :U 2018 ]
-[; ;main.c: 77: {
-"77
+[; ;ring_buffer_LUT.c: 13: if((0 == strcmp(line, "LED On"))) {
+"13
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 1C 2017  ]
 {
-[; ;main.c: 79: __nop();
-"79
-[e ( ___nop ..  ]
-[; ;main.c: 82: if (eusart2RxStringReady) {
-"82
-[e $ ! != -> _eusart2RxStringReady `i -> -> -> 0 `i `Vuc `i 2020  ]
-{
-[; ;main.c: 84: ringBufferPull();
-"84
-[e ( _ringBufferPull ..  ]
-"86
+[; ;ring_buffer_LUT.c: 16: LATCbits.LATC7 = 1;
+"16
+[e = . . _LATCbits 0 7 -> -> 1 `i `uc ]
+[; ;ring_buffer_LUT.c: 19: printf("\n\r");
+"19
+[e ( _printf :s 2C ]
+[; ;ring_buffer_LUT.c: 21: printf("    RC7 Set\n\r");
+"21
+[e ( _printf :s 3C ]
+[; ;ring_buffer_LUT.c: 24: printf("\n\r");
+"24
+[e ( _printf :s 4C ]
+"26
 }
-[e :U 2020 ]
-"87
-}
-[e :U 2017 ]
-"76
+[; ;ring_buffer_LUT.c: 26: }
 [e $U 2018  ]
+"30
+[e :U 2017 ]
+[; ;ring_buffer_LUT.c: 30: else if((0 == strcmp(line, "LED Off"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 5C 2019  ]
+{
+[; ;ring_buffer_LUT.c: 33: LATCbits.LATC7 = 0;
+"33
+[e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
+[; ;ring_buffer_LUT.c: 36: printf("\n\r");
+"36
+[e ( _printf :s 6C ]
+[; ;ring_buffer_LUT.c: 38: printf("    RC7 Cleared\n\r");
+"38
+[e ( _printf :s 7C ]
+[; ;ring_buffer_LUT.c: 41: printf("\n\r");
+"41
+[e ( _printf :s 8C ]
+"43
+}
+[; ;ring_buffer_LUT.c: 43: }
+[e $U 2020  ]
+"46
 [e :U 2019 ]
-[; ;main.c: 86: }
-[; ;main.c: 87: }
-[; ;main.c: 88: }
+[; ;ring_buffer_LUT.c: 46: else if ((0 == strcmp(line, "Talk to me"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 9C 2021  ]
+{
+[; ;ring_buffer_LUT.c: 49: printf("\n\r");
+"49
+[e ( _printf :s 10C ]
+[; ;ring_buffer_LUT.c: 51: printf("    Well, I've got a lot to talk about...\n\r");
+"51
+[e ( _printf :s 11C ]
+[; ;ring_buffer_LUT.c: 52: printf("    First thing's first, I'm talking to you through a "
+[; ;ring_buffer_LUT.c: 53: "UART to USB bridge, produced by FTDI\n\r");
+"53
+[e ( _printf :s 12C ]
+[; ;ring_buffer_LUT.c: 54: printf("    The part number is FT232\n\r");
+"54
+[e ( _printf :s 13C ]
+[; ;ring_buffer_LUT.c: 55: printf("    I'm a PIC18F67K40, and I don't know my revision number yet\r\n");
+"55
+[e ( _printf :s 14C ]
+[; ;ring_buffer_LUT.c: 58: printf("\n\r");
+"58
+[e ( _printf :s 15C ]
+"60
+}
+[; ;ring_buffer_LUT.c: 60: }
+[e $U 2022  ]
+"64
+[e :U 2021 ]
+[; ;ring_buffer_LUT.c: 64: else if ((line[0] == (int) 'A') &&
+[; ;ring_buffer_LUT.c: 65: (line[1] == (int) 'd') &&
+[; ;ring_buffer_LUT.c: 66: (line[2] == (int) 'd')) {
+"66
+[e $ ! && && == -> *U + _line * -> -> 0 `i `x -> -> # *U _line `i `x `i -> -> 65 `ui `i == -> *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x `i -> -> 100 `ui `i == -> *U + _line * -> -> 2 `i `x -> -> # *U _line `i `x `i -> -> 100 `ui `i 2023  ]
+{
+"69
+[v _num_arguments `i ~T0 @X0 1 a ]
+[; ;ring_buffer_LUT.c: 69: int num_arguments = 0;
+[e = _num_arguments -> 0 `i ]
+"72
+[v _sum `f ~T0 @X0 1 a ]
+[; ;ring_buffer_LUT.c: 72: float sum = 0.0;
+[e = _sum -> .0.0 `f ]
+[; ;ring_buffer_LUT.c: 75: for (int index = 0; index < strlen(line); index++) {
+"75
+{
+[v _index `i ~T0 @X0 1 a ]
+[e = _index -> 0 `i ]
+[e $U 2027  ]
+[e :U 2024 ]
+{
+[; ;ring_buffer_LUT.c: 78: if((int) line[index] == 32) {
+"78
+[e $ ! == -> *U + _line * -> _index `x -> -> # *U _line `i `x `i -> 32 `i 2028  ]
+{
+[; ;ring_buffer_LUT.c: 80: num_arguments++;
+"80
+[e ++ _num_arguments -> 1 `i ]
+"82
+}
+[e :U 2028 ]
+"84
+}
+"75
+[e ++ _index -> 1 `i ]
+[e :U 2027 ]
+[e $ < -> _index `ui ( _strlen (1 -> _line `*Cuc 2024  ]
+[e :U 2025 ]
+"84
+}
 "88
+[v _line_index `i ~T0 @X0 1 a ]
+[; ;ring_buffer_LUT.c: 82: }
+[; ;ring_buffer_LUT.c: 84: }
+[; ;ring_buffer_LUT.c: 88: int line_index = 4;
+[e = _line_index -> 4 `i ]
+"92
+[v _arg_str `uc ~T0 @X0 -> 64 `i a ]
+"95
+[v _last_arg_start `i ~T0 @X0 1 a ]
+"98
+[v _float_flag `uc ~T0 @X0 1 a ]
+[; ;ring_buffer_LUT.c: 92: char arg_str[64];
+[; ;ring_buffer_LUT.c: 95: int last_arg_start;
+[; ;ring_buffer_LUT.c: 98: uint8_t float_flag = 0;
+[e = _float_flag -> -> 0 `i `uc ]
+[; ;ring_buffer_LUT.c: 101: for (int arg_index = 0; arg_index < num_arguments; arg_index++) {
+"101
+{
+[v _arg_index `i ~T0 @X0 1 a ]
+[e = _arg_index -> 0 `i ]
+[e $U 2032  ]
+[e :U 2029 ]
+{
+[; ;ring_buffer_LUT.c: 103: last_arg_start = line_index;
+"103
+[e = _last_arg_start _line_index ]
+[; ;ring_buffer_LUT.c: 106: while(isdigit(line[line_index]) ||
+[; ;ring_buffer_LUT.c: 107: line[line_index] == (int) '-' ||
+[; ;ring_buffer_LUT.c: 108: line[line_index] == (int)'.') {
+"108
+[e $U 2033  ]
+[e :U 2034 ]
+{
+[; ;ring_buffer_LUT.c: 111: arg_str[line_index - last_arg_start] = line[line_index];
+"111
+[e = *U + &U _arg_str * -> -> - _line_index _last_arg_start `ui `ux -> -> # *U &U _arg_str `ui `ux *U + _line * -> _line_index `x -> -> # *U _line `i `x ]
+[; ;ring_buffer_LUT.c: 114: line_index++;
+"114
+[e ++ _line_index -> 1 `i ]
+[; ;ring_buffer_LUT.c: 117: if(line[line_index] == (int)'.') {
+"117
+[e $ ! == -> *U + _line * -> _line_index `x -> -> # *U _line `i `x `i -> -> 46 `ui `i 2036  ]
+{
+[; ;ring_buffer_LUT.c: 119: float_flag = 1;
+"119
+[e = _float_flag -> -> 1 `i `uc ]
+"121
+}
+[e :U 2036 ]
+"123
+}
+[e :U 2033 ]
+"106
+[e $ || || ( _isdigit (1 *U + _line * -> _line_index `x -> -> # *U _line `i `x == -> *U + _line * -> _line_index `x -> -> # *U _line `i `x `i -> -> 45 `ui `i == -> *U + _line * -> _line_index `x -> -> # *U _line `i `x `i -> -> 46 `ui `i 2034  ]
+[e :U 2035 ]
+[; ;ring_buffer_LUT.c: 121: }
+[; ;ring_buffer_LUT.c: 123: }
+[; ;ring_buffer_LUT.c: 126: line_index++;
+"126
+[e ++ _line_index -> 1 `i ]
+[; ;ring_buffer_LUT.c: 129: arg_str[line_index - last_arg_start - 1] = '\0';
+"129
+[e = *U + &U _arg_str * -> -> - - _line_index _last_arg_start -> 1 `i `ui `ux -> -> # *U &U _arg_str `ui `ux -> -> 0 `ui `uc ]
+[; ;ring_buffer_LUT.c: 132: last_arg_start = line_index;
+"132
+[e = _last_arg_start _line_index ]
+[; ;ring_buffer_LUT.c: 135: if (float_flag == 0) {
+"135
+[e $ ! == -> _float_flag `i -> 0 `i 2037  ]
+{
+[; ;ring_buffer_LUT.c: 138: sum += atof(arg_str);
+"138
+[e =+ _sum -> ( _atof (1 -> &U _arg_str `*Cuc `f ]
+"140
+}
+[; ;ring_buffer_LUT.c: 140: }
+[e $U 2038  ]
+"143
+[e :U 2037 ]
+[; ;ring_buffer_LUT.c: 143: else {
+{
+[; ;ring_buffer_LUT.c: 146: sum += atoi(arg_str);
+"146
+[e =+ _sum -> ( _atoi (1 -> &U _arg_str `*Cuc `f ]
+"148
+}
+[e :U 2038 ]
+"150
+}
+"101
+[e ++ _arg_index -> 1 `i ]
+[e :U 2032 ]
+[e $ < _arg_index _num_arguments 2029  ]
+[e :U 2030 ]
+"150
+}
+[; ;ring_buffer_LUT.c: 148: }
+[; ;ring_buffer_LUT.c: 150: }
+[; ;ring_buffer_LUT.c: 153: printf("\n\r");
+"153
+[e ( _printf :s 16C ]
+[; ;ring_buffer_LUT.c: 154: printf("    The sum of all arguments entered is %f\n\r", sum);
+"154
+[e ( _printf , (. :s 17C -> _sum `d ]
+[; ;ring_buffer_LUT.c: 155: printf("\n\r");
+"155
+[e ( _printf :s 18C ]
+"157
+}
+[; ;ring_buffer_LUT.c: 157: }
+[e $U 2039  ]
+"160
+[e :U 2023 ]
+[; ;ring_buffer_LUT.c: 160: else if ((line[0] == (int) 'M') &&
+[; ;ring_buffer_LUT.c: 161: (line[1] == (int) 'u') &&
+[; ;ring_buffer_LUT.c: 162: (line[2] == (int) 'l') &&
+[; ;ring_buffer_LUT.c: 163: (line[3] == (int) 't')) {
+"163
+[e $ ! && && && == -> *U + _line * -> -> 0 `i `x -> -> # *U _line `i `x `i -> -> 77 `ui `i == -> *U + _line * -> -> 1 `i `x -> -> # *U _line `i `x `i -> -> 117 `ui `i == -> *U + _line * -> -> 2 `i `x -> -> # *U _line `i `x `i -> -> 108 `ui `i == -> *U + _line * -> -> 3 `i `x -> -> # *U _line `i `x `i -> -> 116 `ui `i 2040  ]
+{
+"166
+[v _num_arguments `i ~T0 @X0 1 a ]
+[; ;ring_buffer_LUT.c: 166: int num_arguments = 0;
+[e = _num_arguments -> 0 `i ]
+"169
+[v _prod `l ~T0 @X0 1 a ]
+[; ;ring_buffer_LUT.c: 169: long long prod = 1;
+[e = _prod -> -> 1 `i `l ]
+[; ;ring_buffer_LUT.c: 172: for (int index = 0; index < strlen(line); index++) {
+"172
+{
+[v _index `i ~T0 @X0 1 a ]
+[e = _index -> 0 `i ]
+[e $U 2044  ]
+[e :U 2041 ]
+{
+[; ;ring_buffer_LUT.c: 175: if((int) line[index] == 32) {
+"175
+[e $ ! == -> *U + _line * -> _index `x -> -> # *U _line `i `x `i -> 32 `i 2045  ]
+{
+[; ;ring_buffer_LUT.c: 177: num_arguments++;
+"177
+[e ++ _num_arguments -> 1 `i ]
+"179
+}
+[e :U 2045 ]
+"181
+}
+"172
+[e ++ _index -> 1 `i ]
+[e :U 2044 ]
+[e $ < -> _index `ui ( _strlen (1 -> _line `*Cuc 2041  ]
+[e :U 2042 ]
+"181
+}
+"185
+[v _line_index `i ~T0 @X0 1 a ]
+[; ;ring_buffer_LUT.c: 179: }
+[; ;ring_buffer_LUT.c: 181: }
+[; ;ring_buffer_LUT.c: 185: int line_index = 5;
+[e = _line_index -> 5 `i ]
+"189
+[v _arg_str `uc ~T0 @X0 -> 64 `i a ]
+"192
+[v _last_arg_start `i ~T0 @X0 1 a ]
+[; ;ring_buffer_LUT.c: 189: char arg_str[64];
+[; ;ring_buffer_LUT.c: 192: int last_arg_start;
+[; ;ring_buffer_LUT.c: 195: for (int arg_index = 0; arg_index < num_arguments; arg_index++) {
+"195
+{
+[v _arg_index `i ~T0 @X0 1 a ]
+[e = _arg_index -> 0 `i ]
+[e $U 2049  ]
+[e :U 2046 ]
+{
+[; ;ring_buffer_LUT.c: 197: last_arg_start = line_index;
+"197
+[e = _last_arg_start _line_index ]
+[; ;ring_buffer_LUT.c: 200: while(isdigit(line[line_index]) || line[line_index] == (int) '-') {
+"200
+[e $U 2050  ]
+[e :U 2051 ]
+{
+[; ;ring_buffer_LUT.c: 203: arg_str[line_index - last_arg_start] = line[line_index];
+"203
+[e = *U + &U _arg_str * -> -> - _line_index _last_arg_start `ui `ux -> -> # *U &U _arg_str `ui `ux *U + _line * -> _line_index `x -> -> # *U _line `i `x ]
+[; ;ring_buffer_LUT.c: 206: line_index++;
+"206
+[e ++ _line_index -> 1 `i ]
+"208
+}
+[e :U 2050 ]
+"200
+[e $ || ( _isdigit (1 *U + _line * -> _line_index `x -> -> # *U _line `i `x == -> *U + _line * -> _line_index `x -> -> # *U _line `i `x `i -> -> 45 `ui `i 2051  ]
+[e :U 2052 ]
+[; ;ring_buffer_LUT.c: 208: }
+[; ;ring_buffer_LUT.c: 211: line_index++;
+"211
+[e ++ _line_index -> 1 `i ]
+[; ;ring_buffer_LUT.c: 214: arg_str[line_index - last_arg_start - 1] = '\0';
+"214
+[e = *U + &U _arg_str * -> -> - - _line_index _last_arg_start -> 1 `i `ui `ux -> -> # *U &U _arg_str `ui `ux -> -> 0 `ui `uc ]
+[; ;ring_buffer_LUT.c: 217: last_arg_start = line_index;
+"217
+[e = _last_arg_start _line_index ]
+[; ;ring_buffer_LUT.c: 220: prod *= atoi(arg_str);
+"220
+[e =* _prod -> ( _atoi (1 -> &U _arg_str `*Cuc `l ]
+"222
+}
+"195
+[e ++ _arg_index -> 1 `i ]
+[e :U 2049 ]
+[e $ < _arg_index _num_arguments 2046  ]
+[e :U 2047 ]
+"222
+}
+[; ;ring_buffer_LUT.c: 222: }
+[; ;ring_buffer_LUT.c: 225: printf("\n\r");
+"225
+[e ( _printf :s 19C ]
+[; ;ring_buffer_LUT.c: 226: printf("    The product of all arguments entered is %d\n\r", prod);
+"226
+[e ( _printf , (. :s 20C _prod ]
+[; ;ring_buffer_LUT.c: 227: printf("\n\r");
+"227
+[e ( _printf :s 21C ]
+"229
+}
+[; ;ring_buffer_LUT.c: 229: }
+[e $U 2053  ]
+"234
+[e :U 2040 ]
+[; ;ring_buffer_LUT.c: 234: else if((0 == strcmp(line, "Reset"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 22C 2054  ]
+{
+[; ;ring_buffer_LUT.c: 237: printf("\033[2J");
+"237
+[e ( _printf :s 23C ]
+[; ;ring_buffer_LUT.c: 240: printf("\033[H");
+"240
+[e ( _printf :s 24C ]
+[; ;ring_buffer_LUT.c: 243: asm("reset");
+"243
+[; <" reset ;# ">
+"245
+}
+[; ;ring_buffer_LUT.c: 245: }
+[e $U 2055  ]
+"248
+[e :U 2054 ]
+[; ;ring_buffer_LUT.c: 248: else if((0 == strcmp(line, "Help"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 25C 2056  ]
+{
+[; ;ring_buffer_LUT.c: 251: printf("\n\r");
+"251
+[e ( _printf :s 26C ]
+[; ;ring_buffer_LUT.c: 253: printf("   List of supported commands so far:\n\r"
+[; ;ring_buffer_LUT.c: 254: "   LED On: Turns LED On\n\r"
+[; ;ring_buffer_LUT.c: 255: "   LED Off: Turns LED Off\n\r"
+[; ;ring_buffer_LUT.c: 256: "   Talk to me: Spews a bunch out\n\r"
+[; ;ring_buffer_LUT.c: 257: "   Add: Adds all arguments following command\n\r"
+[; ;ring_buffer_LUT.c: 258: "   Multiply: Multiplies all arguments\n\r"
+[; ;ring_buffer_LUT.c: 260: "   Reset: Clears the screen and resets the micro\n\r"
+[; ;ring_buffer_LUT.c: 262: "   Help: This message, lists commands\n\r");
+"262
+[e ( _printf :s 27C ]
+[; ;ring_buffer_LUT.c: 265: printf("\n\r");
+"265
+[e ( _printf :s 28C ]
+"267
+}
+[e :U 2056 ]
+"270
+[e :U 2055 ]
+[e :U 2053 ]
+[e :U 2039 ]
+[e :U 2022 ]
+[e :U 2020 ]
+[e :U 2018 ]
+[; ;ring_buffer_LUT.c: 267: }
+[; ;ring_buffer_LUT.c: 270: }
 [e :UE 2016 ]
 }
+[p f _printf 8396928 ]
+[a 22C 82 101 115 101 116 0 ]
+[a 25C 72 101 108 112 0 ]
+[a 1C 76 69 68 32 79 110 0 ]
+[a 5C 76 69 68 32 79 102 102 0 ]
+[a 9C 84 97 108 107 32 116 111 32 109 101 0 ]
+[a 23C 27 91 50 74 0 ]
+[a 24C 27 91 72 0 ]
+[a 3C 32 32 32 32 82 67 55 32 83 101 116 10 13 0 ]
+[a 27C 32 32 32 76 105 115 116 32 111 102 32 115 117 112 112 111 114 116 101 100 32 99 111 109 109 97 110 100 115 32 115 111 32 102 97 114 58 10 13 32 32 32 76 69 68 32 79 110 58 32 84 117 114 110 115 32 76 69 68 32 79 110 10 13 32 32 32 76 69 68 32 79 102 102 58 32 84 117 114 110 115 32 76 69 68 32 79 102 102 10 13 32 32 32 84 97 108 107 32 116 111 32 109 101 58 32 83 112 101 119 115 32 97 32 98 117 110 99 104 32 111 117 116 10 13 32 32 32 65 100 100 58 32 65 100 100 115 32 97 108 108 32 97 114 103 117 109 101 110 116 115 32 102 111 108 108 111 119 105 110 103 32 99 111 109 109 97 110 100 10 13 32 32 32 77 117 108 116 105 112 108 121 58 32 77 117 108 116 105 112 108 105 101 115 32 97 108 108 32 97 114 103 117 109 101 110 116 115 10 13 32 32 32 82 101 115 101 116 58 32 67 108 101 97 114 115 32 116 104 101 32 115 99 114 101 101 110 32 97 110 100 32 114 101 115 101 116 115 32 116 104 101 32 109 105 99 114 111 10 13 32 32 32 72 101 108 112 58 32 84 104 105 115 32 109 101 115 115 97 103 101 44 32 108 105 115 116 115 32 99 111 109 109 97 110 100 115 10 13 0 ]
+[a 17C 32 32 32 32 84 104 101 32 115 117 109 32 111 102 32 97 108 108 32 97 114 103 117 109 101 110 116 115 32 101 110 116 101 114 101 100 32 105 115 32 37 102 10 13 0 ]
+[a 7C 32 32 32 32 82 67 55 32 67 108 101 97 114 101 100 10 13 0 ]
+[a 20C 32 32 32 32 84 104 101 32 112 114 111 100 117 99 116 32 111 102 32 97 108 108 32 97 114 103 117 109 101 110 116 115 32 101 110 116 101 114 101 100 32 105 115 32 37 100 10 13 0 ]
+[a 12C 32 32 32 32 70 105 114 115 116 32 116 104 105 110 103 39 115 32 102 105 114 115 116 44 32 73 39 109 32 116 97 108 107 105 110 103 32 116 111 32 121 111 117 32 116 104 114 111 117 103 104 32 97 32 85 65 82 84 32 116 111 32 85 83 66 32 98 114 105 100 103 101 44 32 112 114 111 100 117 99 101 100 32 98 121 32 70 84 68 73 10 13 0 ]
+[a 13C 32 32 32 32 84 104 101 32 112 97 114 116 32 110 117 109 98 101 114 32 105 115 32 70 84 50 51 50 10 13 0 ]
+[a 11C 32 32 32 32 87 101 108 108 44 32 73 39 118 101 32 103 111 116 32 97 32 108 111 116 32 116 111 32 116 97 108 107 32 97 98 111 117 116 46 46 46 10 13 0 ]
+[a 2C 10 13 0 ]
+[a 4C 10 13 0 ]
+[a 6C 10 13 0 ]
+[a 8C 10 13 0 ]
+[a 10C 10 13 0 ]
+[a 15C 10 13 0 ]
+[a 16C 10 13 0 ]
+[a 18C 10 13 0 ]
+[a 19C 10 13 0 ]
+[a 21C 10 13 0 ]
+[a 26C 10 13 0 ]
+[a 28C 10 13 0 ]
+[a 14C 32 32 32 32 73 39 109 32 97 32 80 73 67 49 56 70 54 55 75 52 48 44 32 97 110 100 32 73 32 100 111 110 39 116 32 107 110 111 119 32 109 121 32 114 101 118 105 115 105 111 110 32 110 117 109 98 101 114 32 121 101 116 13 10 0 ]

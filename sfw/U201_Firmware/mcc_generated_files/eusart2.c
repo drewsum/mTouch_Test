@@ -69,6 +69,8 @@ volatile uint8_t eusart2RxTail = 0;
 volatile uint8_t eusart2RxBuffer[EUSART2_RX_BUFFER_SIZE];
 volatile uint8_t eusart2RxCount;
 
+volatile uint8_t eusart2RxStringReady = 0;
+
 /**
   Section: EUSART2 APIs
 */
@@ -215,6 +217,42 @@ void EUSART2_Receive_ISR(void)
         eusart2RxHead = 0;
     }
     eusart2RxCount++;
+    
+    if((RC2REG == (int) '\n') || (RC2REG == (int) '\r')) {
+        
+        eusart2RxStringReady = 1;
+        
+        // Clear the stuff leftover in receive register, probably not needed
+        RC2REG = 0;
+        
+    }
+    
+    else {
+        
+        eusart2RxStringReady = 0;
+        
+    }
+   
+    // If we've received a backspace
+    if((RC2REG == (int) '\b')) {
+     
+        eusart2RxBuffer[eusart2RxHead] = '\0';
+        eusart2RxHead--;
+ 
+        // Erase the "backspaced" character
+        printf("\033[K");
+        
+        if(eusart2RxHead != eusart2RxTail) {
+        
+            eusart2RxBuffer[eusart2RxHead] = '\0';
+            eusart2RxHead--;
+
+        }
+        
+        RC2REG = 0;
+        
+    }
+    
 }
 
 void EUSART2_SetTxInterruptHandler(void (* interruptHandler)(void)){

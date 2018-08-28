@@ -1,32 +1,22 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [v F17383 `(v ~T0 @X0 0 tf ]
 [v F17386 `(v ~T0 @X0 0 tf ]
-[p mainexit ]
-"70 mcc_generated_files/mcc.h
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"40496 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
-[s S1981 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1981 . INT0EDG INT1EDG INT2EDG INT3EDG . IPEN PEIE_GIEL GIE_GIEH ]
-"40506
-[s S1982 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1982 . . PEIE GIE ]
-"40511
-[s S1983 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1983 . . GIEL GIEH ]
-"40495
-[u S1980 `S1981 1 `S1982 1 `S1983 1 ]
-[n S1980 . . . . ]
-"40517
-[v _INTCONbits `VS1980 ~T0 @X0 0 e@4082 ]
-"114 ring_buffer_interface.h
-[v _printResetMessage `(v ~T0 @X0 0 ef ]
-"43 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h
-[v ___nop `(v ~T0 @X0 0 ef ]
-[p i ___nop ]
+"80 mcc_generated_files/eusart2.h
+[v _eusart2RxCount `Vuc ~T0 @X0 0 e ]
+"281
+[v _EUSART2_Read `(uc ~T0 @X0 0 ef ]
+"47 ring_buffer_interface.h
+[v _eusart2RxTail `Vuc ~T0 @X0 0 e ]
+"46
+[v _eusart2RxHead `Vuc ~T0 @X0 0 e ]
+"56 C:\Program Files (x86)\Microchip\xc8\v1.45\include\string.h
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "40 ring_buffer_interface.h
 [v _eusart2RxStringReady `Vuc ~T0 @X0 0 e ]
-"84
-[v _ringBufferPull `(v ~T0 @X0 0 ef ]
+"47 ring_buffer_LUT.h
+[v _ringBufferLUT `(v ~T0 @X0 0 ef1`*uc ]
+"195 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -16186,56 +16176,115 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_interface.h: 51: char line[64];
 [; ;ring_buffer_interface.h: 84: void ringBufferPull(void);
 [; ;ring_buffer_interface.h: 114: void printResetMessage(void);
-[; ;main.c: 53: extern volatile uint8_t eusart2RxStringReady;
-[v $root$_main `(v ~T0 @X0 0 e ]
-"58 main.c
-[v _main `(v ~T0 @X0 1 ef ]
-"59
+"8 ring_buffer_interface.c
+[v _ringBufferPull `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 58: void main(void)
-[; ;main.c: 59: {
-[e :U _main ]
+[; ;ring_buffer_interface.c: 8: void ringBufferPull(void) {
+[e :U _ringBufferPull ]
 [f ]
-[; ;main.c: 61: SYSTEM_Initialize();
-"61
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 68: (INTCONbits.GIEH = 1);
-"68
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;main.c: 71: (INTCONbits.GIEL = 1);
-"71
-[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-[; ;main.c: 74: printResetMessage();
-"74
-[e ( _printResetMessage ..  ]
-[; ;main.c: 76: while (1)
-"76
-[e :U 2018 ]
-[; ;main.c: 77: {
-"77
+"10
+[v _charNumber `i ~T0 @X0 1 a ]
+[; ;ring_buffer_interface.c: 10: int charNumber = eusart2RxCount;
+[e = _charNumber -> _eusart2RxCount `i ]
+[; ;ring_buffer_interface.c: 13: for (int index = 0; index < 64; index++) {
+"13
 {
-[; ;main.c: 79: __nop();
-"79
-[e ( ___nop ..  ]
-[; ;main.c: 82: if (eusart2RxStringReady) {
-"82
-[e $ ! != -> _eusart2RxStringReady `i -> -> -> 0 `i `Vuc `i 2020  ]
-{
-[; ;main.c: 84: ringBufferPull();
-"84
-[e ( _ringBufferPull ..  ]
-"86
-}
-[e :U 2020 ]
-"87
-}
-[e :U 2017 ]
-"76
+[v _index `i ~T0 @X0 1 a ]
+[e = _index -> 0 `i ]
+[e $ < _index -> 64 `i 2017  ]
 [e $U 2018  ]
-[e :U 2019 ]
-[; ;main.c: 86: }
-[; ;main.c: 87: }
-[; ;main.c: 88: }
-"88
+[e :U 2017 ]
+{
+[; ;ring_buffer_interface.c: 15: line[index] = '\0';
+"15
+[e = *U + &U _line * -> -> _index `ui `ux -> -> # *U &U _line `ui `ux -> -> 0 `ui `uc ]
+"17
+}
+"13
+[e ++ _index -> 1 `i ]
+[e $ < _index -> 64 `i 2017  ]
+[e :U 2018 ]
+"17
+}
+[; ;ring_buffer_interface.c: 17: }
+[; ;ring_buffer_interface.c: 20: for(int index = 0; index < charNumber; index++){
+"20
+{
+[v _index `i ~T0 @X0 1 a ]
+[e = _index -> 0 `i ]
+[e $U 2023  ]
+[e :U 2020 ]
+{
+[; ;ring_buffer_interface.c: 22: line[index] = EUSART2_Read();
+"22
+[e = *U + &U _line * -> -> _index `ui `ux -> -> # *U &U _line `ui `ux ( _EUSART2_Read ..  ]
+"24
+}
+"20
+[e ++ _index -> 1 `i ]
+[e :U 2023 ]
+[e $ < _index _charNumber 2020  ]
+[e :U 2021 ]
+"24
+}
+[; ;ring_buffer_interface.c: 24: }
+[; ;ring_buffer_interface.c: 27: eusart2RxTail = eusart2RxHead;
+"27
+[e = _eusart2RxTail _eusart2RxHead ]
+[; ;ring_buffer_interface.c: 30: while((line[strlen(line) - 1] == (int) '\n') ||
+[; ;ring_buffer_interface.c: 31: (line[strlen(line) - 1] == (int) '\r')) {
+"31
+[e $U 2024  ]
+[e :U 2025 ]
+{
+[; ;ring_buffer_interface.c: 34: line[strlen(line) - 1] = '\0';
+"34
+[e = *U + &U _line * -> - ( _strlen (1 -> &U _line `*Cuc -> -> 1 `i `ui `ux -> -> # *U &U _line `ui `ux -> -> 0 `ui `uc ]
+"36
+}
+[e :U 2024 ]
+"30
+[e $ || == -> *U + &U _line * -> - ( _strlen (1 -> &U _line `*Cuc -> -> 1 `i `ui `ux -> -> # *U &U _line `ui `ux `i -> -> 10 `ui `i == -> *U + &U _line * -> - ( _strlen (1 -> &U _line `*Cuc -> -> 1 `i `ui `ux -> -> # *U &U _line `ui `ux `i -> -> 13 `ui `i 2025  ]
+[e :U 2026 ]
+[; ;ring_buffer_interface.c: 36: }
+[; ;ring_buffer_interface.c: 40: eusart2RxStringReady = 0;
+"40
+[e = _eusart2RxStringReady -> -> 0 `i `uc ]
+[; ;ring_buffer_interface.c: 43: ringBufferLUT(line);
+"43
+[e ( _ringBufferLUT (1 &U _line ]
+[; ;ring_buffer_interface.c: 46: }
+"46
 [e :UE 2016 ]
 }
+"50
+[v _printResetMessage `(v ~T0 @X0 1 ef ]
+{
+[; ;ring_buffer_interface.c: 50: void printResetMessage(void) {
+[e :U _printResetMessage ]
+[f ]
+[; ;ring_buffer_interface.c: 53: printf("\033[2J");
+"53
+[e ( _printf :s 1C ]
+[; ;ring_buffer_interface.c: 56: printf("\033[H");
+"56
+[e ( _printf :s 2C ]
+[; ;ring_buffer_interface.c: 59: printf("PIC18F67K40 mTouch Demo\n\r"
+[; ;ring_buffer_interface.c: 60: "Baud rate: 115200 kbps\n\r"
+[; ;ring_buffer_interface.c: 61: "No parity, 8 bits, no flow control, 1 stop bit\n\r"
+[; ;ring_buffer_interface.c: 62: "Commands are case sensitive\n\r"
+[; ;ring_buffer_interface.c: 63: "Enter a command, or Help for list of commands\n\r");
+"63
+[e ( _printf :s 3C ]
+[; ;ring_buffer_interface.c: 67: printf("\n\r");
+"67
+[e ( _printf :s 4C ]
+[; ;ring_buffer_interface.c: 69: }
+"69
+[e :UE 2027 ]
+}
+[p f _printf 8388608 ]
+[a 1C 27 91 50 74 0 ]
+[a 2C 27 91 72 0 ]
+[a 3C 80 73 67 49 56 70 54 55 75 52 48 32 109 84 111 117 99 104 32 68 101 109 111 10 13 66 97 117 100 32 114 97 116 101 58 32 49 49 53 50 48 48 32 107 98 112 115 10 13 78 111 32 112 97 114 105 116 121 44 32 56 32 98 105 116 115 44 32 110 111 32 102 108 111 119 32 99 111 110 116 114 111 108 44 32 49 32 115 116 111 112 32 98 105 116 10 13 67 111 109 109 97 110 100 115 32 97 114 101 32 99 97 115 101 32 115 101 110 115 105 116 105 118 101 10 13 69 110 116 101 114 32 97 32 99 111 109 109 97 110 100 44 32 111 114 32 72 101 108 112 32 102 111 114 32 108 105 115 116 32 111 102 32 99 111 109 109 97 110 100 115 10 13 0 ]
+[a 4C 10 13 0 ]

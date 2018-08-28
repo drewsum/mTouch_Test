@@ -42,6 +42,15 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <xc.h>
+
+#include "ring_buffer_interface.h"
+
+// Buffer ready to dump flag
+extern volatile uint8_t eusart2RxStringReady;
 
 /*
                          Main application
@@ -61,10 +70,20 @@ void main(void)
     // Enable low priority global interrupts.
     INTERRUPT_GlobalInterruptLowEnable();
 
+    // Tell terminal we're booted
+    printResetMessage();
+    
     while (1)
     {
         // Add your application code
         NOP();
+        
+        // Check to see if we've got received instructions waiting
+        if (eusart2RxStringReady) {
+               
+            ringBufferPull();
+            
+        }
     }
 }
 /**
