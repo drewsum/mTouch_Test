@@ -75,12 +75,9 @@ void main(void)
     
     while (1)
     {
-
         // Check to see if we've got received instructions waiting from USB debug
         if (eusart2RxStringReady) {
-               
             ringBufferPull();
-            
         }
         
         // Service the mTouch API
@@ -92,6 +89,29 @@ void main(void)
         LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
         LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
         LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
+        
+        // print button state if pressed
+        if(MTOUCH_Button_State_Get(Button0)) {
+            printf("    Button0 pressed\n\r");
+        }
+        
+        if(MTOUCH_Button_State_Get(Button1)) {
+            printf("    Button1 pressed\n\r");   
+        }
+        
+        if(MTOUCH_Button_State_Get(Button2)) {
+            printf("    Button2 pressed\n\r");
+        }
+        
+        if(MTOUCH_Button_State_Get(Button3)) {
+            printf("    Button3 pressed\n\r");
+        }
+        
+        if(MTOUCH_Button_State_Get(Button4)) {
+            printf("    Button4 pressed\n\r");
+        }
+        
+        
         
         // Twiddle thumbs
         NOP();
