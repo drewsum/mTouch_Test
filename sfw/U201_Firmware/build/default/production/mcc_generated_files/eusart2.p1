@@ -16175,11 +16175,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _eusart2RxCount `Vuc ~T0 @X0 1 e ]
 [; ;eusart2.c: 70: volatile uint8_t eusart2RxCount;
 "72
-[v _eusart2RxStringReady `Vuc ~T0 @X0 1 e ]
+[v _eusart2RxStringReady `Vb ~T0 @X0 1 e ]
 [i _eusart2RxStringReady
--> -> 0 `i `uc
+-> 0 `i
 ]
-[; ;eusart2.c: 72: volatile uint8_t eusart2RxStringReady = 0;
+[; ;eusart2.c: 72: volatile bit eusart2RxStringReady = 0;
 "77
 [v _EUSART2_Initialize `(v ~T0 @X0 1 ef ]
 "78
@@ -16561,7 +16561,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;eusart2.c: 223: eusart2RxStringReady = 1;
 "223
-[e = _eusart2RxStringReady -> -> 1 `i `uc ]
+[e = _eusart2RxStringReady -> -> 1 `i `b ]
 [; ;eusart2.c: 226: RC2REG = 0;
 "226
 [e = _RC2REG -> -> 0 `i `uc ]
@@ -16575,7 +16575,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;eusart2.c: 232: eusart2RxStringReady = 0;
 "232
-[e = _eusart2RxStringReady -> -> 0 `i `uc ]
+[e = _eusart2RxStringReady -> -> 0 `i `b ]
 "234
 }
 [e :U 2038 ]

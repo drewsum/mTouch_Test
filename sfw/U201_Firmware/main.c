@@ -50,7 +50,22 @@
 #include "ring_buffer_interface.h"
 
 // Buffer ready to dump flag
-extern volatile uint8_t eusart2RxStringReady;
+extern volatile bit eusart2RxStringReady;
+
+// Bit that states if USB is active or not
+volatile bit USB_DTR = 0;
+
+void DTR_Callback(void) {
+ 
+    if(PORTBbits.RB2 == 1) {
+        USB_DTR = 1;
+    }
+    
+    else {
+        USB_DTR = 0;
+    }
+    
+}
 
 /*
                          Main application
@@ -60,10 +75,9 @@ void main(void)
     // Initialize the device
     SYSTEM_Initialize();
 
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
-    // Use the following macros to:
-
+    // Set callback for USB_DTR
+    IOCBF2_SetInterruptHandler(DTR_Callback);
+    
     // Enable high priority global interrupts
     INTERRUPT_GlobalInterruptHighEnable();
 

@@ -17,7 +17,9 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-    
+   
+// Bit that states if USB is active or not
+extern volatile bit USB_DTR;
     
 /*
   @Summary

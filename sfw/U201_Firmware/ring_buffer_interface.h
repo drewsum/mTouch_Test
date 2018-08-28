@@ -37,7 +37,7 @@ extern "C" {
 #endif
 
 // Buffer ready to dump flag
-extern volatile uint8_t eusart2RxStringReady;
+extern volatile bit eusart2RxStringReady;
 
 // Number of bytes received
 extern volatile uint8_t eusart2RxCount;
@@ -45,6 +45,9 @@ extern volatile uint8_t eusart2RxCount;
 // Receive head and tail
 extern volatile uint8_t eusart2RxHead;
 extern volatile uint8_t eusart2RxTail;
+
+// Bit that states if USB is active or not
+extern volatile bit USB_DTR;
 
 // Received String from EUSART rx ring buffer, this is what we actually compare
 // against command strings
@@ -169,7 +172,7 @@ void printResetMessage(void);
  
  * ALSO ADD THIS AFTER THE INSTANTIATIONS OF THE RECEIVE RING BUFFER VARIABLES:
     
-   volatile uint8_t eusart1RxStringReady = 0;
+   volatile bit eusart1RxStringReady = 0;
   
  * THIS FLAG TELLS MAIN TO RUN THE ABOVE FUNCTION, ringBufferPull, and is set
  * when the user types "return" in terminal

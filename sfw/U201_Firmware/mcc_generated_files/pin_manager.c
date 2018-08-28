@@ -53,6 +53,8 @@
 
 
 
+void (*IOCBF2_InterruptHandler)(void);
+
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -71,20 +73,20 @@ void PIN_MANAGER_Initialize(void)
     /**
     TRISx registers
     */
-    TRISE = 0xFF;
-    TRISF = 0xE0;
-    TRISA = 0xFF;
-    TRISG = 0x5F;
-    TRISB = 0xFF;
-    TRISH = 0x0F;
-    TRISC = 0xFF;
-    TRISD = 0xFF;
+    TRISE = 0x7C;
+    TRISF = 0x00;
+    TRISA = 0x00;
+    TRISG = 0x40;
+    TRISB = 0x04;
+    TRISH = 0x00;
+    TRISC = 0x00;
+    TRISD = 0x00;
 
     /**
     ANSELx registers
     */
     ANSELD = 0xFF;
-    ANSELB = 0xFF;
+    ANSELB = 0xFB;
     ANSELE = 0xFF;
     ANSELG = 0xBF;
     ANSELF = 0xE0;
@@ -115,10 +117,23 @@ void PIN_MANAGER_Initialize(void)
     ODCOND = 0x00;
 
 
+    /**
+    IOCx registers 
+    */
+    //interrupt on change for group IOCBF - flag
+    IOCBFbits.IOCBF2 = 0;
+    //interrupt on change for group IOCBN - negative
+    IOCBNbits.IOCBN2 = 1;
+    //interrupt on change for group IOCBP - positive
+    IOCBPbits.IOCBP2 = 1;
 
 
 
+    // register default IOC callback functions at runtime; use these methods to register a custom function
+    IOCBF2_SetInterruptHandler(IOCBF2_DefaultInterruptHandler);
    
+    // Enable IOCI interrupt 
+    PIE0bits.IOCIE = 1; 
     
 	
     RG7PPS = 0x0E;   //RG7->EUSART2:TX2;    
@@ -127,6 +142,41 @@ void PIN_MANAGER_Initialize(void)
   
 void PIN_MANAGER_IOC(void)
 {   
+	// interrupt on change for pin IOCBF2
+    if(IOCBFbits.IOCBF2 == 1)
+    {
+        IOCBF2_ISR();  
+    }	
+}
+
+/**
+   IOCBF2 Interrupt Service Routine
+*/
+void IOCBF2_ISR(void) {
+
+    // Add custom IOCBF2 code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(IOCBF2_InterruptHandler)
+    {
+        IOCBF2_InterruptHandler();
+    }
+    IOCBFbits.IOCBF2 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for IOCBF2 at application runtime
+*/
+void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCBF2_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for IOCBF2
+*/
+void IOCBF2_DefaultInterruptHandler(void){
+    // add your IOCBF2 interrupt custom code
+    // or set custom function using IOCBF2_SetInterruptHandler()
 }
 
 /**

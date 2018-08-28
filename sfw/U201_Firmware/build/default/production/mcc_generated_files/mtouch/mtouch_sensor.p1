@@ -1,10 +1,10 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F17708 `(v ~T0 @X0 0 tf ]
-[v F17711 `(v ~T0 @X0 0 tf ]
+[v F17719 `(v ~T0 @X0 0 tf ]
+[v F17722 `(v ~T0 @X0 0 tf ]
 "147 mcc_generated_files/mtouch/mtouch_sensor.c
 [c E17513 0 1 2 3 4 .. ]
 [n E17513 mtouch_sensor_names Sensor_ANE2 Sensor_ANE3 Sensor_ANE4 Sensor_ANE5 Sensor_ANE6  ]
-[v F17814 `(v ~T0 @X0 0 tf1`E17513 ]
+[v F17825 `(v ~T0 @X0 0 tf1`E17513 ]
 "138
 [v _Sensor_DefaultCallback `(v ~T0 @X0 0 sf1`E17513 ]
 "95
@@ -33,9 +33,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _MTOUCH_Sensor_Enable `(v ~T0 @X0 0 ef1`E17513 ]
 "100
 [v _MTOUCH_Sensor_Calibrate `(v ~T0 @X0 0 ef1`E17513 ]
-[v F17778 `(v ~T0 @X0 1 tf1`*S2016 ]
+[v F17789 `(v ~T0 @X0 1 tf1`*S2016 ]
 "121 mcc_generated_files/mtouch/mtouch_sensor.c
-[v _Sensor_Sampled_Reset `TF17778 ~T0 @X0 0 s ]
+[v _Sensor_Sampled_Reset `TF17789 ~T0 @X0 0 s ]
 "29837 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
 [s S1379 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1379 . TRISE0 TRISE1 TRISE2 TRISE3 TRISE4 TRISE5 TRISE6 TRISE7 ]
@@ -106,16 +106,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Sensor_FrequencyHopping `(v ~T0 @X0 0 sf ]
 "42489 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
 [v _GIE `Vb ~T0 @X0 0 e@32663 ]
-[v F17789 `(uc ~T0 @X0 1 tf1`*S2016 ]
+[v F17800 `(uc ~T0 @X0 1 tf1`*S2016 ]
 "127 mcc_generated_files/mtouch/mtouch_sensor.c
-[v _Sensor_isCalibrated `TF17789 ~T0 @X0 0 s ]
+[v _Sensor_isCalibrated `TF17800 ~T0 @X0 0 s ]
 "26412 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
 [v _ADACQ `Vuc ~T0 @X0 0 e@3932 ]
 "26534
 [v _ADPRE `Vuc ~T0 @X0 0 e@3934 ]
-[v F17798 `(uc ~T0 @X0 1 tf1`*S2016 ]
+[v F17809 `(uc ~T0 @X0 1 tf1`*S2016 ]
 "130 mcc_generated_files/mtouch/mtouch_sensor.c
-[v _Sensor_isCalibratingAcqTime `TF17798 ~T0 @X0 0 s ]
+[v _Sensor_isCalibratingAcqTime `TF17809 ~T0 @X0 0 s ]
 "26604 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
 [v _ADPCH `Vuc ~T0 @X0 0 e@3935 ]
 "27108
@@ -147,30 +147,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ADACC `Vus ~T0 @X0 0 e@3952 ]
 "27983
 [v _ADFLTR `Vus ~T0 @X0 0 e@3954 ]
-[v F17795 `(v ~T0 @X0 1 tf1`*S2016 ]
+[v F17806 `(v ~T0 @X0 1 tf1`*S2016 ]
 "129 mcc_generated_files/mtouch/mtouch_sensor.c
-[v _Sensor_setCalibratAcqTime `TF17795 ~T0 @X0 0 s ]
+[v _Sensor_setCalibratAcqTime `TF17806 ~T0 @X0 0 s ]
 "92 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdlib.h
 [v _abs `(i ~T0 @X0 0 ef1`i ]
-[v F17792 `(v ~T0 @X0 1 tf1`*S2016 ]
+[v F17803 `(v ~T0 @X0 1 tf1`*S2016 ]
 "128 mcc_generated_files/mtouch/mtouch_sensor.c
-[v _Sensor_setCalibrated `TF17792 ~T0 @X0 0 s ]
+[v _Sensor_setCalibrated `TF17803 ~T0 @X0 0 s ]
 "125
 [v _Sensor_isEnabled `(uc ~T0 @X0 0 sf1`*S2016 ]
-[v F17781 `(v ~T0 @X0 1 tf1`*S2016 ]
+[v F17792 `(v ~T0 @X0 1 tf1`*S2016 ]
 "122
-[v _Sensor_setActive `TF17781 ~T0 @X0 0 s ]
-[v F17784 `(v ~T0 @X0 1 tf1`*S2016 ]
+[v _Sensor_setActive `TF17792 ~T0 @X0 0 s ]
+[v F17795 `(v ~T0 @X0 1 tf1`*S2016 ]
 "123
-[v _Sensor_setInactive `TF17784 ~T0 @X0 0 s ]
+[v _Sensor_setInactive `TF17795 ~T0 @X0 0 s ]
 "136
 [v _Sensor_RawSample_Update `(v ~T0 @X0 0 sf1`*S2016 ]
-[v F17769 `(v ~T0 @X0 1 tf ]
+[v F17780 `(v ~T0 @X0 1 tf ]
 "117
-[v _MTOUCH_Sensor_Service `TF17769 ~T0 @X0 0 s ]
-[v F17775 `(v ~T0 @X0 1 tf1`*S2016 ]
+[v _MTOUCH_Sensor_Service `TF17780 ~T0 @X0 0 s ]
+[v F17786 `(v ~T0 @X0 1 tf1`*S2016 ]
 "120
-[v _Sensor_setSampled `TF17775 ~T0 @X0 0 s ]
+[v _Sensor_setSampled `TF17786 ~T0 @X0 0 s ]
 "140
 [v _medianFilter `(ui ~T0 @X0 0 sf1`E17513 ]
 "134
@@ -16312,8 +16312,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mtouch_sensor.h: 103: uint8_t MTOUCH_Sensor_AcquisitionTime_Get(enum mtouch_sensor_names sensor);
 [; ;mtouch_sensor.h: 104: uint8_t MTOUCH_Sensor_PreChargeTime_Get (enum mtouch_sensor_names sensor);
 [; ;mtouch_sensor.h: 106: void MTOUCH_Sensor_NotifyInterruptOccurred(void);
-[; ;pin_manager.h: 256: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 268: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1160: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 1172: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1185: void IOCBF2_ISR(void);
+[; ;pin_manager.h: 1208: void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;pin_manager.h: 1232: extern void (*IOCBF2_InterruptHandler)(void);
+[; ;pin_manager.h: 1256: void IOCBF2_DefaultInterruptHandler(void);
 [; ;interrupt_manager.h: 133: void INTERRUPT_Initialize(void);
 [; ;interrupt_manager.h: 145: void interrupt INTERRUPT_InterruptManager(void);
 [; ;mtouch_button.h: 50: enum mtouch_button_names
@@ -16385,10 +16389,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/mtouch/../eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F17708 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F17719 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F17711 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F17722 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -16445,14 +16449,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mtouch_sensor.c: 138: static void Sensor_DefaultCallback (enum mtouch_sensor_names sensor);
 [; ;mtouch_sensor.c: 140: static mtouch_sensor_packetsample_t medianFilter(enum mtouch_sensor_names sensor);
 "147 mcc_generated_files/mtouch/mtouch_sensor.c
-[v _callback_sampled `*F17814 ~T0 @X0 1 s ]
+[v _callback_sampled `*F17825 ~T0 @X0 1 s ]
 [i _callback_sampled
 &U _Sensor_DefaultCallback
 ]
 [; ;mtouch_sensor.c: 147: static void (*callback_sampled)(enum mtouch_sensor_names sensor) = Sensor_DefaultCallback;
-[v F17818 `ui ~T0 @X0 -> 3 `i t ]
+[v F17829 `ui ~T0 @X0 -> 3 `i t ]
 "154
-[v _sensor_medianBuffer `F17818 ~T0 @X0 -> 5 `i s ]
+[v _sensor_medianBuffer `F17829 ~T0 @X0 -> 5 `i s ]
 [; ;mtouch_sensor.c: 154: static mtouch_sensor_packetsample_t sensor_medianBuffer[5][3];
 "155
 [v _packet_sample `ui ~T0 @X0 -> 5 `i s ]
@@ -17350,7 +17354,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 2073 ]
 }
 "488
-[v _MTOUCH_Sensor_Service `TF17769 ~T0 @X0 1 s ]
+[v _MTOUCH_Sensor_Service `TF17780 ~T0 @X0 1 s ]
 "489
 {
 [; ;mtouch_sensor.c: 488: static inline void MTOUCH_Sensor_Service(void)
@@ -17550,17 +17554,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 "560
 [f ]
 "561
-[v F17933 `uc ~T0 @X0 -> 5 `i s bufferIndex ]
+[v F17944 `uc ~T0 @X0 -> 5 `i s bufferIndex ]
 [; ;mtouch_sensor.c: 561: static uint8_t bufferIndex[5];
 [; ;mtouch_sensor.c: 563: sensor_medianBuffer[sensor][bufferIndex[sensor]++] = packet_sample[sensor];
 "563
-[e = *U + &U *U + &U _sensor_medianBuffer * -> _sensor `ux -> * -> # *U &U *U &U _sensor_medianBuffer `ui -> -> 3 `i `ui `ux * -> ++ *U + &U F17933 * -> _sensor `ux -> -> # *U &U F17933 `ui `ux -> -> 1 `i `uc `ux -> -> # *U &U *U + &U _sensor_medianBuffer * -> _sensor `ux -> * -> # *U &U *U &U _sensor_medianBuffer `ui -> -> 3 `i `ui `ux `ui `ux *U + &U _packet_sample * -> _sensor `ux -> -> # *U &U _packet_sample `ui `ux ]
+[e = *U + &U *U + &U _sensor_medianBuffer * -> _sensor `ux -> * -> # *U &U *U &U _sensor_medianBuffer `ui -> -> 3 `i `ui `ux * -> ++ *U + &U F17944 * -> _sensor `ux -> -> # *U &U F17944 `ui `ux -> -> 1 `i `uc `ux -> -> # *U &U *U + &U _sensor_medianBuffer * -> _sensor `ux -> * -> # *U &U *U &U _sensor_medianBuffer `ui -> -> 3 `i `ui `ux `ui `ux *U + &U _packet_sample * -> _sensor `ux -> -> # *U &U _packet_sample `ui `ux ]
 [; ;mtouch_sensor.c: 565: if(bufferIndex[sensor]>=3)
 "565
-[e $ ! >= -> *U + &U F17933 * -> _sensor `ux -> -> # *U &U F17933 `ui `ux `i -> 3 `i 2088  ]
+[e $ ! >= -> *U + &U F17944 * -> _sensor `ux -> -> # *U &U F17944 `ui `ux `i -> 3 `i 2088  ]
 [; ;mtouch_sensor.c: 566: bufferIndex[sensor] = 0;
 "566
-[e = *U + &U F17933 * -> _sensor `ux -> -> # *U &U F17933 `ui `ux -> -> 0 `i `uc ]
+[e = *U + &U F17944 * -> _sensor `ux -> -> # *U &U F17944 `ui `ux -> -> 0 `i `uc ]
 [e :U 2088 ]
 [; ;mtouch_sensor.c: 568: if(sensor_medianBuffer[sensor][0]>=sensor_medianBuffer[sensor][1])
 "568
@@ -17716,8 +17720,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _variance `ui ~T0 @X0 1 a ]
 [v _maxVariance `ui ~T0 @X0 1 a ]
 "623
-[v F17943 `uc ~T0 @X0 -> 3 `i s varianceOverLimitCounter ]
-[i F17943
+[v F17954 `uc ~T0 @X0 -> 3 `i s varianceOverLimitCounter ]
+[i F17954
 :U ..
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -17769,7 +17773,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;mtouch_sensor.c: 636: if(++varianceOverLimitCounter[freq_index] >= (uint8_t)6)
 "636
-[e $ ! >= -> =+ *U + &U F17943 * -> _freq_index `ux -> -> # *U &U F17943 `ui `ux -> -> 1 `i `uc `i -> -> -> 6 `i `uc `i 2109  ]
+[e $ ! >= -> =+ *U + &U F17954 * -> _freq_index `ux -> -> # *U &U F17954 `ui `ux -> -> 1 `i `uc `i -> -> -> 6 `i `uc `i 2109  ]
 [; ;mtouch_sensor.c: 637: {
 "637
 {
@@ -17876,7 +17880,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;mtouch_sensor.c: 670: varianceOverLimitCounter[frequencyIndex] = 0;
 "670
-[e = *U + &U F17943 * -> _frequencyIndex `ux -> -> # *U &U F17943 `ui `ux -> -> 0 `i `uc ]
+[e = *U + &U F17954 * -> _frequencyIndex `ux -> -> # *U &U F17954 `ui `ux -> -> 0 `i `uc ]
 "671
 }
 "668
@@ -17903,10 +17907,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 [; ;mtouch_sensor.c: 677: if(varianceOverLimitCounter[freq_index] > 0)
 "677
-[e $ ! > -> *U + &U F17943 * -> _freq_index `ux -> -> # *U &U F17943 `ui `ux `i -> 0 `i 2127  ]
+[e $ ! > -> *U + &U F17954 * -> _freq_index `ux -> -> # *U &U F17954 `ui `ux `i -> 0 `i 2127  ]
 [; ;mtouch_sensor.c: 678: varianceOverLimitCounter[freq_index]--;
 "678
-[e -- *U + &U F17943 * -> _freq_index `ux -> -> # *U &U F17943 `ui `ux -> -> 1 `i `uc ]
+[e -- *U + &U F17954 * -> _freq_index `ux -> -> # *U &U F17954 `ui `ux -> -> 1 `i `uc ]
 [e :U 2127 ]
 "679
 }
@@ -17943,9 +17947,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mtouch_sensor.c: 692: void MTOUCH_Sensor_SetSampledCallback(void (*callback)(enum mtouch_sensor_names sensor))
 [; ;mtouch_sensor.c: 693: {
 [e :U _MTOUCH_Sensor_SetSampledCallback ]
-[v F17956 `(v ~T0 @X0 0 tf1`E17513 ]
+[v F17967 `(v ~T0 @X0 0 tf1`E17513 ]
 "692
-[v _callback `*F17956 ~T0 @X0 1 r1 ]
+[v _callback `*F17967 ~T0 @X0 1 r1 ]
 "693
 [f ]
 [; ;mtouch_sensor.c: 694: callback_sampled = callback;
@@ -18062,7 +18066,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 2138 ]
 }
 "740
-[v _Sensor_setActive `TF17781 ~T0 @X0 1 s ]
+[v _Sensor_setActive `TF17792 ~T0 @X0 1 s ]
 "741
 {
 [; ;mtouch_sensor.c: 740: static inline void Sensor_setActive(mtouch_sensor_t* sensor)
@@ -18080,7 +18084,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 2141 ]
 }
 "745
-[v _Sensor_setInactive `TF17784 ~T0 @X0 1 s ]
+[v _Sensor_setInactive `TF17795 ~T0 @X0 1 s ]
 "746
 {
 [; ;mtouch_sensor.c: 745: static inline void Sensor_setInactive(mtouch_sensor_t* sensor)
@@ -18184,7 +18188,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 2147 ]
 }
 "780
-[v _Sensor_isCalibrated `TF17789 ~T0 @X0 1 s ]
+[v _Sensor_isCalibrated `TF17800 ~T0 @X0 1 s ]
 "781
 {
 [; ;mtouch_sensor.c: 780: static inline bool Sensor_isCalibrated(mtouch_sensor_t* sensor)
@@ -18203,7 +18207,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 2150 ]
 }
 "785
-[v _Sensor_setCalibrated `TF17792 ~T0 @X0 1 s ]
+[v _Sensor_setCalibrated `TF17803 ~T0 @X0 1 s ]
 "786
 {
 [; ;mtouch_sensor.c: 785: static inline void Sensor_setCalibrated(mtouch_sensor_t* sensor)
@@ -18224,7 +18228,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 2151 ]
 }
 "791
-[v _Sensor_setCalibratAcqTime `TF17795 ~T0 @X0 1 s ]
+[v _Sensor_setCalibratAcqTime `TF17806 ~T0 @X0 1 s ]
 "792
 {
 [; ;mtouch_sensor.c: 791: static inline void Sensor_setCalibratAcqTime(mtouch_sensor_t* sensor)
@@ -18248,7 +18252,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 2152 ]
 }
 "798
-[v _Sensor_isCalibratingAcqTime `TF17798 ~T0 @X0 1 s ]
+[v _Sensor_isCalibratingAcqTime `TF17809 ~T0 @X0 1 s ]
 "799
 {
 [; ;mtouch_sensor.c: 798: static inline bool Sensor_isCalibratingAcqTime(mtouch_sensor_t* sensor)
@@ -18335,7 +18339,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 2158 ]
 }
 "828
-[v _Sensor_Sampled_Reset `TF17778 ~T0 @X0 1 s ]
+[v _Sensor_Sampled_Reset `TF17789 ~T0 @X0 1 s ]
 "829
 {
 [; ;mtouch_sensor.c: 828: static inline void Sensor_Sampled_Reset(mtouch_sensor_t* sensor)
@@ -18353,7 +18357,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 2161 ]
 }
 "833
-[v _Sensor_setSampled `TF17775 ~T0 @X0 1 s ]
+[v _Sensor_setSampled `TF17786 ~T0 @X0 1 s ]
 "834
 {
 [; ;mtouch_sensor.c: 833: static inline void Sensor_setSampled(mtouch_sensor_t* sensor)

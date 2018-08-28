@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F17505 `(v ~T0 @X0 0 tf ]
-[v F17508 `(v ~T0 @X0 0 tf ]
+[v F17516 `(v ~T0 @X0 0 tf ]
+[v F17519 `(v ~T0 @X0 0 tf ]
 "86 mcc_generated_files/mtouch/mtouch_sensor.h
 [v _MTOUCH_Sensor_InitializeAll `(v ~T0 @X0 0 ef ]
 "126 mcc_generated_files/mtouch/mtouch_button.h
@@ -16115,8 +16115,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mtouch.h: 53: bool MTOUCH_Service_Mainloop (void);
 [; ;mtouch.h: 54: void MTOUCH_Tick (void);
 [; ;mtouch.h: 55: bool MTOUCH_Service_isInProgress (void);
-[; ;pin_manager.h: 256: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 268: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1160: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 1172: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1185: void IOCBF2_ISR(void);
+[; ;pin_manager.h: 1208: void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;pin_manager.h: 1232: extern void (*IOCBF2_InterruptHandler)(void);
+[; ;pin_manager.h: 1256: void IOCBF2_DefaultInterruptHandler(void);
 [; ;interrupt_manager.h: 133: void INTERRUPT_Initialize(void);
 [; ;interrupt_manager.h: 145: void interrupt INTERRUPT_InterruptManager(void);
 [; ;__size_t.h: 4: typedef unsigned size_t;
@@ -16152,10 +16156,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/mtouch/../eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F17505 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F17516 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F17508 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F17519 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);

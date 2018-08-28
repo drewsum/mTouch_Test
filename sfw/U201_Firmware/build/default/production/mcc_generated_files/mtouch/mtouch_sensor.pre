@@ -21472,11 +21472,23 @@ uint8_t MTOUCH_Sensor_PreChargeTime_Get (enum mtouch_sensor_names sensor);
 
 void MTOUCH_Sensor_NotifyInterruptOccurred(void);
 
-# 256 "mcc_generated_files/mtouch/../pin_manager.h"
+# 1160 "mcc_generated_files/mtouch/../pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 268
+# 1172
 void PIN_MANAGER_IOC(void);
+
+# 1185
+void IOCBF2_ISR(void);
+
+# 1208
+void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 1232
+extern void (*IOCBF2_InterruptHandler)(void);
+
+# 1256
+void IOCBF2_DefaultInterruptHandler(void);
 
 # 133 "mcc_generated_files/mtouch/../interrupt_manager.h"
 void INTERRUPT_Initialize(void);

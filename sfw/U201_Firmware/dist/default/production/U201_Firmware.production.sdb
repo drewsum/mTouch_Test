@@ -3,22 +3,6 @@
 [d edition pro ]
 [d chip 18LF67K40 ]
 [d frameptr 4065 ]
-"87 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
-[e E17378 mtouch_button_names `uc
-Button0 0
-Button1 1
-Button2 2
-Button3 3
-Button4 4
-]
-"54 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_LUT.c
-[e E17489 mtouch_button_names `uc
-Button0 0
-Button1 1
-Button2 2
-Button3 3
-Button4 4
-]
 "147 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
 [e E17513 mtouch_sensor_names `uc
 Sensor_ANE2 0
@@ -65,6 +49,22 @@ HYST_12_5_PERCENT 3
 HYST_6_25_PERCENT 4
 HYST_MAX 5
 ]
+"101 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
+[e E17389 mtouch_button_names `uc
+Button0 0
+Button1 1
+Button2 2
+Button3 3
+Button4 4
+]
+"56 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_LUT.c
+[e E17500 mtouch_button_names `uc
+Button0 0
+Button1 1
+Button2 2
+Button3 3
+Button4 4
+]
 "4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
 [v i2_abs abs `(i  1 e 2 0 ]
@@ -104,6 +104,8 @@ HYST_MAX 5
 "15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "58 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
+[v _DTR_Callback DTR_Callback `(v  1 e 1 0 ]
+"73
 [v _main main `(v  1 e 1 0 ]
 "77 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 [v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
@@ -125,7 +127,7 @@ HYST_MAX 5
 [v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
 "52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
-"71
+"74
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `II(v  1 e 1 0 ]
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -251,42 +253,60 @@ HYST_MAX 5
 [v _Sensor_setSampled Sensor_setSampled `T(v  1 s 1 Sensor_setSampled ]
 "838
 [v _MTOUCH_Sensor_isSampling MTOUCH_Sensor_isSampling `(uc  1 e 1 0 ]
-"57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/pin_manager.c
+"59 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"143
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"155
+[v _IOCBF2_ISR IOCBF2_ISR `(v  1 e 1 0 ]
+"170
+[v _IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
+"177
+[v _IOCBF2_DefaultInterruptHandler IOCBF2_DefaultInterruptHandler `(v  1 e 1 0 ]
 "8 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
 [v _ringBufferPull ringBufferPull `(v  1 e 1 0 ]
 "50
 [v _printResetMessage printResetMessage `(v  1 e 1 0 ]
 "9 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_LUT.c
 [v _ringBufferLUT ringBufferLUT `(v  1 e 1 0 ]
-[s S60 . 1 `uc 1 PIN 1 0 :3:0 
+[s S151 . 1 `uc 1 PIN 1 0 :3:0 
 `uc 1 PORT 1 0 :3:3 
 ]
 "2774 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
-[s S63 . 1 `uc 1 RX2PPS 1 0 :6:0 
+[s S154 . 1 `uc 1 RX2PPS 1 0 :6:0 
 ]
-[s S65 . 1 `uc 1 RX2PPS0 1 0 :1:0 
+[s S156 . 1 `uc 1 RX2PPS0 1 0 :1:0 
 `uc 1 RX2PPS1 1 0 :1:1 
 `uc 1 RX2PPS2 1 0 :1:2 
 `uc 1 RX2PPS3 1 0 :1:3 
 `uc 1 RX2PPS4 1 0 :1:4 
 `uc 1 RX2PPS5 1 0 :1:5 
 ]
-[u S72 . 1 `S60 1 . 1 0 `S63 1 . 1 0 `S65 1 . 1 0 ]
-[v _RX2PPSbits RX2PPSbits `VES72  1 e 1 @3601 ]
-[s S165 . 1 `uc 1 ADIP 1 0 :1:0 
+[u S163 . 1 `S151 1 . 1 0 `S154 1 . 1 0 `S156 1 . 1 0 ]
+[v _RX2PPSbits RX2PPSbits `VES163  1 e 1 @3601 ]
+[s S323 . 1 `uc 1 INT0IP 1 0 :1:0 
+`uc 1 INT1IP 1 0 :1:1 
+`uc 1 INT2IP 1 0 :1:2 
+`uc 1 INT3IP 1 0 :1:3 
+`uc 1 IOCIP 1 0 :1:4 
+`uc 1 TMR0IP 1 0 :1:5 
+]
+"4007
+[u S330 . 1 `S323 1 . 1 0 ]
+[v _IPR0bits IPR0bits `VES330  1 e 1 @3615 ]
+[s S301 . 1 `uc 1 ADIP 1 0 :1:0 
 `uc 1 ADTIP 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIP 1 0 :1:6 
 `uc 1 OSCFIP 1 0 :1:7 
 ]
 "4060
-[s S171 . 1 `uc 1 . 1 0 :7:0 
+[s S307 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIP 1 0 :1:7 
 ]
-[u S174 . 1 `S165 1 . 1 0 `S171 1 . 1 0 ]
-[v _IPR1bits IPR1bits `VES174  1 e 1 @3616 ]
-[s S133 . 1 `uc 1 SSP1IP 1 0 :1:0 
+[u S310 . 1 `S301 1 . 1 0 `S307 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES310  1 e 1 @3616 ]
+[s S269 . 1 `uc 1 SSP1IP 1 0 :1:0 
 `uc 1 BCL1IP 1 0 :1:1 
 `uc 1 SSP2IP 1 0 :1:2 
 `uc 1 BCL2IP 1 0 :1:3 
@@ -296,26 +316,36 @@ HYST_MAX 5
 `uc 1 RC2IP 1 0 :1:7 
 ]
 "4167
-[s S142 . 1 `uc 1 . 1 0 :1:0 
+[s S278 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIP 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIP 1 0 :1:4 
 ]
-[u S147 . 1 `S133 1 . 1 0 `S142 1 . 1 0 ]
-[v _IPR3bits IPR3bits `VES147  1 e 1 @3618 ]
-[s S264 . 1 `uc 1 ADIE 1 0 :1:0 
+[u S283 . 1 `S269 1 . 1 0 `S278 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES283  1 e 1 @3618 ]
+[s S133 . 1 `uc 1 INT0IE 1 0 :1:0 
+`uc 1 INT1IE 1 0 :1:1 
+`uc 1 INT2IE 1 0 :1:2 
+`uc 1 INT3IE 1 0 :1:3 
+`uc 1 IOCIE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+"4555
+[u S140 . 1 `S133 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES140  1 e 1 @3625 ]
+[s S417 . 1 `uc 1 ADIE 1 0 :1:0 
 `uc 1 ADTIE 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIE 1 0 :1:6 
 `uc 1 OSCFIE 1 0 :1:7 
 ]
 "4608
-[s S270 . 1 `uc 1 . 1 0 :7:0 
+[s S423 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIE 1 0 :1:7 
 ]
-[u S273 . 1 `S264 1 . 1 0 `S270 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES273  1 e 1 @3626 ]
-[s S187 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S426 . 1 `S417 1 . 1 0 `S423 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES426  1 e 1 @3626 ]
+[s S340 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -325,32 +355,42 @@ HYST_MAX 5
 `uc 1 RC2IE 1 0 :1:7 
 ]
 "4722
-[s S196 . 1 `uc 1 RXB0IE 1 0 :1:0 
+[s S349 . 1 `uc 1 RXB0IE 1 0 :1:0 
 `uc 1 RXB1IE 1 0 :1:1 
 `uc 1 TXB0IE 1 0 :1:2 
 `uc 1 TXB1IE 1 0 :1:3 
 `uc 1 TXB2IE 1 0 :1:4 
 ]
-[s S202 . 1 `uc 1 . 1 0 :1:0 
+[s S355 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIE 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIE 1 0 :1:4 
 ]
-[u S207 . 1 `S187 1 . 1 0 `S196 1 . 1 0 `S202 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES207  1 e 1 @3628 ]
-[s S286 . 1 `uc 1 ADIF 1 0 :1:0 
+[u S360 . 1 `S340 1 . 1 0 `S349 1 . 1 0 `S355 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES360  1 e 1 @3628 ]
+[s S475 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 INT1IF 1 0 :1:1 
+`uc 1 INT2IF 1 0 :1:2 
+`uc 1 INT3IF 1 0 :1:3 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"5100
+[u S482 . 1 `S475 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES482  1 e 1 @3635 ]
+[s S439 . 1 `uc 1 ADIF 1 0 :1:0 
 `uc 1 ADTIF 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIF 1 0 :1:6 
 `uc 1 OSCFIF 1 0 :1:7 
 ]
 "5153
-[s S292 . 1 `uc 1 . 1 0 :7:0 
+[s S445 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S295 . 1 `S286 1 . 1 0 `S292 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES295  1 e 1 @3636 ]
-[s S232 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S448 . 1 `S439 1 . 1 0 `S445 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES448  1 e 1 @3636 ]
+[s S385 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -360,13 +400,13 @@ HYST_MAX 5
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "5260
-[s S241 . 1 `uc 1 . 1 0 :1:0 
+[s S394 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIF 1 0 :1:4 
 ]
-[u S246 . 1 `S232 1 . 1 0 `S241 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES246  1 e 1 @3638 ]
+[u S399 . 1 `S385 1 . 1 0 `S394 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES399  1 e 1 @3638 ]
 "6184
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @3651 ]
 "6324
@@ -397,6 +437,42 @@ HYST_MAX 5
 [v _WPUA WPUA `VEuc  1 e 1 @3729 ]
 "10220
 [v _ANSELA ANSELA `VEuc  1 e 1 @3730 ]
+[s S60 . 1 `uc 1 IOCBF0 1 0 :1:0 
+`uc 1 IOCBF1 1 0 :1:1 
+`uc 1 IOCBF2 1 0 :1:2 
+`uc 1 IOCBF3 1 0 :1:3 
+`uc 1 IOCBF4 1 0 :1:4 
+`uc 1 IOCBF5 1 0 :1:5 
+`uc 1 IOCBF6 1 0 :1:6 
+`uc 1 IOCBF7 1 0 :1:7 
+]
+"10299
+[u S69 . 1 `S60 1 . 1 0 ]
+[v _IOCBFbits IOCBFbits `VES69  1 e 1 @3731 ]
+[s S81 . 1 `uc 1 IOCBN0 1 0 :1:0 
+`uc 1 IOCBN1 1 0 :1:1 
+`uc 1 IOCBN2 1 0 :1:2 
+`uc 1 IOCBN3 1 0 :1:3 
+`uc 1 IOCBN4 1 0 :1:4 
+`uc 1 IOCBN5 1 0 :1:5 
+`uc 1 IOCBN6 1 0 :1:6 
+`uc 1 IOCBN7 1 0 :1:7 
+]
+"10361
+[u S90 . 1 `S81 1 . 1 0 ]
+[v _IOCBNbits IOCBNbits `VES90  1 e 1 @3732 ]
+[s S102 . 1 `uc 1 IOCBP0 1 0 :1:0 
+`uc 1 IOCBP1 1 0 :1:1 
+`uc 1 IOCBP2 1 0 :1:2 
+`uc 1 IOCBP3 1 0 :1:3 
+`uc 1 IOCBP4 1 0 :1:4 
+`uc 1 IOCBP5 1 0 :1:5 
+`uc 1 IOCBP6 1 0 :1:6 
+`uc 1 IOCBP7 1 0 :1:7 
+]
+"10423
+[u S111 . 1 `S102 1 . 1 0 ]
+[v _IOCBPbits IOCBPbits `VES111  1 e 1 @3733 ]
 "10592
 [v _ODCONB ODCONB `VEuc  1 e 1 @3736 ]
 "10654
@@ -417,7 +493,7 @@ HYST_MAX 5
 [v _ODCONE ODCONE `VEuc  1 e 1 @3757 ]
 "11894
 [v _WPUE WPUE `VEuc  1 e 1 @3758 ]
-[s S868 . 1 `uc 1 WPUE0 1 0 :1:0 
+[s S863 . 1 `uc 1 WPUE0 1 0 :1:0 
 `uc 1 WPUE1 1 0 :1:1 
 `uc 1 WPUE2 1 0 :1:2 
 `uc 1 WPUE3 1 0 :1:3 
@@ -427,11 +503,11 @@ HYST_MAX 5
 `uc 1 WPUE7 1 0 :1:7 
 ]
 "11911
-[u S877 . 1 `S868 1 . 1 0 ]
-[v _WPUEbits WPUEbits `VES877  1 e 1 @3758 ]
+[u S872 . 1 `S863 1 . 1 0 ]
+[v _WPUEbits WPUEbits `VES872  1 e 1 @3758 ]
 "11956
 [v _ANSELE ANSELE `VEuc  1 e 1 @3759 ]
-[s S889 . 1 `uc 1 ANSELE0 1 0 :1:0 
+[s S884 . 1 `uc 1 ANSELE0 1 0 :1:0 
 `uc 1 ANSELE1 1 0 :1:1 
 `uc 1 ANSELE2 1 0 :1:2 
 `uc 1 ANSELE3 1 0 :1:3 
@@ -441,8 +517,8 @@ HYST_MAX 5
 `uc 1 ANSELE7 1 0 :1:7 
 ]
 "11973
-[u S898 . 1 `S889 1 . 1 0 ]
-[v _ANSELEbits ANSELEbits `VES898  1 e 1 @3759 ]
+[u S893 . 1 `S884 1 . 1 0 ]
+[v _ANSELEbits ANSELEbits `VES893  1 e 1 @3759 ]
 "12142
 [v _ODCONF ODCONF `VEuc  1 e 1 @3762 ]
 "12204
@@ -469,7 +545,7 @@ HYST_MAX 5
 [v _SP2BRGH SP2BRGH `VEuc  1 e 1 @3828 ]
 "17011
 [v _RC2STA RC2STA `VEuc  1 e 1 @3829 ]
-[s S456 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S650 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -479,19 +555,19 @@ HYST_MAX 5
 `uc 1 SPEN 1 0 :1:7 
 ]
 "17044
-[s S465 . 1 `uc 1 . 1 0 :6:0 
+[s S659 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_92 1 0 :1:6 
 ]
-[s S468 . 1 `uc 1 . 1 0 :6:0 
+[s S662 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC92 1 0 :1:6 
 ]
-[s S471 . 1 `uc 1 RCD82 1 0 :1:0 
+[s S665 . 1 `uc 1 RCD82 1 0 :1:0 
 ]
-[u S473 . 1 `S456 1 . 1 0 `S465 1 . 1 0 `S468 1 . 1 0 `S471 1 . 1 0 ]
-[v _RC2STAbits RC2STAbits `VES473  1 e 1 @3829 ]
+[u S667 . 1 `S650 1 . 1 0 `S659 1 . 1 0 `S662 1 . 1 0 `S665 1 . 1 0 ]
+[v _RC2STAbits RC2STAbits `VES667  1 e 1 @3829 ]
 "17185
 [v _TX2STA TX2STA `VEuc  1 e 1 @3830 ]
-[s S422 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S616 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -501,13 +577,13 @@ HYST_MAX 5
 `uc 1 CSRC 1 0 :1:7 
 ]
 "17214
-[s S431 . 1 `uc 1 . 1 0 :6:0 
+[s S625 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_92 1 0 :1:6 
 ]
-[s S434 . 1 `uc 1 TXD82 1 0 :1:0 
+[s S628 . 1 `uc 1 TXD82 1 0 :1:0 
 ]
-[u S436 . 1 `S422 1 . 1 0 `S431 1 . 1 0 `S434 1 . 1 0 ]
-[v _TX2STAbits TX2STAbits `VES436  1 e 1 @3830 ]
+[u S630 . 1 `S616 1 . 1 0 `S625 1 . 1 0 `S628 1 . 1 0 ]
+[v _TX2STAbits TX2STAbits `VES630  1 e 1 @3830 ]
 "17341
 [v _BAUD2CON BAUD2CON `VEuc  1 e 1 @3831 ]
 "26126
@@ -530,7 +606,7 @@ HYST_MAX 5
 [v _ADPCH ADPCH `VEuc  1 e 1 @3935 ]
 "26662
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @3936 ]
-[s S1032 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S1027 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -540,21 +616,21 @@ HYST_MAX 5
 `uc 1 ADON 1 0 :1:7 
 ]
 "26697
-[s S1041 . 1 `uc 1 GO 1 0 :1:0 
+[s S1036 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 ]
-[s S1045 . 1 `uc 1 DONE 1 0 :1:0 
+[s S1040 . 1 `uc 1 DONE 1 0 :1:0 
 ]
-[s S1047 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+[s S1042 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
 ]
-[s S1049 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S1044 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 ]
-[s S1051 . 1 `uc 1 . 1 0 :7:0 
+[s S1046 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 ADCAL 1 0 :1:7 
 ]
-[u S1054 . 1 `S1032 1 . 1 0 `S1041 1 . 1 0 `S1045 1 . 1 0 `S1047 1 . 1 0 `S1049 1 . 1 0 `S1051 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES1054  1 e 1 @3936 ]
+[u S1049 . 1 `S1027 1 . 1 0 `S1036 1 . 1 0 `S1040 1 . 1 0 `S1042 1 . 1 0 `S1044 1 . 1 0 `S1046 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1049  1 e 1 @3936 ]
 "27108
 [v _ADRPT ADRPT `VEuc  1 e 1 @3942 ]
 "27255
@@ -585,7 +661,7 @@ HYST_MAX 5
 [v _LATE LATE `VEuc  1 e 1 @3965 ]
 "29037
 [v _LATF LATF `VEuc  1 e 1 @3966 ]
-[s S625 . 1 `uc 1 LATF0 1 0 :1:0 
+[s S1862 . 1 `uc 1 LATF0 1 0 :1:0 
 `uc 1 LATF1 1 0 :1:1 
 `uc 1 LATF2 1 0 :1:2 
 `uc 1 LATF3 1 0 :1:3 
@@ -595,7 +671,7 @@ HYST_MAX 5
 `uc 1 LATF7 1 0 :1:7 
 ]
 "29064
-[s S634 . 1 `uc 1 LF0 1 0 :1:0 
+[s S1871 . 1 `uc 1 LF0 1 0 :1:0 
 `uc 1 LF1 1 0 :1:1 
 `uc 1 LF2 1 0 :1:2 
 `uc 1 LF3 1 0 :1:3 
@@ -604,8 +680,8 @@ HYST_MAX 5
 `uc 1 LF6 1 0 :1:6 
 `uc 1 LF7 1 0 :1:7 
 ]
-[u S643 . 1 `S625 1 . 1 0 `S634 1 . 1 0 ]
-[v _LATFbits LATFbits `VES643  1 e 1 @3966 ]
+[u S1880 . 1 `S1862 1 . 1 0 `S1871 1 . 1 0 ]
+[v _LATFbits LATFbits `VES1880  1 e 1 @3966 ]
 "29149
 [v _LATG LATG `VEuc  1 e 1 @3967 ]
 "29238
@@ -620,7 +696,7 @@ HYST_MAX 5
 [v _TRISD TRISD `VEuc  1 e 1 @3972 ]
 "29826
 [v _TRISE TRISE `VEuc  1 e 1 @3973 ]
-[s S926 . 1 `uc 1 TRISE0 1 0 :1:0 
+[s S921 . 1 `uc 1 TRISE0 1 0 :1:0 
 `uc 1 TRISE1 1 0 :1:1 
 `uc 1 TRISE2 1 0 :1:2 
 `uc 1 TRISE3 1 0 :1:3 
@@ -630,15 +706,30 @@ HYST_MAX 5
 `uc 1 TRISE7 1 0 :1:7 
 ]
 "29848
-[u S935 . 1 `S926 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES935  1 e 1 @3973 ]
+[u S930 . 1 `S921 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES930  1 e 1 @3973 ]
 "29948
 [v _TRISF TRISF `VEuc  1 e 1 @3974 ]
 "30010
 [v _TRISG TRISG `VEuc  1 e 1 @3975 ]
 "30067
 [v _TRISH TRISH `VEuc  1 e 1 @3976 ]
-[s S94 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S1799 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"30210
+[s S1808 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S1811 . 1 `S1799 1 . 1 0 `S1808 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES1811  1 e 1 @3978 ]
+[s S230 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 INT3EDG 1 0 :1:3 
@@ -648,25 +739,27 @@ HYST_MAX 5
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "40517
-[s S103 . 1 `uc 1 . 1 0 :6:0 
+[s S239 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "40517
-[s S107 . 1 `uc 1 . 1 0 :6:0 
+[s S243 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "40517
-[u S111 . 1 `S94 1 . 1 0 `S103 1 . 1 0 `S107 1 . 1 0 ]
+[u S247 . 1 `S230 1 . 1 0 `S239 1 . 1 0 `S243 1 . 1 0 ]
 "40517
 "40517
-[v _INTCONbits INTCONbits `VES111  1 e 1 @4082 ]
+[v _INTCONbits INTCONbits `VES247  1 e 1 @4082 ]
 "42489
 "42489
 [v _GIE GIE `VEb  1 e 0 @32663 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
 [v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
+"56 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
+[v _USB_DTR USB_DTR `VEb  1 e 0 0 ]
 "62 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 [v _eusart2TxHead eusart2TxHead `VEuc  1 e 1 0 ]
 "63
@@ -684,18 +777,18 @@ HYST_MAX 5
 "70
 [v _eusart2RxCount eusart2RxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusart2RxStringReady eusart2RxStringReady `VEuc  1 e 1 0 ]
+[v _eusart2RxStringReady eusart2RxStringReady `VEb  1 e 0 0 ]
 "86 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.h
 [v _EUSART2_TxDefaultInterruptHandler EUSART2_TxDefaultInterruptHandler `*.38(v  1 e 3 0 ]
 "87
 [v _EUSART2_RxDefaultInterruptHandler EUSART2_RxDefaultInterruptHandler `*.38(v  1 e 3 0 ]
 "47 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch.c
 [v _mtouch_time_toScan mtouch_time_toScan `uc  1 s 1 mtouch_time_toScan ]
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
 "85 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
-[v _mtouch_button_init mtouch_button_init `C[5]S1496  1 e 80 0 ]
+[v _mtouch_button_init mtouch_button_init `C[5]S1491  1 e 80 0 ]
 "129
-[v _mtouch_button mtouch_button `[5]S1496  1 s 80 mtouch_button ]
+[v _mtouch_button mtouch_button `[5]S1491  1 s 80 mtouch_button ]
 "156
 [v _callback_pressed callback_pressed `*.38(v  1 s 3 callback_pressed ]
 "157
@@ -720,28 +813,30 @@ HYST_MAX 5
 [v _freq_hop freq_hop `[3]uc  1 s 3 freq_hop ]
 "167
 [v _sample_delay sample_delay `uc  1 s 1 sample_delay ]
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
 "174
-[v _mtouch_sensor_init mtouch_sensor_init `C[5]S847  1 e 45 0 ]
+[v _mtouch_sensor_init mtouch_sensor_init `C[5]S842  1 e 45 0 ]
 "182
-[v _mtouch_sensor mtouch_sensor `[5]S847  1 s 45 mtouch_sensor ]
-"51 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.h
+[v _mtouch_sensor mtouch_sensor `[5]S842  1 s 45 mtouch_sensor ]
+"56 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/pin_manager.c
+[v _IOCBF2_InterruptHandler IOCBF2_InterruptHandler `*.38(v  1 e 3 0 ]
+"54 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.h
 [v _line line `[64]uc  1 e 64 0 ]
-"58 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
+"73 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"120
+"134
 } 0
 "8 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
 [v _ringBufferPull ringBufferPull `(v  1 e 1 0 ]
 {
 "20
-[v ringBufferPull@index_724 index `i  1 a 2 32 ]
+[v ringBufferPull@index_1970 index `i  1 a 2 32 ]
 "13
 [v ringBufferPull@index index `i  1 a 2 34 ]
 "10
@@ -761,7 +856,7 @@ HYST_MAX 5
 [v _ringBufferLUT ringBufferLUT `(v  1 e 1 0 ]
 {
 [v ringBufferLUT@line line `*.39uc  1 p 2 24 ]
-"125
+"128
 } 0
 "33 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
@@ -792,7 +887,7 @@ HYST_MAX 5
 "50 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
 [v _printResetMessage printResetMessage `(v  1 e 1 0 ]
 {
-"72
+"76
 } 0
 "464 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -860,10 +955,16 @@ HYST_MAX 5
 {
 "88
 } 0
-"57 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/pin_manager.c
+"59 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"126
+"141
+} 0
+"170
+[v _IOCBF2_SetInterruptHandler IOCBF2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCBF2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"172
 } 0
 "60 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -934,7 +1035,7 @@ HYST_MAX 5
 "52 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
-"69
+"72
 } 0
 "77 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 [v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
@@ -980,33 +1081,33 @@ HYST_MAX 5
 "324
 [v _Button_Tick_helper Button_Tick_helper `(v  1 s 1 Button_Tick_helper ]
 {
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
-[v Button_Tick_helper@button button `*.39S1496  1 p 2 0 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Tick_helper@button button `*.39S1491  1 p 2 0 ]
 "335
 } 0
 "811 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
 [v _MTOUCH_Sensor_Sampled_ResetAll MTOUCH_Sensor_Sampled_ResetAll `(v  1 e 1 0 ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
 "813
-[v MTOUCH_Sensor_Sampled_ResetAll@sensor sensor `*.39S847  1 a 2 2 ]
+[v MTOUCH_Sensor_Sampled_ResetAll@sensor sensor `*.39S842  1 a 2 2 ]
 "818
 } 0
 "828
 [v _Sensor_Sampled_Reset Sensor_Sampled_Reset `T(v  1 s 1 Sensor_Sampled_Reset ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v Sensor_Sampled_Reset@sensor sensor `*.39S847  1 p 2 0 ]
+[v Sensor_Sampled_Reset@sensor sensor `*.39S842  1 p 2 0 ]
 "831
 } 0
 "302
@@ -1019,14 +1120,14 @@ HYST_MAX 5
 "339
 [v _Sensor_scheduleNextScan Sensor_scheduleNextScan `(v  1 s 1 Sensor_scheduleNextScan ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
 "341
-[v Sensor_scheduleNextScan@sensor sensor `*.39S847  1 a 2 6 ]
+[v Sensor_scheduleNextScan@sensor sensor `*.39S842  1 a 2 6 ]
 "342
 [v Sensor_scheduleNextScan@skipScan skipScan `uc  1 a 1 5 ]
 "343
@@ -1036,25 +1137,25 @@ HYST_MAX 5
 "798
 [v _Sensor_isCalibratingAcqTime Sensor_isCalibratingAcqTime `T(uc  1 s 1 Sensor_isCalibratingAcqTime ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v Sensor_isCalibratingAcqTime@sensor sensor `*.39S847  1 p 2 0 ]
+[v Sensor_isCalibratingAcqTime@sensor sensor `*.39S842  1 p 2 0 ]
 "802
 } 0
 "780
 [v _Sensor_isCalibrated Sensor_isCalibrated `T(uc  1 s 1 Sensor_isCalibrated ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v Sensor_isCalibrated@sensor sensor `*.39S847  1 p 2 0 ]
+[v Sensor_isCalibrated@sensor sensor `*.39S842  1 p 2 0 ]
 "783
 } 0
 "222
@@ -1091,14 +1192,14 @@ HYST_MAX 5
 [v _Sensor_postAcquisitionProcess Sensor_postAcquisitionProcess `(v  1 s 1 Sensor_postAcquisitionProcess ]
 {
 [v Sensor_postAcquisitionProcess@name name `E17513  1 a 1 wreg ]
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
 "452
-[v Sensor_postAcquisitionProcess@sensor sensor `*.39S847  1 a 2 18 ]
+[v Sensor_postAcquisitionProcess@sensor sensor `*.39S842  1 a 2 18 ]
 "450
 [v Sensor_postAcquisitionProcess@name name `E17513  1 a 1 wreg ]
 "452
@@ -1108,37 +1209,37 @@ HYST_MAX 5
 "745
 [v _Sensor_setInactive Sensor_setInactive `T(v  1 s 1 Sensor_setInactive ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v Sensor_setInactive@sensor sensor `*.39S847  1 p 2 0 ]
+[v Sensor_setInactive@sensor sensor `*.39S842  1 p 2 0 ]
 "748
 } 0
 "740
 [v _Sensor_setActive Sensor_setActive `T(v  1 s 1 Sensor_setActive ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v Sensor_setActive@sensor sensor `*.39S847  1 p 2 0 ]
+[v Sensor_setActive@sensor sensor `*.39S842  1 p 2 0 ]
 "743
 } 0
 "725
 [v _Sensor_isEnabled Sensor_isEnabled `(uc  1 s 1 Sensor_isEnabled ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v Sensor_isEnabled@sensor sensor `*.39S847  1 p 2 0 ]
+[v Sensor_isEnabled@sensor sensor `*.39S842  1 p 2 0 ]
 "731
 } 0
 "542
@@ -1146,14 +1247,14 @@ HYST_MAX 5
 {
 "544
 [v Sensor_RawSample_Update@result result `ui  1 a 2 9 ]
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
 "542
-[v Sensor_RawSample_Update@sensor sensor `*.39S847  1 p 2 7 ]
+[v Sensor_RawSample_Update@sensor sensor `*.39S842  1 p 2 7 ]
 "556
 } 0
 "559
@@ -1210,9 +1311,9 @@ HYST_MAX 5
 [v _Button_Service Button_Service `(v  1 s 1 Button_Service ]
 {
 [v Button_Service@name name `E17454  1 a 1 wreg ]
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
 "221
-[v Button_Service@button button `*.39S1496  1 a 2 18 ]
+[v Button_Service@button button `*.39S1491  1 a 2 18 ]
 "219
 [v Button_Service@name name `E17454  1 a 1 wreg ]
 "221
@@ -1240,31 +1341,31 @@ HYST_MAX 5
 "256 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_button.c
 [v _Button_State_NotPressed Button_State_NotPressed `(v  1 s 1 Button_State_NotPressed ]
 {
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
-[v Button_State_NotPressed@button button `*.39S1496  1 p 2 9 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_State_NotPressed@button button `*.39S1491  1 p 2 9 ]
 "290
 } 0
 "236
 [v _Button_State_Initializing Button_State_Initializing `(v  1 s 1 Button_State_Initializing ]
 {
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
-[v Button_State_Initializing@button button `*.39S1496  1 p 2 9 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_State_Initializing@button button `*.39S1491  1 p 2 9 ]
 "255
 } 0
 "292
 [v _Button_State_Pressed Button_State_Pressed `(v  1 s 1 Button_State_Pressed ]
 {
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
-[v Button_State_Pressed@button button `*.39S1496  1 p 2 9 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_State_Pressed@button button `*.39S1491  1 p 2 9 ]
 "309
 } 0
 "178
 [v _MTOUCH_Button_Initialize MTOUCH_Button_Initialize `(v  1 e 1 0 ]
 {
 [v MTOUCH_Button_Initialize@name name `E17454  1 a 1 wreg ]
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
 "180
-[v MTOUCH_Button_Initialize@button button `*.39S1496  1 a 2 2 ]
+[v MTOUCH_Button_Initialize@button button `*.39S1491  1 a 2 2 ]
 "178
 [v MTOUCH_Button_Initialize@name name `E17454  1 a 1 wreg ]
 "180
@@ -1287,29 +1388,29 @@ HYST_MAX 5
 "484
 [v _Button_Baseline_Update Button_Baseline_Update `(v  1 s 1 Button_Baseline_Update ]
 {
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
-[v Button_Baseline_Update@button button `*.39S1496  1 p 2 0 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Baseline_Update@button button `*.39S1491  1 p 2 0 ]
 "498
 } 0
 "478
 [v _Button_Baseline_Initialize Button_Baseline_Initialize `(v  1 s 1 Button_Baseline_Initialize ]
 {
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
-[v Button_Baseline_Initialize@button button `*.39S1496  1 p 2 3 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Baseline_Initialize@button button `*.39S1491  1 p 2 3 ]
 "482
 } 0
 "451
 [v _Button_Reading_Update Button_Reading_Update `(v  1 s 1 Button_Reading_Update ]
 {
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
-[v Button_Reading_Update@button button `*.39S1496  1 p 2 7 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Reading_Update@button button `*.39S1491  1 p 2 7 ]
 "463
 } 0
 "465
 [v _Button_Reading_Update_Helper Button_Reading_Update_Helper `(v  1 s 1 Button_Reading_Update_Helper ]
 {
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
-[v Button_Reading_Update_Helper@button button `*.39S1496  1 p 2 3 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[v Button_Reading_Update_Helper@button button `*.39S1491  1 p 2 3 ]
 "476
 } 0
 "532 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
@@ -1326,9 +1427,9 @@ HYST_MAX 5
 {
 "404
 [v Button_Deviation_Update@deviation deviation `l  1 a 4 8 ]
-[s S1496 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
+[s S1491 . 16 `CE17454 1 name 1 0 `CE17394 1 sensor 1 1 `E17516 1 state 1 2 `ui 1 reading 2 3 `ul 1 baseline 4 5 `c 1 deviation 1 9 `ui 1 counter 2 10 `ui 1 baseline_count 2 12 `c 1 threshold 1 14 `uc 1 scaling 1 15 ]
 "402
-[v Button_Deviation_Update@button button `*.39S1496  1 p 2 0 ]
+[v Button_Deviation_Update@button button `*.39S1491  1 p 2 0 ]
 "422
 } 0
 "513
@@ -1340,10 +1441,30 @@ HYST_MAX 5
 [v MTOUCH_Button_State_Get@name name `E17454  1 a 1 0 ]
 "519
 } 0
-"71 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/interrupt_manager.c
+"74 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `II(v  1 e 1 0 ]
 {
-"90
+"97
+} 0
+"143 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+{
+"150
+} 0
+"155
+[v _IOCBF2_ISR IOCBF2_ISR `(v  1 e 1 0 ]
+{
+"165
+} 0
+"58 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
+[v _DTR_Callback DTR_Callback `(v  1 e 1 0 ]
+{
+"68
+} 0
+"177 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/pin_manager.c
+[v _IOCBF2_DefaultInterruptHandler IOCBF2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"180
 } 0
 "183 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/eusart2.c
 [v _EUSART2_Transmit_ISR EUSART2_Transmit_ISR `(v  1 e 1 0 ]
@@ -1408,26 +1529,26 @@ HYST_MAX 5
 "488
 [v _MTOUCH_Sensor_Service MTOUCH_Sensor_Service `T(v  1 s 1 MTOUCH_Sensor_Service ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
 "490
-[v MTOUCH_Sensor_Service@sensor sensor `*.39S847  1 a 2 13 ]
+[v MTOUCH_Sensor_Service@sensor sensor `*.39S842  1 a 2 13 ]
 "513
 } 0
 "339
 [v i2_Sensor_scheduleNextScan Sensor_scheduleNextScan `(v  1 s 1 i2_Sensor_scheduleNextScan ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v i2Sensor_scheduleNextScan@sensor Sensor_scheduleNextScan `*.39S847  1 a 2 6 ]
+[v i2Sensor_scheduleNextScan@sensor Sensor_scheduleNextScan `*.39S842  1 a 2 6 ]
 [v i2Sensor_scheduleNextScan@skipScan Sensor_scheduleNextScan `uc  1 a 1 5 ]
 [v i2Sensor_scheduleNextScan@state Sensor_scheduleNextScan `uc  1 a 1 4 ]
 "393
@@ -1435,13 +1556,13 @@ HYST_MAX 5
 "780
 [v i2_Sensor_isCalibrated Sensor_isCalibrated `T(uc  1 s 1 i2_Sensor_isCalibrated ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v i2Sensor_isCalibrated@sensor sensor `*.39S847  1 p 2 0 ]
+[v i2Sensor_isCalibrated@sensor sensor `*.39S842  1 p 2 0 ]
 "783
 } 0
 "222
@@ -1474,13 +1595,13 @@ HYST_MAX 5
 "833
 [v _Sensor_setSampled Sensor_setSampled `T(v  1 s 1 Sensor_setSampled ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v Sensor_setSampled@sensor sensor `*.39S847  1 p 2 0 ]
+[v Sensor_setSampled@sensor sensor `*.39S842  1 p 2 0 ]
 "836
 } 0
 "402
@@ -1488,14 +1609,14 @@ HYST_MAX 5
 {
 "404
 [v Sensor_autoCalibration@name name `E17513  1 a 1 12 ]
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
 "402
-[v Sensor_autoCalibration@sensor sensor `*.39S847  1 p 2 4 ]
+[v Sensor_autoCalibration@sensor sensor `*.39S842  1 p 2 4 ]
 "441
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\abs.c
@@ -1507,36 +1628,36 @@ HYST_MAX 5
 "798 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\mcc_generated_files/mtouch/mtouch_sensor.c
 [v i2_Sensor_isCalibratingAcqTime Sensor_isCalibratingAcqTime `T(uc  1 s 1 i2_Sensor_isCalibratingAcqTime ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v i2Sensor_isCalibratingAcqTime@sensor sensor `*.39S847  1 p 2 0 ]
+[v i2Sensor_isCalibratingAcqTime@sensor sensor `*.39S842  1 p 2 0 ]
 "802
 } 0
 "785
 [v _Sensor_setCalibrated Sensor_setCalibrated `T(v  1 s 1 Sensor_setCalibrated ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v Sensor_setCalibrated@sensor sensor `*.39S847  1 p 2 0 ]
+[v Sensor_setCalibrated@sensor sensor `*.39S842  1 p 2 0 ]
 "789
 } 0
 "791
 [v _Sensor_setCalibratAcqTime Sensor_setCalibratAcqTime `T(v  1 s 1 Sensor_setCalibratAcqTime ]
 {
-[s S847 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
+[s S842 . 9 `CE17513 1 sensor_name 1 0 `Cuc 1 adpch 1 1 `uc 1 precharge_time 1 2 `uc 1 acquisition_time 1 3 `uc 1 oversampling 1 4 `uc 1 addcap 1 5 `ui 1 rawSample 2 6 `uc 1 enabled 1 8 :1:0 
 `uc 1 sampled 1 8 :1:1 
 `uc 1 acitve 1 8 :1:2 
 `uc 1 calibrated 1 8 :1:3 
 `uc 1 acqTime_cal 1 8 :1:4 
 ]
-[v Sensor_setCalibratAcqTime@sensor sensor `*.39S847  1 p 2 0 ]
+[v Sensor_setCalibratAcqTime@sensor sensor `*.39S842  1 p 2 0 ]
 "796
 } 0

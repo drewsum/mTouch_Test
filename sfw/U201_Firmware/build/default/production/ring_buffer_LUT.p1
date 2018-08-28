@@ -1,17 +1,19 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F17615 `(v ~T0 @X0 0 tf ]
-[v F17618 `(v ~T0 @X0 0 tf ]
+[v F17626 `(v ~T0 @X0 0 tf ]
+[v F17629 `(v ~T0 @X0 0 tf ]
+"22 ring_buffer_LUT.h
+[v _USB_DTR `Vb ~T0 @X0 0 e ]
 "45 C:\Program Files (x86)\Microchip\xc8\v1.45\include\string.h
 [v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
 "29037 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
 [v _LATF `Vuc ~T0 @X0 0 e@3966 ]
 "195 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"54 ring_buffer_LUT.c
-[c E17489 0 1 2 3 4 .. ]
-[n E17489 mtouch_button_names Button0 Button1 Button2 Button3 Button4  ]
+"56 ring_buffer_LUT.c
+[c E17500 0 1 2 3 4 .. ]
+[n E17500 mtouch_button_names Button0 Button1 Button2 Button3 Button4  ]
 "138 mcc_generated_files/mtouch/mtouch_button.h
-[v _MTOUCH_Button_isPressed `(uc ~T0 @X0 0 ef1`E17489 ]
+[v _MTOUCH_Button_isPressed `(uc ~T0 @X0 0 ef1`E17500 ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
 [; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
@@ -16041,8 +16043,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-[; ;pin_manager.h: 256: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 268: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1160: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 1172: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1185: void IOCBF2_ISR(void);
+[; ;pin_manager.h: 1208: void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;pin_manager.h: 1232: extern void (*IOCBF2_InterruptHandler)(void);
+[; ;pin_manager.h: 1256: void IOCBF2_DefaultInterruptHandler(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -16184,10 +16190,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F17615 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F17626 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F17618 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F17629 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -16252,7 +16258,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 101: extern char * ltoa(char * buf, long val, int base);
 [; ;stdlib.h: 102: extern char * ultoa(char * buf, unsigned long val, int base);
 [; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
-[; ;ring_buffer_LUT.h: 47: void ringBufferLUT(char * line);
+[; ;ring_buffer_LUT.h: 22: extern volatile bit USB_DTR;
+[; ;ring_buffer_LUT.h: 49: void ringBufferLUT(char * line);
 "9 ring_buffer_LUT.c
 [v _ringBufferLUT `(v ~T0 @X0 1 ef1`*uc ]
 {
@@ -16260,161 +16267,169 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _ringBufferLUT ]
 [v _line `*uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;ring_buffer_LUT.c: 15: if((0 == strcmp(line, "LEDs On"))) {
-"15
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 1C 2017  ]
+[; ;ring_buffer_LUT.c: 14: if (USB_DTR == 1) {
+"14
+[e $ ! == -> _USB_DTR `i -> 1 `i 2017  ]
 {
-[; ;ring_buffer_LUT.c: 18: LATF = 0x00;
-"18
+[; ;ring_buffer_LUT.c: 17: if((0 == strcmp(line, "LEDs On"))) {
+"17
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 1C 2018  ]
+{
+[; ;ring_buffer_LUT.c: 20: LATF = 0x00;
+"20
 [e = _LATF -> -> 0 `i `uc ]
-[; ;ring_buffer_LUT.c: 21: printf("\n\r");
-"21
-[e ( _printf :s 2C ]
-[; ;ring_buffer_LUT.c: 23: printf("    LATF = 0x00\n\r");
+[; ;ring_buffer_LUT.c: 23: printf("\n\r");
 "23
+[e ( _printf :s 2C ]
+[; ;ring_buffer_LUT.c: 25: printf("    LATF = 0x00\n\r");
+"25
 [e ( _printf :s 3C ]
-[; ;ring_buffer_LUT.c: 26: printf("\n\r");
-"26
-[e ( _printf :s 4C ]
+[; ;ring_buffer_LUT.c: 28: printf("\n\r");
 "28
+[e ( _printf :s 4C ]
+"30
 }
-[; ;ring_buffer_LUT.c: 28: }
-[e $U 2018  ]
-"32
-[e :U 2017 ]
-[; ;ring_buffer_LUT.c: 32: else if((0 == strcmp(line, "LEDs Off"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 5C 2019  ]
-{
-[; ;ring_buffer_LUT.c: 35: LATF = 0xFF;
-"35
-[e = _LATF -> -> 255 `i `uc ]
-[; ;ring_buffer_LUT.c: 38: printf("\n\r");
-"38
-[e ( _printf :s 6C ]
-[; ;ring_buffer_LUT.c: 40: printf("LATF = 0xFF\n\r");
-"40
-[e ( _printf :s 7C ]
-[; ;ring_buffer_LUT.c: 43: printf("\n\r");
-"43
-[e ( _printf :s 8C ]
-"45
-}
-[; ;ring_buffer_LUT.c: 45: }
-[e $U 2020  ]
-"48
-[e :U 2019 ]
-[; ;ring_buffer_LUT.c: 48: else if((0 == strcmp(line, "Button States?"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 9C 2021  ]
-{
-[; ;ring_buffer_LUT.c: 51: printf("\n\r");
-"51
-[e ( _printf :s 10C ]
-[; ;ring_buffer_LUT.c: 54: printf("    Button 0: %d\n\r", MTOUCH_Button_isPressed(Button0));
-"54
-[e ( _printf , (. :s 11C -> ( _MTOUCH_Button_isPressed (1 . `E17489 0 `i ]
-[; ;ring_buffer_LUT.c: 55: printf("    Button 1: %d\n\r", MTOUCH_Button_isPressed(Button1));
-"55
-[e ( _printf , (. :s 12C -> ( _MTOUCH_Button_isPressed (1 . `E17489 1 `i ]
-[; ;ring_buffer_LUT.c: 56: printf("    Button 2: %d\n\r", MTOUCH_Button_isPressed(Button2));
-"56
-[e ( _printf , (. :s 13C -> ( _MTOUCH_Button_isPressed (1 . `E17489 2 `i ]
-[; ;ring_buffer_LUT.c: 57: printf("    Button 3: %d\n\r", MTOUCH_Button_isPressed(Button3));
-"57
-[e ( _printf , (. :s 14C -> ( _MTOUCH_Button_isPressed (1 . `E17489 3 `i ]
-[; ;ring_buffer_LUT.c: 58: printf("    Button 4: %d\n\r", MTOUCH_Button_isPressed(Button4));
-"58
-[e ( _printf , (. :s 15C -> ( _MTOUCH_Button_isPressed (1 . `E17489 4 `i ]
-[; ;ring_buffer_LUT.c: 61: printf("\n\r");
-"61
-[e ( _printf :s 16C ]
-"62
-}
-[; ;ring_buffer_LUT.c: 62: }
-[e $U 2022  ]
-"66
-[e :U 2021 ]
-[; ;ring_buffer_LUT.c: 66: else if((0 == strcmp(line, "Reset"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 17C 2023  ]
-{
-[; ;ring_buffer_LUT.c: 69: printf("\033[2J");
-"69
-[e ( _printf :s 18C ]
-[; ;ring_buffer_LUT.c: 72: printf("\033[H");
-"72
-[e ( _printf :s 19C ]
-[; ;ring_buffer_LUT.c: 75: asm("reset");
-"75
-[; <" reset ;# ">
-"77
-}
-[; ;ring_buffer_LUT.c: 77: }
-[e $U 2024  ]
-"80
-[e :U 2023 ]
-[; ;ring_buffer_LUT.c: 80: else if((0 == strcmp(line, "Clear"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 20C 2025  ]
-{
-[; ;ring_buffer_LUT.c: 83: printf("\033[2J");
-"83
-[e ( _printf :s 21C ]
-[; ;ring_buffer_LUT.c: 86: printf("\033[H");
-"86
-[e ( _printf :s 22C ]
-"88
-}
-[; ;ring_buffer_LUT.c: 88: }
-[e $U 2026  ]
-"91
-[e :U 2025 ]
-[; ;ring_buffer_LUT.c: 91: else if((0 == strcmp(line, "*IDN?")) || (0 == strcmp(line, "IDN"))) {
-[e $ ! || == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 23C == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 24C 2027  ]
-{
-[; ;ring_buffer_LUT.c: 94: printf("\n\r");
-"94
-[e ( _printf :s 25C ]
-[; ;ring_buffer_LUT.c: 97: printf("    mTouch Test Board, REVA");
-"97
-[e ( _printf :s 26C ]
-[; ;ring_buffer_LUT.c: 100: printf("\n\r");
-"100
-[e ( _printf :s 27C ]
-"102
-}
-[; ;ring_buffer_LUT.c: 102: }
-[e $U 2028  ]
-"105
-[e :U 2027 ]
-[; ;ring_buffer_LUT.c: 105: else if((0 == strcmp(line, "Help"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 28C 2029  ]
-{
-[; ;ring_buffer_LUT.c: 108: printf("\n\r");
-"108
-[e ( _printf :s 29C ]
-[; ;ring_buffer_LUT.c: 110: printf("   List of supported commands:\n\r"
-[; ;ring_buffer_LUT.c: 111: "   LEDs On: Turns all LEDs On\n\r"
-[; ;ring_buffer_LUT.c: 112: "   LEDs Off: Turns all LEDs Off\n\r"
-[; ;ring_buffer_LUT.c: 113: "   Button States?: Returns state of all five mTouch buttons\n\r"
-[; ;ring_buffer_LUT.c: 114: "   Reset: Clears the terminal and resets the micro\n\r"
-[; ;ring_buffer_LUT.c: 115: "   Clear: Clears the terminal but doesn't reset the micro\n\r"
-[; ;ring_buffer_LUT.c: 116: "   *IDN?: Returns device identification\n\r"
-[; ;ring_buffer_LUT.c: 117: "   Help: This message, lists commands\n\r");
-"117
-[e ( _printf :s 30C ]
-[; ;ring_buffer_LUT.c: 120: printf("\n\r");
-"120
-[e ( _printf :s 31C ]
-"122
-}
-[e :U 2029 ]
-"125
-[e :U 2028 ]
-[e :U 2026 ]
-[e :U 2024 ]
-[e :U 2022 ]
-[e :U 2020 ]
+[; ;ring_buffer_LUT.c: 30: }
+[e $U 2019  ]
+"34
 [e :U 2018 ]
-[; ;ring_buffer_LUT.c: 122: }
-[; ;ring_buffer_LUT.c: 125: }
+[; ;ring_buffer_LUT.c: 34: else if((0 == strcmp(line, "LEDs Off"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 5C 2020  ]
+{
+[; ;ring_buffer_LUT.c: 37: LATF = 0xFF;
+"37
+[e = _LATF -> -> 255 `i `uc ]
+[; ;ring_buffer_LUT.c: 40: printf("\n\r");
+"40
+[e ( _printf :s 6C ]
+[; ;ring_buffer_LUT.c: 42: printf("LATF = 0xFF\n\r");
+"42
+[e ( _printf :s 7C ]
+[; ;ring_buffer_LUT.c: 45: printf("\n\r");
+"45
+[e ( _printf :s 8C ]
+"47
+}
+[; ;ring_buffer_LUT.c: 47: }
+[e $U 2021  ]
+"50
+[e :U 2020 ]
+[; ;ring_buffer_LUT.c: 50: else if((0 == strcmp(line, "Button States?"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 9C 2022  ]
+{
+[; ;ring_buffer_LUT.c: 53: printf("\n\r");
+"53
+[e ( _printf :s 10C ]
+[; ;ring_buffer_LUT.c: 56: printf("    Button 0: %d\n\r", MTOUCH_Button_isPressed(Button0));
+"56
+[e ( _printf , (. :s 11C -> ( _MTOUCH_Button_isPressed (1 . `E17500 0 `i ]
+[; ;ring_buffer_LUT.c: 57: printf("    Button 1: %d\n\r", MTOUCH_Button_isPressed(Button1));
+"57
+[e ( _printf , (. :s 12C -> ( _MTOUCH_Button_isPressed (1 . `E17500 1 `i ]
+[; ;ring_buffer_LUT.c: 58: printf("    Button 2: %d\n\r", MTOUCH_Button_isPressed(Button2));
+"58
+[e ( _printf , (. :s 13C -> ( _MTOUCH_Button_isPressed (1 . `E17500 2 `i ]
+[; ;ring_buffer_LUT.c: 59: printf("    Button 3: %d\n\r", MTOUCH_Button_isPressed(Button3));
+"59
+[e ( _printf , (. :s 14C -> ( _MTOUCH_Button_isPressed (1 . `E17500 3 `i ]
+[; ;ring_buffer_LUT.c: 60: printf("    Button 4: %d\n\r", MTOUCH_Button_isPressed(Button4));
+"60
+[e ( _printf , (. :s 15C -> ( _MTOUCH_Button_isPressed (1 . `E17500 4 `i ]
+[; ;ring_buffer_LUT.c: 63: printf("\n\r");
+"63
+[e ( _printf :s 16C ]
+"64
+}
+[; ;ring_buffer_LUT.c: 64: }
+[e $U 2023  ]
+"68
+[e :U 2022 ]
+[; ;ring_buffer_LUT.c: 68: else if((0 == strcmp(line, "Reset"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 17C 2024  ]
+{
+[; ;ring_buffer_LUT.c: 71: printf("\033[2J");
+"71
+[e ( _printf :s 18C ]
+[; ;ring_buffer_LUT.c: 74: printf("\033[H");
+"74
+[e ( _printf :s 19C ]
+[; ;ring_buffer_LUT.c: 77: asm("reset");
+"77
+[; <" reset ;# ">
+"79
+}
+[; ;ring_buffer_LUT.c: 79: }
+[e $U 2025  ]
+"82
+[e :U 2024 ]
+[; ;ring_buffer_LUT.c: 82: else if((0 == strcmp(line, "Clear"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 20C 2026  ]
+{
+[; ;ring_buffer_LUT.c: 85: printf("\033[2J");
+"85
+[e ( _printf :s 21C ]
+[; ;ring_buffer_LUT.c: 88: printf("\033[H");
+"88
+[e ( _printf :s 22C ]
+"90
+}
+[; ;ring_buffer_LUT.c: 90: }
+[e $U 2027  ]
+"93
+[e :U 2026 ]
+[; ;ring_buffer_LUT.c: 93: else if((0 == strcmp(line, "*IDN?")) || (0 == strcmp(line, "IDN"))) {
+[e $ ! || == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 23C == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 24C 2028  ]
+{
+[; ;ring_buffer_LUT.c: 96: printf("\n\r");
+"96
+[e ( _printf :s 25C ]
+[; ;ring_buffer_LUT.c: 99: printf("    mTouch Test Board, REVA");
+"99
+[e ( _printf :s 26C ]
+[; ;ring_buffer_LUT.c: 102: printf("\n\r");
+"102
+[e ( _printf :s 27C ]
+"104
+}
+[; ;ring_buffer_LUT.c: 104: }
+[e $U 2029  ]
+"107
+[e :U 2028 ]
+[; ;ring_buffer_LUT.c: 107: else if((0 == strcmp(line, "Help"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 28C 2030  ]
+{
+[; ;ring_buffer_LUT.c: 110: printf("\n\r");
+"110
+[e ( _printf :s 29C ]
+[; ;ring_buffer_LUT.c: 112: printf("   List of supported commands:\n\r"
+[; ;ring_buffer_LUT.c: 113: "   LEDs On: Turns all LEDs On\n\r"
+[; ;ring_buffer_LUT.c: 114: "   LEDs Off: Turns all LEDs Off\n\r"
+[; ;ring_buffer_LUT.c: 115: "   Button States?: Returns state of all five mTouch buttons\n\r"
+[; ;ring_buffer_LUT.c: 116: "   Reset: Clears the terminal and resets the micro\n\r"
+[; ;ring_buffer_LUT.c: 117: "   Clear: Clears the terminal but doesn't reset the micro\n\r"
+[; ;ring_buffer_LUT.c: 118: "   *IDN?: Returns device identification\n\r"
+[; ;ring_buffer_LUT.c: 119: "   Help: This message, lists commands\n\r");
+"119
+[e ( _printf :s 30C ]
+[; ;ring_buffer_LUT.c: 122: printf("\n\r");
+"122
+[e ( _printf :s 31C ]
+"124
+}
+[e :U 2030 ]
+"126
+[e :U 2029 ]
+[e :U 2027 ]
+[e :U 2025 ]
+[e :U 2023 ]
+[e :U 2021 ]
+[e :U 2019 ]
+}
+[e :U 2017 ]
+[; ;ring_buffer_LUT.c: 124: }
+[; ;ring_buffer_LUT.c: 126: }
+[; ;ring_buffer_LUT.c: 128: }
+"128
 [e :UE 2016 ]
 }
 [p f _printf 8388736 ]

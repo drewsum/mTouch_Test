@@ -21427,7 +21427,7 @@ volatile uint8_t eusart2RxTail = 0;
 volatile uint8_t eusart2RxBuffer[64];
 volatile uint8_t eusart2RxCount;
 
-volatile uint8_t eusart2RxStringReady = 0;
+volatile bit eusart2RxStringReady = 0;
 
 # 77
 void EUSART2_Initialize(void)

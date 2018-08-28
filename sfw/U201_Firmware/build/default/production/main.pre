@@ -21222,11 +21222,23 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 256 "mcc_generated_files/pin_manager.h"
+# 1160 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 268
+# 1172
 void PIN_MANAGER_IOC(void);
+
+# 1185
+void IOCBF2_ISR(void);
+
+# 1208
+void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 1232
+extern void (*IOCBF2_InterruptHandler)(void);
+
+# 1256
+void IOCBF2_DefaultInterruptHandler(void);
 
 # 13 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdint.h"
 typedef signed char int8_t;
@@ -21657,11 +21669,14 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
 
-# 47 "ring_buffer_LUT.h"
+# 22 "ring_buffer_LUT.h"
+extern volatile bit USB_DTR;
+
+# 49
 void ringBufferLUT(char * line);
 
 # 40 "ring_buffer_interface.h"
-extern volatile uint8_t eusart2RxStringReady;
+extern volatile bit eusart2RxStringReady;
 
 
 extern volatile uint8_t eusart2RxCount;
@@ -21671,25 +21686,46 @@ extern volatile uint8_t eusart2RxHead;
 extern volatile uint8_t eusart2RxTail;
 
 
+extern volatile bit USB_DTR;
+
+
 
 char line[64];
 
-# 84
+# 87
 void ringBufferPull(void);
 
-# 114
+# 117
 void printResetMessage(void);
 
 # 53 "main.c"
-extern volatile uint8_t eusart2RxStringReady;
+extern volatile bit eusart2RxStringReady;
 
-# 58
+
+volatile bit USB_DTR = 0;
+
+void DTR_Callback(void) {
+
+if(PORTBbits.RB2 == 1) {
+USB_DTR = 1;
+}
+
+else {
+USB_DTR = 0;
+}
+
+}
+
+# 73
 void main(void)
 {
 
 SYSTEM_Initialize();
 
-# 68
+
+IOCBF2_SetInterruptHandler(DTR_Callback);
+
+
 (INTCONbits.GIEH = 1);
 
 
@@ -21715,7 +21751,7 @@ LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
 LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
 LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
 
-# 117
+# 131
 __nop();
 
 }

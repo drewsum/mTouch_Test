@@ -1,9 +1,23 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F17505 `(v ~T0 @X0 0 tf ]
-[v F17508 `(v ~T0 @X0 0 tf ]
+[v F17516 `(v ~T0 @X0 0 tf ]
+[v F17519 `(v ~T0 @X0 0 tf ]
+"30195 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
+[s S1392 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1392 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"30205
+[s S1393 :3 `uc 1 :1 `uc 1 ]
+[n S1393 . . CCP2_PA2 ]
+"30194
+[u S1391 `S1392 1 `S1393 1 ]
+[n S1391 . . . ]
+"30210
+[v _PORTBbits `VS1391 ~T0 @X0 0 e@3978 ]
 [p mainexit ]
 "71 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+[v F17288 `(v ~T0 @X0 0 tf ]
+"1208 mcc_generated_files/pin_manager.h
+[v _IOCBF2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F17288 ]
 "40496 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
 [s S1981 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1981 . INT0EDG INT1EDG INT2EDG INT3EDG . IPEN PEIE_GIEL GIE_GIEH ]
@@ -18,11 +32,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1980 . . . . ]
 "40517
 [v _INTCONbits `VS1980 ~T0 @X0 0 e@4082 ]
-"114 ring_buffer_interface.h
+"117 ring_buffer_interface.h
 [v _printResetMessage `(v ~T0 @X0 0 ef ]
 "40
-[v _eusart2RxStringReady `Vuc ~T0 @X0 0 e ]
-"84
+[v _eusart2RxStringReady `Vb ~T0 @X0 0 e ]
+"87
 [v _ringBufferPull `(v ~T0 @X0 0 ef ]
 "53 mcc_generated_files/mtouch/mtouch.h
 [v _MTOUCH_Service_Mainloop `(uc ~T0 @X0 0 ef ]
@@ -37,11 +51,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1349 . . . ]
 "29064
 [v _LATFbits `VS1349 ~T0 @X0 0 e@3966 ]
-"87 main.c
-[c E17378 0 1 2 3 4 .. ]
-[n E17378 mtouch_button_names Button0 Button1 Button2 Button3 Button4  ]
+"101 main.c
+[c E17389 0 1 2 3 4 .. ]
+[n E17389 mtouch_button_names Button0 Button1 Button2 Button3 Button4  ]
 "141 mcc_generated_files/mtouch/mtouch_button.h
-[v _MTOUCH_Button_State_Get `(uc ~T0 @X0 0 ef1`E17378 ]
+[v _MTOUCH_Button_State_Get `(uc ~T0 @X0 0 ef1`E17389 ]
 "43 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
@@ -16034,8 +16048,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-[; ;pin_manager.h: 256: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 268: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1160: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 1172: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1185: void IOCBF2_ISR(void);
+[; ;pin_manager.h: 1208: void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;pin_manager.h: 1232: extern void (*IOCBF2_InterruptHandler)(void);
+[; ;pin_manager.h: 1256: void IOCBF2_DefaultInterruptHandler(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -16178,10 +16196,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F17505 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F17516 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F17508 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F17519 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -16272,84 +16290,127 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 101: extern char * ltoa(char * buf, long val, int base);
 [; ;stdlib.h: 102: extern char * ultoa(char * buf, unsigned long val, int base);
 [; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
-[; ;ring_buffer_LUT.h: 47: void ringBufferLUT(char * line);
-[; ;ring_buffer_interface.h: 40: extern volatile uint8_t eusart2RxStringReady;
+[; ;ring_buffer_LUT.h: 22: extern volatile bit USB_DTR;
+[; ;ring_buffer_LUT.h: 49: void ringBufferLUT(char * line);
+[; ;ring_buffer_interface.h: 40: extern volatile bit eusart2RxStringReady;
 [; ;ring_buffer_interface.h: 43: extern volatile uint8_t eusart2RxCount;
 [; ;ring_buffer_interface.h: 46: extern volatile uint8_t eusart2RxHead;
 [; ;ring_buffer_interface.h: 47: extern volatile uint8_t eusart2RxTail;
-"51 ring_buffer_interface.h
+[; ;ring_buffer_interface.h: 50: extern volatile bit USB_DTR;
+"54 ring_buffer_interface.h
 [v _line `uc ~T0 @X0 -> 64 `i e ]
-[; ;ring_buffer_interface.h: 51: char line[64];
-[; ;ring_buffer_interface.h: 84: void ringBufferPull(void);
-[; ;ring_buffer_interface.h: 114: void printResetMessage(void);
-[; ;main.c: 53: extern volatile uint8_t eusart2RxStringReady;
-[v $root$_main `(v ~T0 @X0 0 e ]
-"58 main.c
-[v _main `(v ~T0 @X0 1 ef ]
-"59
+[; ;ring_buffer_interface.h: 54: char line[64];
+[; ;ring_buffer_interface.h: 87: void ringBufferPull(void);
+[; ;ring_buffer_interface.h: 117: void printResetMessage(void);
+[; ;main.c: 53: extern volatile bit eusart2RxStringReady;
+"56 main.c
+[v _USB_DTR `Vb ~T0 @X0 1 e ]
+[i _USB_DTR
+-> 0 `i
+]
+[; ;main.c: 56: volatile bit USB_DTR = 0;
+"58
+[v _DTR_Callback `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 58: void main(void)
-[; ;main.c: 59: {
+[; ;main.c: 58: void DTR_Callback(void) {
+[e :U _DTR_Callback ]
+[f ]
+[; ;main.c: 60: if(PORTBbits.RB2 == 1) {
+"60
+[e $ ! == -> . . _PORTBbits 0 2 `i -> 1 `i 2017  ]
+{
+[; ;main.c: 61: USB_DTR = 1;
+"61
+[e = _USB_DTR -> -> 1 `i `b ]
+"62
+}
+[; ;main.c: 62: }
+[e $U 2018  ]
+"64
+[e :U 2017 ]
+[; ;main.c: 64: else {
+{
+[; ;main.c: 65: USB_DTR = 0;
+"65
+[e = _USB_DTR -> -> 0 `i `b ]
+"66
+}
+[e :U 2018 ]
+[; ;main.c: 66: }
+[; ;main.c: 68: }
+"68
+[e :UE 2016 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"73
+[v _main `(v ~T0 @X0 1 ef ]
+"74
+{
+[; ;main.c: 73: void main(void)
+[; ;main.c: 74: {
 [e :U _main ]
 [f ]
-[; ;main.c: 61: SYSTEM_Initialize();
-"61
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 68: (INTCONbits.GIEH = 1);
-"68
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;main.c: 71: (INTCONbits.GIEL = 1);
-"71
-[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-[; ;main.c: 74: printResetMessage();
-"74
-[e ( _printResetMessage ..  ]
-[; ;main.c: 76: while (1)
+[; ;main.c: 76: SYSTEM_Initialize();
 "76
-[e :U 2018 ]
-[; ;main.c: 77: {
-"77
-{
-[; ;main.c: 79: if (eusart2RxStringReady) {
+[e ( _SYSTEM_Initialize ..  ]
+[; ;main.c: 79: IOCBF2_SetInterruptHandler(DTR_Callback);
 "79
-[e $ ! != -> _eusart2RxStringReady `i -> -> -> 0 `i `Vuc `i 2020  ]
+[e ( _IOCBF2_SetInterruptHandler (1 &U _DTR_Callback ]
+[; ;main.c: 82: (INTCONbits.GIEH = 1);
+"82
+[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
+[; ;main.c: 85: (INTCONbits.GIEL = 1);
+"85
+[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
+[; ;main.c: 88: printResetMessage();
+"88
+[e ( _printResetMessage ..  ]
+[; ;main.c: 90: while (1)
+"90
+[e :U 2021 ]
+[; ;main.c: 91: {
+"91
 {
-[; ;main.c: 80: ringBufferPull();
-"80
+[; ;main.c: 93: if (eusart2RxStringReady) {
+"93
+[e $ ! _eusart2RxStringReady 2023  ]
+{
+[; ;main.c: 94: ringBufferPull();
+"94
 [e ( _ringBufferPull ..  ]
-"81
+"95
+}
+[e :U 2023 ]
+[; ;main.c: 95: }
+[; ;main.c: 98: MTOUCH_Service_Mainloop();
+"98
+[e ( _MTOUCH_Service_Mainloop ..  ]
+[; ;main.c: 101: LATFbits.LATF0 = ~MTOUCH_Button_State_Get(Button0);
+"101
+[e = . . _LATFbits 0 0 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 0 `i `uc ]
+[; ;main.c: 102: LATFbits.LATF1 = ~MTOUCH_Button_State_Get(Button1);
+"102
+[e = . . _LATFbits 0 1 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 1 `i `uc ]
+[; ;main.c: 103: LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
+"103
+[e = . . _LATFbits 0 2 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 2 `i `uc ]
+[; ;main.c: 104: LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
+"104
+[e = . . _LATFbits 0 3 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 3 `i `uc ]
+[; ;main.c: 105: LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
+"105
+[e = . . _LATFbits 0 4 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 4 `i `uc ]
+[; ;main.c: 131: __nop();
+"131
+[e ( ___nop ..  ]
+"133
 }
 [e :U 2020 ]
-[; ;main.c: 81: }
-[; ;main.c: 84: MTOUCH_Service_Mainloop();
-"84
-[e ( _MTOUCH_Service_Mainloop ..  ]
-[; ;main.c: 87: LATFbits.LATF0 = ~MTOUCH_Button_State_Get(Button0);
-"87
-[e = . . _LATFbits 0 0 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 0 `i `uc ]
-[; ;main.c: 88: LATFbits.LATF1 = ~MTOUCH_Button_State_Get(Button1);
-"88
-[e = . . _LATFbits 0 1 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 1 `i `uc ]
-[; ;main.c: 89: LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
-"89
-[e = . . _LATFbits 0 2 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 2 `i `uc ]
-[; ;main.c: 90: LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
 "90
-[e = . . _LATFbits 0 3 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 3 `i `uc ]
-[; ;main.c: 91: LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
-"91
-[e = . . _LATFbits 0 4 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 4 `i `uc ]
-[; ;main.c: 117: __nop();
-"117
-[e ( ___nop ..  ]
-"119
-}
-[e :U 2017 ]
-"76
-[e $U 2018  ]
-[e :U 2019 ]
-[; ;main.c: 119: }
-[; ;main.c: 120: }
-"120
-[e :UE 2016 ]
+[e $U 2021  ]
+[e :U 2022 ]
+[; ;main.c: 133: }
+[; ;main.c: 134: }
+"134
+[e :UE 2019 ]
 }

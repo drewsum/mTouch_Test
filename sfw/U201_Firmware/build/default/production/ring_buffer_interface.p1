@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F17505 `(v ~T0 @X0 0 tf ]
-[v F17508 `(v ~T0 @X0 0 tf ]
+[v F17516 `(v ~T0 @X0 0 tf ]
+[v F17519 `(v ~T0 @X0 0 tf ]
 "80 mcc_generated_files/eusart2.h
 [v _eusart2RxCount `Vuc ~T0 @X0 0 e ]
 "281
@@ -12,9 +12,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "56 C:\Program Files (x86)\Microchip\xc8\v1.45\include\string.h
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "40 ring_buffer_interface.h
-[v _eusart2RxStringReady `Vuc ~T0 @X0 0 e ]
-"47 ring_buffer_LUT.h
+[v _eusart2RxStringReady `Vb ~T0 @X0 0 e ]
+"49 ring_buffer_LUT.h
 [v _ringBufferLUT `(v ~T0 @X0 0 ef1`*uc ]
+"22
+[v _USB_DTR `Vb ~T0 @X0 0 e ]
 "195 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
@@ -16006,8 +16008,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-[; ;pin_manager.h: 256: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 268: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1160: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 1172: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 1185: void IOCBF2_ISR(void);
+[; ;pin_manager.h: 1208: void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void));
+[; ;pin_manager.h: 1232: extern void (*IOCBF2_InterruptHandler)(void);
+[; ;pin_manager.h: 1256: void IOCBF2_DefaultInterruptHandler(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -16150,10 +16156,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart2.h: 79: extern volatile uint8_t eusart2TxBufferRemaining;
 [; ;eusart2.h: 80: extern volatile uint8_t eusart2RxCount;
 "86 mcc_generated_files/eusart2.h
-[v _EUSART2_TxDefaultInterruptHandler `*F17505 ~T0 @X0 1 e ]
+[v _EUSART2_TxDefaultInterruptHandler `*F17516 ~T0 @X0 1 e ]
 [; ;eusart2.h: 86: void (*EUSART2_TxDefaultInterruptHandler)(void);
 "87
-[v _EUSART2_RxDefaultInterruptHandler `*F17508 ~T0 @X0 1 e ]
+[v _EUSART2_RxDefaultInterruptHandler `*F17519 ~T0 @X0 1 e ]
 [; ;eusart2.h: 87: void (*EUSART2_RxDefaultInterruptHandler)(void);
 [; ;eusart2.h: 109: void EUSART2_Initialize(void);
 [; ;eusart2.h: 162: uint8_t EUSART2_is_tx_ready(void);
@@ -16244,16 +16250,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 101: extern char * ltoa(char * buf, long val, int base);
 [; ;stdlib.h: 102: extern char * ultoa(char * buf, unsigned long val, int base);
 [; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
-[; ;ring_buffer_LUT.h: 47: void ringBufferLUT(char * line);
-[; ;ring_buffer_interface.h: 40: extern volatile uint8_t eusart2RxStringReady;
+[; ;ring_buffer_LUT.h: 22: extern volatile bit USB_DTR;
+[; ;ring_buffer_LUT.h: 49: void ringBufferLUT(char * line);
+[; ;ring_buffer_interface.h: 40: extern volatile bit eusart2RxStringReady;
 [; ;ring_buffer_interface.h: 43: extern volatile uint8_t eusart2RxCount;
 [; ;ring_buffer_interface.h: 46: extern volatile uint8_t eusart2RxHead;
 [; ;ring_buffer_interface.h: 47: extern volatile uint8_t eusart2RxTail;
-"51 ring_buffer_interface.h
+[; ;ring_buffer_interface.h: 50: extern volatile bit USB_DTR;
+"54 ring_buffer_interface.h
 [v _line `uc ~T0 @X0 -> 64 `i e ]
-[; ;ring_buffer_interface.h: 51: char line[64];
-[; ;ring_buffer_interface.h: 84: void ringBufferPull(void);
-[; ;ring_buffer_interface.h: 114: void printResetMessage(void);
+[; ;ring_buffer_interface.h: 54: char line[64];
+[; ;ring_buffer_interface.h: 87: void ringBufferPull(void);
+[; ;ring_buffer_interface.h: 117: void printResetMessage(void);
 "8 ring_buffer_interface.c
 [v _ringBufferPull `(v ~T0 @X0 1 ef ]
 {
@@ -16327,7 +16335,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_interface.c: 36: }
 [; ;ring_buffer_interface.c: 40: eusart2RxStringReady = 0;
 "40
-[e = _eusart2RxStringReady -> -> 0 `i `uc ]
+[e = _eusart2RxStringReady -> -> 0 `i `b ]
 [; ;ring_buffer_interface.c: 43: ringBufferLUT(line);
 "43
 [e ( _ringBufferLUT (1 &U _line ]
@@ -16341,27 +16349,35 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_interface.c: 50: void printResetMessage(void) {
 [e :U _printResetMessage ]
 [f ]
-[; ;ring_buffer_interface.c: 53: printf("\033[2J");
-"53
+[; ;ring_buffer_interface.c: 52: if (USB_DTR == 1) {
+"52
+[e $ ! == -> _USB_DTR `i -> 1 `i 2028  ]
+{
+[; ;ring_buffer_interface.c: 55: printf("\033[2J");
+"55
 [e ( _printf :s 1C ]
-[; ;ring_buffer_interface.c: 56: printf("\033[H");
-"56
+[; ;ring_buffer_interface.c: 58: printf("\033[H");
+"58
 [e ( _printf :s 2C ]
-[; ;ring_buffer_interface.c: 59: printf("    Boot complete\n\r"
-[; ;ring_buffer_interface.c: 60: "   PIC18F67K40 mTouch Test Board\n\r"
-[; ;ring_buffer_interface.c: 61: "   Evaluates the mTouch capacitive touch library distributed by Microchip\n\r"
-[; ;ring_buffer_interface.c: 62: "   Sets the state of five LEDs based on mTouch capacitive pushbuttons\n\r"
-[; ;ring_buffer_interface.c: 63: "   Baud rate: 115200 bps\n\r"
-[; ;ring_buffer_interface.c: 64: "   No parity, 8 bits, no flow control, 1 stop bit\n\r"
-[; ;ring_buffer_interface.c: 65: "   Commands are case sensitive\n\r"
-[; ;ring_buffer_interface.c: 66: "   Enter a command, or enter Help for list of commands\n\r");
-"66
+[; ;ring_buffer_interface.c: 61: printf("    Boot complete\n\r"
+[; ;ring_buffer_interface.c: 62: "   PIC18F67K40 mTouch Test Board\n\r"
+[; ;ring_buffer_interface.c: 63: "   Evaluates the mTouch capacitive touch library distributed by Microchip\n\r"
+[; ;ring_buffer_interface.c: 64: "   Sets the state of five LEDs based on mTouch capacitive pushbuttons\n\r"
+[; ;ring_buffer_interface.c: 65: "   Baud rate: 115200 bps\n\r"
+[; ;ring_buffer_interface.c: 66: "   No parity, 8 bits, no flow control, 1 stop bit\n\r"
+[; ;ring_buffer_interface.c: 67: "   Commands are case sensitive\n\r"
+[; ;ring_buffer_interface.c: 68: "   Enter a command, or enter Help for list of commands\n\r");
+"68
 [e ( _printf :s 3C ]
-[; ;ring_buffer_interface.c: 70: printf("\n\r");
-"70
-[e ( _printf :s 4C ]
-[; ;ring_buffer_interface.c: 72: }
+[; ;ring_buffer_interface.c: 72: printf("\n\r");
 "72
+[e ( _printf :s 4C ]
+"74
+}
+[e :U 2028 ]
+[; ;ring_buffer_interface.c: 74: }
+[; ;ring_buffer_interface.c: 76: }
+"76
 [e :UE 2027 ]
 }
 [p f _printf 8388608 ]

@@ -69,7 +69,7 @@ volatile uint8_t eusart2RxTail = 0;
 volatile uint8_t eusart2RxBuffer[EUSART2_RX_BUFFER_SIZE];
 volatile uint8_t eusart2RxCount;
 
-volatile uint8_t eusart2RxStringReady = 0;
+volatile bit eusart2RxStringReady = 0;
 
 /**
   Section: EUSART2 APIs

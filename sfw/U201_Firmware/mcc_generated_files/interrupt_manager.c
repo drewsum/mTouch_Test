@@ -65,6 +65,9 @@ void  INTERRUPT_Initialize (void)
     // ADTI - high priority
     IPR1bits.ADTIP = 1;
 
+    // IOCI - high priority
+    IPR0bits.IOCIP = 1;
+
 
 }
 
@@ -82,6 +85,10 @@ void interrupt INTERRUPT_InterruptManagerHigh (void)
     else if(PIE1bits.ADTIE == 1 && PIR1bits.ADTIF == 1)
     {
         ADCC_ThresholdISR_mTouch();
+    }
+    else if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
+    {
+        PIN_MANAGER_IOC();
     }
     else
     {

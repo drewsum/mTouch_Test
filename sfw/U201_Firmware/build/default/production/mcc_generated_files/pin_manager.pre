@@ -21222,20 +21222,35 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 256 "mcc_generated_files/pin_manager.h"
+# 1160 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 268
+# 1172
 void PIN_MANAGER_IOC(void);
+
+# 1185
+void IOCBF2_ISR(void);
+
+# 1208
+void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void));
+
+# 1232
+extern void (*IOCBF2_InterruptHandler)(void);
+
+# 1256
+void IOCBF2_DefaultInterruptHandler(void);
 
 # 12 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdbool.h"
 typedef unsigned char bool;
 
-# 57 "mcc_generated_files/pin_manager.c"
+# 56 "mcc_generated_files/pin_manager.c"
+void (*IOCBF2_InterruptHandler)(void);
+
+
 void PIN_MANAGER_Initialize(void)
 {
 
-# 62
+# 64
 LATE = 0x00;
 LATD = 0x00;
 LATA = 0x00;
@@ -21245,25 +21260,25 @@ LATG = 0x00;
 LATC = 0x00;
 LATH = 0x00;
 
-# 74
-TRISE = 0xFF;
-TRISF = 0xE0;
-TRISA = 0xFF;
-TRISG = 0x5F;
-TRISB = 0xFF;
-TRISH = 0x0F;
-TRISC = 0xFF;
-TRISD = 0xFF;
+# 76
+TRISE = 0x7C;
+TRISF = 0x00;
+TRISA = 0x00;
+TRISG = 0x40;
+TRISB = 0x04;
+TRISH = 0x00;
+TRISC = 0x00;
+TRISD = 0x00;
 
-# 86
+# 88
 ANSELD = 0xFF;
-ANSELB = 0xFF;
+ANSELB = 0xFB;
 ANSELE = 0xFF;
 ANSELG = 0xBF;
 ANSELF = 0xE0;
 ANSELA = 0xFF;
 
-# 96
+# 98
 WPUD = 0x00;
 WPUF = 0x00;
 WPUE = 0x00;
@@ -21273,7 +21288,7 @@ WPUA = 0x00;
 WPUC = 0x00;
 WPUH = 0x00;
 
-# 108
+# 110
 ODCONE = 0x00;
 ODCONF = 0x1F;
 ODCONA = 0x00;
@@ -21284,11 +21299,55 @@ ODCONC = 0x00;
 ODCOND = 0x00;
 
 # 124
+IOCBFbits.IOCBF2 = 0;
+
+IOCBNbits.IOCBN2 = 1;
+
+IOCBPbits.IOCBP2 = 1;
+
+
+
+
+IOCBF2_SetInterruptHandler(IOCBF2_DefaultInterruptHandler);
+
+
+PIE0bits.IOCIE = 1;
+
+
 RG7PPS = 0x0E;
 RX2PPSbits.RX2PPS = 0x36;
 }
 
 void PIN_MANAGER_IOC(void)
 {
+
+if(IOCBFbits.IOCBF2 == 1)
+{
+IOCBF2_ISR();
+}
+}
+
+# 155
+void IOCBF2_ISR(void) {
+
+
+
+
+if(IOCBF2_InterruptHandler)
+{
+IOCBF2_InterruptHandler();
+}
+IOCBFbits.IOCBF2 = 0;
+}
+
+# 170
+void IOCBF2_SetInterruptHandler(void (* InterruptHandler)(void)){
+IOCBF2_InterruptHandler = InterruptHandler;
+}
+
+# 177
+void IOCBF2_DefaultInterruptHandler(void){
+
+
 }
 
