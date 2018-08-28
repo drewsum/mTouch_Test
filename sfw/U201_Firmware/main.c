@@ -76,9 +76,13 @@ void main(void)
     while (1)
     {
         // Add your application code
-        NOP();
+        // Show signs of life, blink output LEDs. This will be removed later
+        LATF = 0x00;
+        __delay_ms(500);
+        LATF = 0xFF;
+        __delay_ms(500);
         
-        // Check to see if we've got received instructions waiting
+        // Check to see if we've got received instructions waiting from USB debug
         if (eusart2RxStringReady) {
                
             ringBufferPull();

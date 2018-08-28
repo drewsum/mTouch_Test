@@ -21582,7 +21582,11 @@ printResetMessage();
 while (1)
 {
 
-__nop();
+
+LATF = 0x00;
+_delay((unsigned long)((500)*(64000000/4000.0)));
+LATF = 0xFF;
+_delay((unsigned long)((500)*(64000000/4000.0)));
 
 
 if (eusart2RxStringReady) {

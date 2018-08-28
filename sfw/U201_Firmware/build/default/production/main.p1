@@ -20,9 +20,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _INTCONbits `VS1980 ~T0 @X0 0 e@4082 ]
 "114 ring_buffer_interface.h
 [v _printResetMessage `(v ~T0 @X0 0 ef ]
-"43 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h
-[v ___nop `(v ~T0 @X0 0 ef ]
-[p i ___nop ]
+"29037 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
+[v _LATF `Vuc ~T0 @X0 0 e@3966 ]
+[v F17273 `(v ~T0 @X0 1 tf1`ul ]
+"164 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h
+[v __delay `JF17273 ~T0 @X0 0 e ]
+[p i __delay ]
 "40 ring_buffer_interface.h
 [v _eusart2RxStringReady `Vuc ~T0 @X0 0 e ]
 "84
@@ -16214,28 +16217,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 77: {
 "77
 {
-[; ;main.c: 79: __nop();
-"79
-[e ( ___nop ..  ]
-[; ;main.c: 82: if (eusart2RxStringReady) {
+[; ;main.c: 80: LATF = 0x00;
+"80
+[e = _LATF -> -> 0 `i `uc ]
+[; ;main.c: 81: _delay((unsigned long)((500)*(64000000/4000.0)));
+"81
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;main.c: 82: LATF = 0xFF;
 "82
+[e = _LATF -> -> 255 `i `uc ]
+[; ;main.c: 83: _delay((unsigned long)((500)*(64000000/4000.0)));
+"83
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;main.c: 86: if (eusart2RxStringReady) {
+"86
 [e $ ! != -> _eusart2RxStringReady `i -> -> -> 0 `i `Vuc `i 2020  ]
 {
-[; ;main.c: 84: ringBufferPull();
-"84
+[; ;main.c: 88: ringBufferPull();
+"88
 [e ( _ringBufferPull ..  ]
-"86
+"90
 }
 [e :U 2020 ]
-"87
+"91
 }
 [e :U 2017 ]
 "76
 [e $U 2018  ]
 [e :U 2019 ]
-[; ;main.c: 86: }
-[; ;main.c: 87: }
-[; ;main.c: 88: }
-"88
+[; ;main.c: 90: }
+[; ;main.c: 91: }
+[; ;main.c: 92: }
+"92
 [e :UE 2016 ]
 }
