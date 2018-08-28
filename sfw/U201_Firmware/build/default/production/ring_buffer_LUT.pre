@@ -21677,10 +21677,10 @@ extern char * ftoa(float f, int * status);
 # 47 "ring_buffer_LUT.h"
 void ringBufferLUT(char * line);
 
-# 7 "ring_buffer_LUT.c"
+# 9 "ring_buffer_LUT.c"
 void ringBufferLUT(char * line) {
 
-# 13
+# 15
 if((0 == strcmp(line, "LEDs On"))) {
 
 
@@ -21711,6 +21711,23 @@ printf("LATF = 0xFF\n\r");
 
 printf("\n\r");
 
+}
+
+
+else if((0 == strcmp(line, "Button States?"))) {
+
+
+printf("\n\r");
+
+
+printf("    Button 0: %d\n\r", MTOUCH_Button_isPressed(Button0));
+printf("    Button 1: %d\n\r", MTOUCH_Button_isPressed(Button1));
+printf("    Button 2: %d\n\r", MTOUCH_Button_isPressed(Button2));
+printf("    Button 3: %d\n\r", MTOUCH_Button_isPressed(Button3));
+printf("    Button 4: %d\n\r", MTOUCH_Button_isPressed(Button4));
+
+
+printf("\n\r");
 }
 
 
@@ -21762,6 +21779,7 @@ printf("\n\r");
 printf("   List of supported commands:\n\r"
 "   LEDs On: Turns all LEDs On\n\r"
 "   LEDs Off: Turns all LEDs Off\n\r"
+"   Button States?: Returns state of all five mTouch buttons\n\r"
 "   Reset: Clears the terminal and resets the micro\n\r"
 "   Clear: Clears the terminal but doesn't reset the micro\n\r"
 "   *IDN?: Returns device identification\n\r"

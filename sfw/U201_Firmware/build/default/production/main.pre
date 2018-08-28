@@ -21701,11 +21701,8 @@ printResetMessage();
 while (1)
 {
 
-
 if (eusart2RxStringReady) {
-
 ringBufferPull();
-
 }
 
 
@@ -21718,8 +21715,7 @@ LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
 LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
 LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
 
-
-
+# 117
 __nop();
 
 }

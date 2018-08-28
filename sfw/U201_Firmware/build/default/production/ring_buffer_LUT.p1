@@ -7,6 +7,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _LATF `Vuc ~T0 @X0 0 e@3966 ]
 "195 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"54 ring_buffer_LUT.c
+[c E17489 0 1 2 3 4 .. ]
+[n E17489 mtouch_button_names Button0 Button1 Button2 Button3 Button4  ]
+"138 mcc_generated_files/mtouch/mtouch_button.h
+[v _MTOUCH_Button_isPressed `(uc ~T0 @X0 0 ef1`E17489 ]
 [; ;__size_t.h: 4: typedef unsigned size_t;
 [; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
 [; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
@@ -16248,159 +16253,199 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 102: extern char * ultoa(char * buf, unsigned long val, int base);
 [; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
 [; ;ring_buffer_LUT.h: 47: void ringBufferLUT(char * line);
-"7 ring_buffer_LUT.c
+"9 ring_buffer_LUT.c
 [v _ringBufferLUT `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;ring_buffer_LUT.c: 7: void ringBufferLUT(char * line) {
+[; ;ring_buffer_LUT.c: 9: void ringBufferLUT(char * line) {
 [e :U _ringBufferLUT ]
 [v _line `*uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;ring_buffer_LUT.c: 13: if((0 == strcmp(line, "LEDs On"))) {
-"13
+[; ;ring_buffer_LUT.c: 15: if((0 == strcmp(line, "LEDs On"))) {
+"15
 [e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 1C 2017  ]
 {
-[; ;ring_buffer_LUT.c: 16: LATF = 0x00;
-"16
+[; ;ring_buffer_LUT.c: 18: LATF = 0x00;
+"18
 [e = _LATF -> -> 0 `i `uc ]
-[; ;ring_buffer_LUT.c: 19: printf("\n\r");
-"19
-[e ( _printf :s 2C ]
-[; ;ring_buffer_LUT.c: 21: printf("    LATF = 0x00\n\r");
+[; ;ring_buffer_LUT.c: 21: printf("\n\r");
 "21
+[e ( _printf :s 2C ]
+[; ;ring_buffer_LUT.c: 23: printf("    LATF = 0x00\n\r");
+"23
 [e ( _printf :s 3C ]
-[; ;ring_buffer_LUT.c: 24: printf("\n\r");
-"24
-[e ( _printf :s 4C ]
+[; ;ring_buffer_LUT.c: 26: printf("\n\r");
 "26
+[e ( _printf :s 4C ]
+"28
 }
-[; ;ring_buffer_LUT.c: 26: }
+[; ;ring_buffer_LUT.c: 28: }
 [e $U 2018  ]
-"30
+"32
 [e :U 2017 ]
-[; ;ring_buffer_LUT.c: 30: else if((0 == strcmp(line, "LEDs Off"))) {
+[; ;ring_buffer_LUT.c: 32: else if((0 == strcmp(line, "LEDs Off"))) {
 [e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 5C 2019  ]
 {
-[; ;ring_buffer_LUT.c: 33: LATF = 0xFF;
-"33
+[; ;ring_buffer_LUT.c: 35: LATF = 0xFF;
+"35
 [e = _LATF -> -> 255 `i `uc ]
-[; ;ring_buffer_LUT.c: 36: printf("\n\r");
-"36
-[e ( _printf :s 6C ]
-[; ;ring_buffer_LUT.c: 38: printf("LATF = 0xFF\n\r");
+[; ;ring_buffer_LUT.c: 38: printf("\n\r");
 "38
+[e ( _printf :s 6C ]
+[; ;ring_buffer_LUT.c: 40: printf("LATF = 0xFF\n\r");
+"40
 [e ( _printf :s 7C ]
-[; ;ring_buffer_LUT.c: 41: printf("\n\r");
-"41
-[e ( _printf :s 8C ]
+[; ;ring_buffer_LUT.c: 43: printf("\n\r");
 "43
+[e ( _printf :s 8C ]
+"45
 }
-[; ;ring_buffer_LUT.c: 43: }
+[; ;ring_buffer_LUT.c: 45: }
 [e $U 2020  ]
-"47
+"48
 [e :U 2019 ]
-[; ;ring_buffer_LUT.c: 47: else if((0 == strcmp(line, "Reset"))) {
+[; ;ring_buffer_LUT.c: 48: else if((0 == strcmp(line, "Button States?"))) {
 [e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 9C 2021  ]
 {
-[; ;ring_buffer_LUT.c: 50: printf("\033[2J");
-"50
+[; ;ring_buffer_LUT.c: 51: printf("\n\r");
+"51
 [e ( _printf :s 10C ]
-[; ;ring_buffer_LUT.c: 53: printf("\033[H");
-"53
-[e ( _printf :s 11C ]
-[; ;ring_buffer_LUT.c: 56: asm("reset");
+[; ;ring_buffer_LUT.c: 54: printf("    Button 0: %d\n\r", MTOUCH_Button_isPressed(Button0));
+"54
+[e ( _printf , (. :s 11C -> ( _MTOUCH_Button_isPressed (1 . `E17489 0 `i ]
+[; ;ring_buffer_LUT.c: 55: printf("    Button 1: %d\n\r", MTOUCH_Button_isPressed(Button1));
+"55
+[e ( _printf , (. :s 12C -> ( _MTOUCH_Button_isPressed (1 . `E17489 1 `i ]
+[; ;ring_buffer_LUT.c: 56: printf("    Button 2: %d\n\r", MTOUCH_Button_isPressed(Button2));
 "56
-[; <" reset ;# ">
+[e ( _printf , (. :s 13C -> ( _MTOUCH_Button_isPressed (1 . `E17489 2 `i ]
+[; ;ring_buffer_LUT.c: 57: printf("    Button 3: %d\n\r", MTOUCH_Button_isPressed(Button3));
+"57
+[e ( _printf , (. :s 14C -> ( _MTOUCH_Button_isPressed (1 . `E17489 3 `i ]
+[; ;ring_buffer_LUT.c: 58: printf("    Button 4: %d\n\r", MTOUCH_Button_isPressed(Button4));
 "58
-}
-[; ;ring_buffer_LUT.c: 58: }
-[e $U 2022  ]
+[e ( _printf , (. :s 15C -> ( _MTOUCH_Button_isPressed (1 . `E17489 4 `i ]
+[; ;ring_buffer_LUT.c: 61: printf("\n\r");
 "61
+[e ( _printf :s 16C ]
+"62
+}
+[; ;ring_buffer_LUT.c: 62: }
+[e $U 2022  ]
+"66
 [e :U 2021 ]
-[; ;ring_buffer_LUT.c: 61: else if((0 == strcmp(line, "Clear"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 12C 2023  ]
+[; ;ring_buffer_LUT.c: 66: else if((0 == strcmp(line, "Reset"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 17C 2023  ]
 {
-[; ;ring_buffer_LUT.c: 64: printf("\033[2J");
-"64
-[e ( _printf :s 13C ]
-[; ;ring_buffer_LUT.c: 67: printf("\033[H");
-"67
-[e ( _printf :s 14C ]
+[; ;ring_buffer_LUT.c: 69: printf("\033[2J");
 "69
-}
-[; ;ring_buffer_LUT.c: 69: }
-[e $U 2024  ]
-"72
-[e :U 2023 ]
-[; ;ring_buffer_LUT.c: 72: else if((0 == strcmp(line, "*IDN?")) || (0 == strcmp(line, "IDN"))) {
-[e $ ! || == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 15C == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 16C 2025  ]
-{
-[; ;ring_buffer_LUT.c: 75: printf("\n\r");
-"75
-[e ( _printf :s 17C ]
-[; ;ring_buffer_LUT.c: 78: printf("    mTouch Test Board, REVA");
-"78
 [e ( _printf :s 18C ]
-[; ;ring_buffer_LUT.c: 81: printf("\n\r");
-"81
+[; ;ring_buffer_LUT.c: 72: printf("\033[H");
+"72
 [e ( _printf :s 19C ]
-"83
+[; ;ring_buffer_LUT.c: 75: asm("reset");
+"75
+[; <" reset ;# ">
+"77
 }
-[; ;ring_buffer_LUT.c: 83: }
-[e $U 2026  ]
-"86
-[e :U 2025 ]
-[; ;ring_buffer_LUT.c: 86: else if((0 == strcmp(line, "Help"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 20C 2027  ]
+[; ;ring_buffer_LUT.c: 77: }
+[e $U 2024  ]
+"80
+[e :U 2023 ]
+[; ;ring_buffer_LUT.c: 80: else if((0 == strcmp(line, "Clear"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 20C 2025  ]
 {
-[; ;ring_buffer_LUT.c: 89: printf("\n\r");
-"89
+[; ;ring_buffer_LUT.c: 83: printf("\033[2J");
+"83
 [e ( _printf :s 21C ]
-[; ;ring_buffer_LUT.c: 91: printf("   List of supported commands:\n\r"
-[; ;ring_buffer_LUT.c: 92: "   LEDs On: Turns all LEDs On\n\r"
-[; ;ring_buffer_LUT.c: 93: "   LEDs Off: Turns all LEDs Off\n\r"
-[; ;ring_buffer_LUT.c: 94: "   Reset: Clears the terminal and resets the micro\n\r"
-[; ;ring_buffer_LUT.c: 95: "   Clear: Clears the terminal but doesn't reset the micro\n\r"
-[; ;ring_buffer_LUT.c: 96: "   *IDN?: Returns device identification\n\r"
-[; ;ring_buffer_LUT.c: 97: "   Help: This message, lists commands\n\r");
-"97
+[; ;ring_buffer_LUT.c: 86: printf("\033[H");
+"86
 [e ( _printf :s 22C ]
+"88
+}
+[; ;ring_buffer_LUT.c: 88: }
+[e $U 2026  ]
+"91
+[e :U 2025 ]
+[; ;ring_buffer_LUT.c: 91: else if((0 == strcmp(line, "*IDN?")) || (0 == strcmp(line, "IDN"))) {
+[e $ ! || == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 23C == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 24C 2027  ]
+{
+[; ;ring_buffer_LUT.c: 94: printf("\n\r");
+"94
+[e ( _printf :s 25C ]
+[; ;ring_buffer_LUT.c: 97: printf("    mTouch Test Board, REVA");
+"97
+[e ( _printf :s 26C ]
 [; ;ring_buffer_LUT.c: 100: printf("\n\r");
 "100
-[e ( _printf :s 23C ]
+[e ( _printf :s 27C ]
 "102
 }
-[e :U 2027 ]
+[; ;ring_buffer_LUT.c: 102: }
+[e $U 2028  ]
 "105
+[e :U 2027 ]
+[; ;ring_buffer_LUT.c: 105: else if((0 == strcmp(line, "Help"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 28C 2029  ]
+{
+[; ;ring_buffer_LUT.c: 108: printf("\n\r");
+"108
+[e ( _printf :s 29C ]
+[; ;ring_buffer_LUT.c: 110: printf("   List of supported commands:\n\r"
+[; ;ring_buffer_LUT.c: 111: "   LEDs On: Turns all LEDs On\n\r"
+[; ;ring_buffer_LUT.c: 112: "   LEDs Off: Turns all LEDs Off\n\r"
+[; ;ring_buffer_LUT.c: 113: "   Button States?: Returns state of all five mTouch buttons\n\r"
+[; ;ring_buffer_LUT.c: 114: "   Reset: Clears the terminal and resets the micro\n\r"
+[; ;ring_buffer_LUT.c: 115: "   Clear: Clears the terminal but doesn't reset the micro\n\r"
+[; ;ring_buffer_LUT.c: 116: "   *IDN?: Returns device identification\n\r"
+[; ;ring_buffer_LUT.c: 117: "   Help: This message, lists commands\n\r");
+"117
+[e ( _printf :s 30C ]
+[; ;ring_buffer_LUT.c: 120: printf("\n\r");
+"120
+[e ( _printf :s 31C ]
+"122
+}
+[e :U 2029 ]
+"125
+[e :U 2028 ]
 [e :U 2026 ]
 [e :U 2024 ]
 [e :U 2022 ]
 [e :U 2020 ]
 [e :U 2018 ]
-[; ;ring_buffer_LUT.c: 102: }
-[; ;ring_buffer_LUT.c: 105: }
+[; ;ring_buffer_LUT.c: 122: }
+[; ;ring_buffer_LUT.c: 125: }
 [e :UE 2016 ]
 }
-[p f _printf 8388608 ]
-[a 9C 82 101 115 101 116 0 ]
-[a 12C 67 108 101 97 114 0 ]
-[a 20C 72 101 108 112 0 ]
+[p f _printf 8388736 ]
+[a 17C 82 101 115 101 116 0 ]
+[a 20C 67 108 101 97 114 0 ]
+[a 28C 72 101 108 112 0 ]
 [a 1C 76 69 68 115 32 79 110 0 ]
 [a 5C 76 69 68 115 32 79 102 102 0 ]
-[a 16C 73 68 78 0 ]
-[a 10C 27 91 50 74 0 ]
-[a 13C 27 91 50 74 0 ]
-[a 11C 27 91 72 0 ]
-[a 14C 27 91 72 0 ]
-[a 18C 32 32 32 32 109 84 111 117 99 104 32 84 101 115 116 32 66 111 97 114 100 44 32 82 69 86 65 0 ]
-[a 15C 42 73 68 78 63 0 ]
-[a 22C 32 32 32 76 105 115 116 32 111 102 32 115 117 112 112 111 114 116 101 100 32 99 111 109 109 97 110 100 115 58 10 13 32 32 32 76 69 68 115 32 79 110 58 32 84 117 114 110 115 32 97 108 108 32 76 69 68 115 32 79 110 10 13 32 32 32 76 69 68 115 32 79 102 102 58 32 84 117 114 110 115 32 97 108 108 32 76 69 68 115 32 79 102 102 10 13 32 32 32 82 101 115 101 116 58 32 67 108 101 97 114 115 32 116 104 101 32 116 101 114 109 105 110 97 108 32 97 110 100 32 114 101 115 101 116 115 32 116 104 101 32 109 105 99 114 111 10 13 32 32 32 67 108 101 97 114 58 32 67 108 101 97 114 115 32 116 104 101 32 116 101 114 109 105 110 97 108 32 98 117 116 32 100 111 101 115 110 39 116 32 114 101 115 101 116 32 116 104 101 32 109 105 99 114 111 10 13 32 32 32 42 73 68 78 63 58 32 82 101 116 117 114 110 115 32 100 101 118 105 99 101 32 105 100 101 110 116 105 102 105 99 97 116 105 111 110 10 13 32 32 32 72 101 108 112 58 32 84 104 105 115 32 109 101 115 115 97 103 101 44 32 108 105 115 116 115 32 99 111 109 109 97 110 100 115 10 13 0 ]
+[a 24C 73 68 78 0 ]
+[a 18C 27 91 50 74 0 ]
+[a 21C 27 91 50 74 0 ]
+[a 19C 27 91 72 0 ]
+[a 22C 27 91 72 0 ]
+[a 26C 32 32 32 32 109 84 111 117 99 104 32 84 101 115 116 32 66 111 97 114 100 44 32 82 69 86 65 0 ]
+[a 9C 66 117 116 116 111 110 32 83 116 97 116 101 115 63 0 ]
+[a 23C 42 73 68 78 63 0 ]
+[a 30C 32 32 32 76 105 115 116 32 111 102 32 115 117 112 112 111 114 116 101 100 32 99 111 109 109 97 110 100 115 58 10 13 32 32 32 76 69 68 115 32 79 110 58 32 84 117 114 110 115 32 97 108 108 32 76 69 68 115 32 79 110 10 13 32 32 32 76 69 68 115 32 79 102 102 58 32 84 117 114 110 115 32 97 108 108 32 76 69 68 115 32 79 102 102 10 13 32 32 32 66 117 116 116 111 110 32 83 116 97 116 101 115 63 58 32 82 101 116 117 114 110 115 32 115 116 97 116 101 32 111 102 32 97 108 108 32 102 105 118 101 32 109 84 111 117 99 104 32 98 117 116 116 111 110 115 10 13 32 32 32 82 101 115 101 116 58 32 67 108 101 97 114 115 32 116 104 101 32 116 101 114 109 105 110 97 108 32 97 110 100 32 114 101 115 101 116 115 32 116 104 101 32 109 105 99 114 111 10 13 32 32 32 67 108 101 97 114 58 32 67 108 101 97 114 115 32 116 104 101 32 116 101 114 109 105 110 97 108 32 98 117 116 32 100 111 101 115 110 39 116 32 114 101 115 101 116 32 116 104 101 32 109 105 99 114 111 10 13 32 32 32 42 73 68 78 63 58 32 82 101 116 117 114 110 115 32 100 101 118 105 99 101 32 105 100 101 110 116 105 102 105 99 97 116 105 111 110 10 13 32 32 32 72 101 108 112 58 32 84 104 105 115 32 109 101 115 115 97 103 101 44 32 108 105 115 116 115 32 99 111 109 109 97 110 100 115 10 13 0 ]
+[a 15C 32 32 32 32 66 117 116 116 111 110 32 52 58 32 37 100 10 13 0 ]
+[a 14C 32 32 32 32 66 117 116 116 111 110 32 51 58 32 37 100 10 13 0 ]
+[a 13C 32 32 32 32 66 117 116 116 111 110 32 50 58 32 37 100 10 13 0 ]
+[a 12C 32 32 32 32 66 117 116 116 111 110 32 49 58 32 37 100 10 13 0 ]
+[a 11C 32 32 32 32 66 117 116 116 111 110 32 48 58 32 37 100 10 13 0 ]
 [a 7C 76 65 84 70 32 61 32 48 120 70 70 10 13 0 ]
 [a 3C 32 32 32 32 76 65 84 70 32 61 32 48 120 48 48 10 13 0 ]
 [a 2C 10 13 0 ]
 [a 4C 10 13 0 ]
 [a 6C 10 13 0 ]
 [a 8C 10 13 0 ]
-[a 17C 10 13 0 ]
-[a 19C 10 13 0 ]
-[a 21C 10 13 0 ]
-[a 23C 10 13 0 ]
+[a 10C 10 13 0 ]
+[a 16C 10 13 0 ]
+[a 25C 10 13 0 ]
+[a 27C 10 13 0 ]
+[a 29C 10 13 0 ]
+[a 31C 10 13 0 ]

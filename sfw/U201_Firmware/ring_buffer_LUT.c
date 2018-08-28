@@ -4,6 +4,8 @@
 
 #include "ring_buffer_LUT.h"
 
+#include "mcc_generated_files/mtouch/mtouch_button.h"
+
 void ringBufferLUT(char * line) {
  
     // THIS IS WHERE WE DO THE ACTUAL PARSING OF RECEIVED STRING AND
@@ -40,6 +42,23 @@ void ringBufferLUT(char * line) {
         // Get some space on terminal
         printf("\n\r");
         
+    }
+    
+    // Return state of all mTouch pushbuttons
+    else if((0 == strcmp(line, "Button States?"))) {
+        
+        // Get some space on terminal
+        printf("\n\r");
+        
+        // Print state of buttons
+        printf("    Button 0: %d\n\r", MTOUCH_Button_isPressed(Button0));
+        printf("    Button 1: %d\n\r", MTOUCH_Button_isPressed(Button1));
+        printf("    Button 2: %d\n\r", MTOUCH_Button_isPressed(Button2));
+        printf("    Button 3: %d\n\r", MTOUCH_Button_isPressed(Button3));
+        printf("    Button 4: %d\n\r", MTOUCH_Button_isPressed(Button4));
+        
+        // Get some space on terminal
+        printf("\n\r");
     }
     
 
@@ -91,6 +110,7 @@ void ringBufferLUT(char * line) {
         printf("   List of supported commands:\n\r"
                 "   LEDs On: Turns all LEDs On\n\r"
                 "   LEDs Off: Turns all LEDs Off\n\r"
+                "   Button States?: Returns state of all five mTouch buttons\n\r"
                 "   Reset: Clears the terminal and resets the micro\n\r"
                 "   Clear: Clears the terminal but doesn't reset the micro\n\r"
                 "   *IDN?: Returns device identification\n\r"

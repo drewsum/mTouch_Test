@@ -37,7 +37,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1349 . . . ]
 "29064
 [v _LATFbits `VS1349 ~T0 @X0 0 e@3966 ]
-"90 main.c
+"87 main.c
 [c E17378 0 1 2 3 4 .. ]
 [n E17378 mtouch_button_names Button0 Button1 Button2 Button3 Button4  ]
 "141 mcc_generated_files/mtouch/mtouch_button.h
@@ -16310,46 +16310,46 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 77: {
 "77
 {
-[; ;main.c: 80: if (eusart2RxStringReady) {
-"80
+[; ;main.c: 79: if (eusart2RxStringReady) {
+"79
 [e $ ! != -> _eusart2RxStringReady `i -> -> -> 0 `i `Vuc `i 2020  ]
 {
-[; ;main.c: 82: ringBufferPull();
-"82
+[; ;main.c: 80: ringBufferPull();
+"80
 [e ( _ringBufferPull ..  ]
-"84
+"81
 }
 [e :U 2020 ]
-[; ;main.c: 84: }
-[; ;main.c: 87: MTOUCH_Service_Mainloop();
-"87
+[; ;main.c: 81: }
+[; ;main.c: 84: MTOUCH_Service_Mainloop();
+"84
 [e ( _MTOUCH_Service_Mainloop ..  ]
-[; ;main.c: 90: LATFbits.LATF0 = ~MTOUCH_Button_State_Get(Button0);
-"90
+[; ;main.c: 87: LATFbits.LATF0 = ~MTOUCH_Button_State_Get(Button0);
+"87
 [e = . . _LATFbits 0 0 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 0 `i `uc ]
-[; ;main.c: 91: LATFbits.LATF1 = ~MTOUCH_Button_State_Get(Button1);
-"91
+[; ;main.c: 88: LATFbits.LATF1 = ~MTOUCH_Button_State_Get(Button1);
+"88
 [e = . . _LATFbits 0 1 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 1 `i `uc ]
-[; ;main.c: 92: LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
-"92
+[; ;main.c: 89: LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
+"89
 [e = . . _LATFbits 0 2 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 2 `i `uc ]
-[; ;main.c: 93: LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
-"93
+[; ;main.c: 90: LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
+"90
 [e = . . _LATFbits 0 3 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 3 `i `uc ]
-[; ;main.c: 94: LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
-"94
+[; ;main.c: 91: LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
+"91
 [e = . . _LATFbits 0 4 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17378 4 `i `uc ]
-[; ;main.c: 98: __nop();
-"98
+[; ;main.c: 117: __nop();
+"117
 [e ( ___nop ..  ]
-"100
+"119
 }
 [e :U 2017 ]
 "76
 [e $U 2018  ]
 [e :U 2019 ]
-[; ;main.c: 100: }
-[; ;main.c: 101: }
-"101
+[; ;main.c: 119: }
+[; ;main.c: 120: }
+"120
 [e :UE 2016 ]
 }

@@ -16347,22 +16347,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_interface.c: 56: printf("\033[H");
 "56
 [e ( _printf :s 2C ]
-[; ;ring_buffer_interface.c: 59: printf("PIC18F67K40 mTouch Demo\n\r"
-[; ;ring_buffer_interface.c: 60: "Baud rate: 115200 kbps\n\r"
-[; ;ring_buffer_interface.c: 61: "No parity, 8 bits, no flow control, 1 stop bit\n\r"
-[; ;ring_buffer_interface.c: 62: "Commands are case sensitive\n\r"
-[; ;ring_buffer_interface.c: 63: "Enter a command, or Help for list of commands\n\r");
-"63
+[; ;ring_buffer_interface.c: 59: printf("    Boot complete\n\r"
+[; ;ring_buffer_interface.c: 60: "   PIC18F67K40 mTouch Demo\n\r"
+[; ;ring_buffer_interface.c: 61: "   Sets the state of five LEDs based on mTouch capacitive pushbuttons\n\r"
+[; ;ring_buffer_interface.c: 62: "   Baud rate: 115200 kbps\n\r"
+[; ;ring_buffer_interface.c: 63: "   No parity, 8 bits, no flow control, 1 stop bit\n\r"
+[; ;ring_buffer_interface.c: 64: "   Commands are case sensitive\n\r"
+[; ;ring_buffer_interface.c: 65: "   Enter a command, or enter Help for list of commands\n\r");
+"65
 [e ( _printf :s 3C ]
-[; ;ring_buffer_interface.c: 67: printf("\n\r");
-"67
-[e ( _printf :s 4C ]
-[; ;ring_buffer_interface.c: 69: }
+[; ;ring_buffer_interface.c: 69: printf("\n\r");
 "69
+[e ( _printf :s 4C ]
+[; ;ring_buffer_interface.c: 71: }
+"71
 [e :UE 2027 ]
 }
 [p f _printf 8388608 ]
 [a 1C 27 91 50 74 0 ]
 [a 2C 27 91 72 0 ]
-[a 3C 80 73 67 49 56 70 54 55 75 52 48 32 109 84 111 117 99 104 32 68 101 109 111 10 13 66 97 117 100 32 114 97 116 101 58 32 49 49 53 50 48 48 32 107 98 112 115 10 13 78 111 32 112 97 114 105 116 121 44 32 56 32 98 105 116 115 44 32 110 111 32 102 108 111 119 32 99 111 110 116 114 111 108 44 32 49 32 115 116 111 112 32 98 105 116 10 13 67 111 109 109 97 110 100 115 32 97 114 101 32 99 97 115 101 32 115 101 110 115 105 116 105 118 101 10 13 69 110 116 101 114 32 97 32 99 111 109 109 97 110 100 44 32 111 114 32 72 101 108 112 32 102 111 114 32 108 105 115 116 32 111 102 32 99 111 109 109 97 110 100 115 10 13 0 ]
+[a 3C 32 32 32 32 66 111 111 116 32 99 111 109 112 108 101 116 101 10 13 32 32 32 80 73 67 49 56 70 54 55 75 52 48 32 109 84 111 117 99 104 32 68 101 109 111 10 13 32 32 32 83 101 116 115 32 116 104 101 32 115 116 97 116 101 32 111 102 32 102 105 118 101 32 76 69 68 115 32 98 97 115 101 100 32 111 110 32 109 84 111 117 99 104 32 99 97 112 97 99 105 116 105 118 101 32 112 117 115 104 98 117 116 116 111 110 115 10 13 32 32 32 66 97 117 100 32 114 97 116 101 58 32 49 49 53 50 48 48 32 107 98 112 115 10 13 32 32 32 78 111 32 112 97 114 105 116 121 44 32 56 32 98 105 116 115 44 32 110 111 32 102 108 111 119 32 99 111 110 116 114 111 108 44 32 49 32 115 116 111 112 32 98 105 116 10 13 32 32 32 67 111 109 109 97 110 100 115 32 97 114 101 32 99 97 115 101 32 115 101 110 115 105 116 105 118 101 10 13 32 32 32 69 110 116 101 114 32 97 32 99 111 109 109 97 110 100 44 32 111 114 32 101 110 116 101 114 32 72 101 108 112 32 102 111 114 32 108 105 115 116 32 111 102 32 99 111 109 109 97 110 100 115 10 13 0 ]
 [a 4C 10 13 0 ]

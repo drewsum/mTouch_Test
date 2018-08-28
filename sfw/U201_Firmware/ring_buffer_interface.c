@@ -56,11 +56,13 @@ void printResetMessage(void) {
     printf("\033[H");
     
     // Tell terminal we're up and running
-    printf("PIC18F67K40 mTouch Demo\n\r"
-            "Baud rate: 115200 kbps\n\r"
-            "No parity, 8 bits, no flow control, 1 stop bit\n\r"
-            "Commands are case sensitive\n\r"
-            "Enter a command, or Help for list of commands\n\r");
+    printf("    Boot complete\n\r"
+            "   PIC18F67K40 mTouch Demo\n\r"
+            "   Sets the state of five LEDs based on mTouch capacitive pushbuttons\n\r"
+            "   Baud rate: 115200 kbps\n\r"
+            "   No parity, 8 bits, no flow control, 1 stop bit\n\r"
+            "   Commands are case sensitive\n\r"
+            "   Enter a command, or enter Help for list of commands\n\r");
             
     
     // Get some space on terminal
