@@ -68,17 +68,32 @@ void ringBufferLUT(char * line) {
         
     }
     
+    // Identification string
+    else if((0 == strcmp(line, "*IDN?")) || (0 == strcmp(line, "IDN"))) {
+       
+               // Get some space on terminal
+        printf("\n\r"); 
+        
+        // Tell term who we are
+        printf("    mTouch Test Board, REVA");
+        
+        // Get some space on terminal
+        printf("\n\r");
+        
+    }
+    
     // help, print options
     else if((0 == strcmp(line, "Help"))) {
      
         // Get some space on terminal
         printf("\n\r");
         // Print help message
-        printf("   List of supported commands so far:\n\r"
+        printf("   List of supported commands:\n\r"
                 "   LEDs On: Turns all LEDs On\n\r"
                 "   LEDs Off: Turns all LEDs Off\n\r"
-                "   Reset: Clears the screen and resets the micro\n\r"
-                "   Clear: Clears the screen but doesn't reset the micro\n\r"
+                "   Reset: Clears the terminal and resets the micro\n\r"
+                "   Clear: Clears the terminal but doesn't reset the micro\n\r"
+                "   *IDN?: Returns device identification\n\r"
                 "   Help: This message, lists commands\n\r");
         
         // Get some space on terminal

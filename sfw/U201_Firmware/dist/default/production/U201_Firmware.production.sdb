@@ -342,13 +342,13 @@
 "58 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"92
+"90
 } 0
 "8 C:\Users\Drew Maatman\Documents\KiCad Projects\Projects\mTouch_Test_KiCAD\sfw\U201_Firmware\ring_buffer_interface.c
 [v _ringBufferPull ringBufferPull `(v  1 e 1 0 ]
 {
 "20
-[v ringBufferPull@index_575 index `i  1 a 2 39 ]
+[v ringBufferPull@index_572 index `i  1 a 2 39 ]
 "13
 [v ringBufferPull@index index `i  1 a 2 41 ]
 "10
@@ -368,7 +368,7 @@
 [v _ringBufferLUT ringBufferLUT `(v  1 e 1 0 ]
 {
 [v ringBufferLUT@line line `*.39uc  1 p 2 32 ]
-"90
+"105
 } 0
 "33 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]

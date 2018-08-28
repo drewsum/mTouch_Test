@@ -16253,51 +16253,76 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 2024  ]
 "72
 [e :U 2023 ]
-[; ;ring_buffer_LUT.c: 72: else if((0 == strcmp(line, "Help"))) {
-[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 15C 2025  ]
+[; ;ring_buffer_LUT.c: 72: else if((0 == strcmp(line, "*IDN?")) || (0 == strcmp(line, "IDN"))) {
+[e $ ! || == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 15C == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 16C 2025  ]
 {
 [; ;ring_buffer_LUT.c: 75: printf("\n\r");
 "75
-[e ( _printf :s 16C ]
-[; ;ring_buffer_LUT.c: 77: printf("   List of supported commands so far:\n\r"
-[; ;ring_buffer_LUT.c: 78: "   LEDs On: Turns all LEDs On\n\r"
-[; ;ring_buffer_LUT.c: 79: "   LEDs Off: Turns all LEDs Off\n\r"
-[; ;ring_buffer_LUT.c: 80: "   Reset: Clears the screen and resets the micro\n\r"
-[; ;ring_buffer_LUT.c: 81: "   Clear: Clears the screen but doesn't reset the micro\n\r"
-[; ;ring_buffer_LUT.c: 82: "   Help: This message, lists commands\n\r");
-"82
 [e ( _printf :s 17C ]
-[; ;ring_buffer_LUT.c: 85: printf("\n\r");
-"85
+[; ;ring_buffer_LUT.c: 78: printf("    mTouch Test Board, REVA");
+"78
 [e ( _printf :s 18C ]
-"87
+[; ;ring_buffer_LUT.c: 81: printf("\n\r");
+"81
+[e ( _printf :s 19C ]
+"83
 }
+[; ;ring_buffer_LUT.c: 83: }
+[e $U 2026  ]
+"86
 [e :U 2025 ]
-"90
+[; ;ring_buffer_LUT.c: 86: else if((0 == strcmp(line, "Help"))) {
+[e $ ! == -> 0 `i ( _strcmp (2 , -> _line `*Cuc :s 20C 2027  ]
+{
+[; ;ring_buffer_LUT.c: 89: printf("\n\r");
+"89
+[e ( _printf :s 21C ]
+[; ;ring_buffer_LUT.c: 91: printf("   List of supported commands:\n\r"
+[; ;ring_buffer_LUT.c: 92: "   LEDs On: Turns all LEDs On\n\r"
+[; ;ring_buffer_LUT.c: 93: "   LEDs Off: Turns all LEDs Off\n\r"
+[; ;ring_buffer_LUT.c: 94: "   Reset: Clears the terminal and resets the micro\n\r"
+[; ;ring_buffer_LUT.c: 95: "   Clear: Clears the terminal but doesn't reset the micro\n\r"
+[; ;ring_buffer_LUT.c: 96: "   *IDN?: Returns device identification\n\r"
+[; ;ring_buffer_LUT.c: 97: "   Help: This message, lists commands\n\r");
+"97
+[e ( _printf :s 22C ]
+[; ;ring_buffer_LUT.c: 100: printf("\n\r");
+"100
+[e ( _printf :s 23C ]
+"102
+}
+[e :U 2027 ]
+"105
+[e :U 2026 ]
 [e :U 2024 ]
 [e :U 2022 ]
 [e :U 2020 ]
 [e :U 2018 ]
-[; ;ring_buffer_LUT.c: 87: }
-[; ;ring_buffer_LUT.c: 90: }
+[; ;ring_buffer_LUT.c: 102: }
+[; ;ring_buffer_LUT.c: 105: }
 [e :UE 2016 ]
 }
 [p f _printf 8388608 ]
 [a 9C 82 101 115 101 116 0 ]
 [a 12C 67 108 101 97 114 0 ]
-[a 15C 72 101 108 112 0 ]
+[a 20C 72 101 108 112 0 ]
 [a 1C 76 69 68 115 32 79 110 0 ]
 [a 5C 76 69 68 115 32 79 102 102 0 ]
+[a 16C 73 68 78 0 ]
 [a 10C 27 91 50 74 0 ]
 [a 13C 27 91 50 74 0 ]
 [a 11C 27 91 72 0 ]
 [a 14C 27 91 72 0 ]
-[a 17C 32 32 32 76 105 115 116 32 111 102 32 115 117 112 112 111 114 116 101 100 32 99 111 109 109 97 110 100 115 32 115 111 32 102 97 114 58 10 13 32 32 32 76 69 68 115 32 79 110 58 32 84 117 114 110 115 32 97 108 108 32 76 69 68 115 32 79 110 10 13 32 32 32 76 69 68 115 32 79 102 102 58 32 84 117 114 110 115 32 97 108 108 32 76 69 68 115 32 79 102 102 10 13 32 32 32 82 101 115 101 116 58 32 67 108 101 97 114 115 32 116 104 101 32 115 99 114 101 101 110 32 97 110 100 32 114 101 115 101 116 115 32 116 104 101 32 109 105 99 114 111 10 13 32 32 32 67 108 101 97 114 58 32 67 108 101 97 114 115 32 116 104 101 32 115 99 114 101 101 110 32 98 117 116 32 100 111 101 115 110 39 116 32 114 101 115 101 116 32 116 104 101 32 109 105 99 114 111 10 13 32 32 32 72 101 108 112 58 32 84 104 105 115 32 109 101 115 115 97 103 101 44 32 108 105 115 116 115 32 99 111 109 109 97 110 100 115 10 13 0 ]
+[a 18C 32 32 32 32 109 84 111 117 99 104 32 84 101 115 116 32 66 111 97 114 100 44 32 82 69 86 65 0 ]
+[a 15C 42 73 68 78 63 0 ]
+[a 22C 32 32 32 76 105 115 116 32 111 102 32 115 117 112 112 111 114 116 101 100 32 99 111 109 109 97 110 100 115 58 10 13 32 32 32 76 69 68 115 32 79 110 58 32 84 117 114 110 115 32 97 108 108 32 76 69 68 115 32 79 110 10 13 32 32 32 76 69 68 115 32 79 102 102 58 32 84 117 114 110 115 32 97 108 108 32 76 69 68 115 32 79 102 102 10 13 32 32 32 82 101 115 101 116 58 32 67 108 101 97 114 115 32 116 104 101 32 116 101 114 109 105 110 97 108 32 97 110 100 32 114 101 115 101 116 115 32 116 104 101 32 109 105 99 114 111 10 13 32 32 32 67 108 101 97 114 58 32 67 108 101 97 114 115 32 116 104 101 32 116 101 114 109 105 110 97 108 32 98 117 116 32 100 111 101 115 110 39 116 32 114 101 115 101 116 32 116 104 101 32 109 105 99 114 111 10 13 32 32 32 42 73 68 78 63 58 32 82 101 116 117 114 110 115 32 100 101 118 105 99 101 32 105 100 101 110 116 105 102 105 99 97 116 105 111 110 10 13 32 32 32 72 101 108 112 58 32 84 104 105 115 32 109 101 115 115 97 103 101 44 32 108 105 115 116 115 32 99 111 109 109 97 110 100 115 10 13 0 ]
 [a 7C 76 65 84 70 32 61 32 48 120 70 70 10 13 0 ]
 [a 3C 32 32 32 32 76 65 84 70 32 61 32 48 120 48 48 10 13 0 ]
 [a 2C 10 13 0 ]
 [a 4C 10 13 0 ]
 [a 6C 10 13 0 ]
 [a 8C 10 13 0 ]
-[a 16C 10 13 0 ]
-[a 18C 10 13 0 ]
+[a 17C 10 13 0 ]
+[a 19C 10 13 0 ]
+[a 21C 10 13 0 ]
+[a 23C 10 13 0 ]
