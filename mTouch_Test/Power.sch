@@ -220,17 +220,6 @@ F 3 "" H 6990 3390 50  0001 C CNN
 	1    6990 3390
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+9V #PWR0604
-U 1 1 5B70FDD8
-P 5520 3010
-F 0 "#PWR0604" H 5520 2860 50  0001 C CNN
-F 1 "+9V" H 5520 3150 50  0000 C CNN
-F 2 "" H 5520 3010 50  0001 C CNN
-F 3 "" H 5520 3010 50  0001 C CNN
-	1    5520 3010
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5520 3010 5520 3090
 $Comp
@@ -406,4 +395,15 @@ Wire Wire Line
 Wire Wire Line
 	3050 3290 2620 3290
 Connection ~ 2620 3290
+$Comp
+L power:+5V #PWR?
+U 1 1 5B84D158
+P 5520 3010
+F 0 "#PWR?" H 5520 2860 50  0001 C CNN
+F 1 "+5V" H 5520 3150 50  0000 C CNN
+F 2 "" H 5520 3010 50  0001 C CNN
+F 3 "" H 5520 3010 50  0001 C CNN
+	1    5520 3010
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
