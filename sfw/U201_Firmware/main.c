@@ -55,6 +55,7 @@ extern volatile bit eusart2RxStringReady;
 // Bit that states if USB is active or not
 volatile bit USB_DTR = 0;
 
+// Callback function for USB_DTR
 void DTR_Callback(void) {
  
     if(PORTBbits.RB2 == 1) {
@@ -63,6 +64,37 @@ void DTR_Callback(void) {
     
     else {
         USB_DTR = 0;
+    }
+    
+}
+
+// Function called upon any button press
+void mTouchCallback(void) {
+    
+    if (MTOUCH_Button_isPressed(Button0)) {
+        LATFbits.LATF0 = !LATFbits.LATF0;
+        printf("    Button 0 has been pressed\n\r");
+    }
+    
+    if (MTOUCH_Button_isPressed(Button1)) {
+        LATFbits.LATF1 = !LATFbits.LATF1;
+        printf("    Button 1 has been pressed\n\r");
+    }
+    
+    if (MTOUCH_Button_isPressed(Button2)) {
+        LATFbits.LATF2 = !LATFbits.LATF2;
+        printf("    Button 2 has been pressed\n\r");
+    }
+    
+    if (MTOUCH_Button_isPressed(Button3)) {
+        LATFbits.LATF3 = !LATFbits.LATF3;
+        printf("    Button 3 has been pressed\n\r");
+    }
+    
+    if (MTOUCH_Button_isPressed(Button4)) {
+        LATFbits.LATF4 = !LATFbits.LATF4;
+        printf("    Button 4 has been pressed\n\r");
+        
     }
     
 }
@@ -84,6 +116,12 @@ void main(void)
     // Enable low priority global interrupts.
     INTERRUPT_GlobalInterruptLowEnable();
 
+    // Set Button callback functions
+    MTOUCH_Button_SetPressedCallback(mTouchCallback);
+    
+    // Check if terminal is available on boot
+    DTR_Callback();
+    
     // Tell terminal we're booted
     printResetMessage();
     
@@ -96,36 +134,6 @@ void main(void)
         
         // Service the mTouch API
         MTOUCH_Service_Mainloop();
-        
-        // Act on buttons presses, light LED if button is pressed
-        LATFbits.LATF0 = ~MTOUCH_Button_State_Get(Button0);
-        LATFbits.LATF1 = ~MTOUCH_Button_State_Get(Button1);
-        LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
-        LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
-        LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
-        
-        // print button state if pressed to terminal
-//        if(MTOUCH_Button_State_Get(Button0)) {
-//            printf("    Button0 pressed\n\r");
-//        }
-//        
-//        if(MTOUCH_Button_State_Get(Button1)) {
-//            printf("    Button1 pressed\n\r");   
-//        }
-//        
-//        if(MTOUCH_Button_State_Get(Button2)) {
-//            printf("    Button2 pressed\n\r");
-//        }
-//        
-//        if(MTOUCH_Button_State_Get(Button3)) {
-//            printf("    Button3 pressed\n\r");
-//        }
-//        
-//        if(MTOUCH_Button_State_Get(Button4)) {
-//            printf("    Button4 pressed\n\r");
-//        }
-        
-        
         
         // Twiddle thumbs
         NOP();

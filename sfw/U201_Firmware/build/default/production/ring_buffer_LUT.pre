@@ -21726,7 +21726,7 @@ LATF = 0xFF;
 
 printf("\n\r");
 
-printf("LATF = 0xFF\n\r");
+printf("    LATF = 0xFF\n\r");
 
 
 printf("\n\r");

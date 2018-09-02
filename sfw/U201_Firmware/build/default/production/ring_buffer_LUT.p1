@@ -16302,7 +16302,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ring_buffer_LUT.c: 40: printf("\n\r");
 "40
 [e ( _printf :s 6C ]
-[; ;ring_buffer_LUT.c: 42: printf("LATF = 0xFF\n\r");
+[; ;ring_buffer_LUT.c: 42: printf("    LATF = 0xFF\n\r");
 "42
 [e ( _printf :s 7C ]
 [; ;ring_buffer_LUT.c: 45: printf("\n\r");
@@ -16452,7 +16452,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 13C 32 32 32 32 66 117 116 116 111 110 32 50 58 32 37 100 10 13 0 ]
 [a 12C 32 32 32 32 66 117 116 116 111 110 32 49 58 32 37 100 10 13 0 ]
 [a 11C 32 32 32 32 66 117 116 116 111 110 32 48 58 32 37 100 10 13 0 ]
-[a 7C 76 65 84 70 32 61 32 48 120 70 70 10 13 0 ]
+[a 7C 32 32 32 32 76 65 84 70 32 61 32 48 120 70 70 10 13 0 ]
 [a 3C 32 32 32 32 76 65 84 70 32 61 32 48 120 48 48 10 13 0 ]
 [a 2C 10 13 0 ]
 [a 4C 10 13 0 ]

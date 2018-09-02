@@ -49,6 +49,18 @@ enum mtouch_button_state
     MTOUCH_BUTTON_STATE_pressed
 };
 
+    enum mtouch_button_aks_group
+    {
+        No_AKS_Group    = 0,
+        AKS_Group_1     = 1,
+        AKS_Group_2     = 2,
+        AKS_Group_3     = 3,
+        AKS_Group_4     = 4,
+        AKS_Group_5     = 5,
+        AKS_Group_6     = 6,
+        AKS_Group_7     = 7,
+        Max_AKS_Group   = 8
+    };
 
     enum mtouch_button_hysteresis_thresholds
     {
@@ -73,6 +85,7 @@ enum mtouch_button_state
         const enum mtouch_button_names      name;
         const enum mtouch_sensor_names      sensor;
         enum mtouch_button_state            state;
+            enum mtouch_button_aks_group    aks_group;
             mtouch_button_reading_t         reading;
             mtouch_button_baseline_t        baseline;
             mtouch_button_deviation_t       deviation;
@@ -88,6 +101,7 @@ enum mtouch_button_state
         {   Button0, 
             Sensor_ANE2,
             MTOUCH_BUTTON_STATE_initializing,
+            AKS_Group_1,
             0,0,0,0,0, /* non-const variables */
             (mtouch_button_deviation_t)MTOUCH_BUTTON_THRESHOLD_Button0, /* threshold */
             (mtouch_button_scaling_t)MTOUCH_BUTTON_SCALING_Button0 /* scaling */
@@ -96,6 +110,7 @@ enum mtouch_button_state
         {   Button1, 
             Sensor_ANE3,
             MTOUCH_BUTTON_STATE_initializing,
+            AKS_Group_1,
             0,0,0,0,0, /* non-const variables */
             (mtouch_button_deviation_t)MTOUCH_BUTTON_THRESHOLD_Button1, /* threshold */
             (mtouch_button_scaling_t)MTOUCH_BUTTON_SCALING_Button1 /* scaling */
@@ -104,6 +119,7 @@ enum mtouch_button_state
         {   Button2, 
             Sensor_ANE4,
             MTOUCH_BUTTON_STATE_initializing,
+            AKS_Group_1,
             0,0,0,0,0, /* non-const variables */
             (mtouch_button_deviation_t)MTOUCH_BUTTON_THRESHOLD_Button2, /* threshold */
             (mtouch_button_scaling_t)MTOUCH_BUTTON_SCALING_Button2 /* scaling */
@@ -112,6 +128,7 @@ enum mtouch_button_state
         {   Button3, 
             Sensor_ANE5,
             MTOUCH_BUTTON_STATE_initializing,
+            AKS_Group_1,
             0,0,0,0,0, /* non-const variables */
             (mtouch_button_deviation_t)MTOUCH_BUTTON_THRESHOLD_Button3, /* threshold */
             (mtouch_button_scaling_t)MTOUCH_BUTTON_SCALING_Button3 /* scaling */
@@ -120,6 +137,7 @@ enum mtouch_button_state
         {   Button4, 
             Sensor_ANE6,
             MTOUCH_BUTTON_STATE_initializing,
+            AKS_Group_1,
             0,0,0,0,0, /* non-const variables */
             (mtouch_button_deviation_t)MTOUCH_BUTTON_THRESHOLD_Button4, /* threshold */
             (mtouch_button_scaling_t)MTOUCH_BUTTON_SCALING_Button4 /* scaling */
@@ -146,6 +164,7 @@ static void                     Button_DefaultCallback      (enum mtouch_button_
 static void                     Button_State_Initializing   (mtouch_button_t* button);
 static void                     Button_State_NotPressed     (mtouch_button_t* button);
 static void                     Button_State_Pressed        (mtouch_button_t* button);
+static bool                     Button_Check_AKS_Block      (mtouch_button_t* button);
 
 
 /*
@@ -268,6 +287,11 @@ static void Button_State_NotPressed(mtouch_button_t* button)
     /* Threshold check */
     else if ((button->deviation) > (button->threshold))
     {
+        if(button->aks_group != No_AKS_Group)
+        {
+            if(Button_Check_AKS_Block(button))
+                return;
+        }
 
         button->state   = MTOUCH_BUTTON_STATE_pressed;
         button->counter = (mtouch_button_statecounter_t)0;
@@ -285,6 +309,11 @@ static void Button_State_NotPressed(mtouch_button_t* button)
     if ((button->baseline_count) == MTOUCH_BUTTON_BASELINE_RATE)
     {
         button->baseline_count = (mtouch_button_baselinecounter_t)0;
+        if(button->aks_group != No_AKS_Group)
+        {
+            if(Button_Check_AKS_Block(button))
+                return;
+        }
         Button_Baseline_Update(button);
     }
 }
@@ -421,6 +450,10 @@ static void Button_Deviation_Update(mtouch_button_t* button)
     button->deviation = (mtouch_button_deviation_t)deviation;
 }
 
+static mtouch_button_reading_t Button_Unscaled_Deviation_Get(mtouch_button_t* button)
+{
+    return (mtouch_button_reading_t)(button->reading - (mtouch_button_reading_t)((button->baseline)>>MTOUCH_BUTTON_BASELINE_GAIN));
+}
 mtouch_buttonmask_t MTOUCH_Button_Buttonmask_Get(void)
 {
     mtouch_buttonmask_t output = 0;
@@ -516,6 +549,43 @@ uint8_t MTOUCH_Button_State_Get(enum mtouch_button_names name)
         return (uint8_t)mtouch_button[name].state;
     else
         return 0;
+}
+/*
+ * =======================================================================
+ * Button Adjacent Key Suppression
+ * =======================================================================
+ */
+static bool Button_Check_AKS_Block(mtouch_button_t* button)
+{
+    enum mtouch_button_aks_group currentAKSGroup = button->aks_group;
+    int16_t surplus_deviation_this_button,surplus_deviation_check_button;
+    mtouch_button_t* check_button;
+    
+    surplus_deviation_this_button = (int16_t)(Button_Unscaled_Deviation_Get(button) - (mtouch_button_reading_t)button->threshold);
+    
+    for(check_button = &mtouch_button[0];check_button <= &mtouch_button[MTOUCH_BUTTONS-1];check_button++)
+    {
+        if(check_button->name == button->name)
+        {
+            /* Don't check again itself*/
+        }
+        else
+        {
+            if(check_button->aks_group == currentAKSGroup)
+            {
+                if(check_button->state == MTOUCH_BUTTON_STATE_pressed)  /* block if other button in the same AKS group is pressed */
+                    return true;
+                else                                                    /* check other sensors surplus deviation */
+                {
+                    surplus_deviation_check_button = (int16_t)(Button_Unscaled_Deviation_Get(check_button) - (mtouch_button_reading_t)check_button->threshold);
+                    if(surplus_deviation_check_button > 0 && surplus_deviation_check_button > surplus_deviation_this_button)
+                        return true;
+                }
+            }
+            
+        }
+    }    
+    return false;
 }
 
 

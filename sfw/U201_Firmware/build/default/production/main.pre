@@ -21704,6 +21704,7 @@ extern volatile bit eusart2RxStringReady;
 
 volatile bit USB_DTR = 0;
 
+
 void DTR_Callback(void) {
 
 if(PORTBbits.RB2 == 1) {
@@ -21716,7 +21717,38 @@ USB_DTR = 0;
 
 }
 
-# 73
+
+void mTouchCallback(void) {
+
+if (MTOUCH_Button_isPressed(Button0)) {
+LATFbits.LATF0 = !LATFbits.LATF0;
+printf("    Button 0 has been pressed\n\r");
+}
+
+if (MTOUCH_Button_isPressed(Button1)) {
+LATFbits.LATF1 = !LATFbits.LATF1;
+printf("    Button 1 has been pressed\n\r");
+}
+
+if (MTOUCH_Button_isPressed(Button2)) {
+LATFbits.LATF2 = !LATFbits.LATF2;
+printf("    Button 2 has been pressed\n\r");
+}
+
+if (MTOUCH_Button_isPressed(Button3)) {
+LATFbits.LATF3 = !LATFbits.LATF3;
+printf("    Button 3 has been pressed\n\r");
+}
+
+if (MTOUCH_Button_isPressed(Button4)) {
+LATFbits.LATF4 = !LATFbits.LATF4;
+printf("    Button 4 has been pressed\n\r");
+
+}
+
+}
+
+# 105
 void main(void)
 {
 
@@ -21732,6 +21764,12 @@ IOCBF2_SetInterruptHandler(DTR_Callback);
 (INTCONbits.GIEL = 1);
 
 
+MTOUCH_Button_SetPressedCallback(mTouchCallback);
+
+
+DTR_Callback();
+
+
 printResetMessage();
 
 while (1)
@@ -21745,13 +21783,6 @@ ringBufferPull();
 MTOUCH_Service_Mainloop();
 
 
-LATFbits.LATF0 = ~MTOUCH_Button_State_Get(Button0);
-LATFbits.LATF1 = ~MTOUCH_Button_State_Get(Button1);
-LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
-LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
-LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
-
-# 131
 __nop();
 
 }

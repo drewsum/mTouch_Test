@@ -888,7 +888,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%0%aks_group"/>
-         <value>No_AKS_Group</value>
+         <value>AKS_Group_1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RE3PPS" settingAlias="RE3PPS"/>
@@ -1208,7 +1208,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%1%aks_group"/>
-         <value>No_AKS_Group</value>
+         <value>AKS_Group_1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="SLRCOND" settingAlias="SLRD6" alias="limited"/>
@@ -1264,7 +1264,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%2%aks_group"/>
-         <value>No_AKS_Group</value>
+         <value>AKS_Group_1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="ANSELE" settingAlias="ANSELE6" alias="analog"/>
@@ -4388,7 +4388,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%3%aks_group"/>
-         <value>No_AKS_Group</value>
+         <value>AKS_Group_1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCCF" settingAlias="IOCCF3" alias="disabled"/>
@@ -10423,12 +10423,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT" alias="1st acquisition"/>
-         <value>2</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="mTouch" name="ANG3"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="ADCC" registerAlias="ADSTAT" settingAlias="ADSTAT" alias="1st acquisition"/>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="mTouch" name="ANG4"/>
@@ -11204,7 +11204,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="mTouch" name="buttons%items%4%aks_group"/>
-         <value>No_AKS_Group</value>
+         <value>AKS_Group_1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCEN" settingAlias="SOSCEN" alias="enabled"/>
@@ -13035,10 +13035,6 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="T0CKIPPS%aux1"/>
-         <value>4</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="SetPointCount"/>
          <value>0</value>
       </entry>
@@ -13049,16 +13045,16 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>mcc_generated_files\eusart2.c</file>
-         <hash>83b6924748e8523f5627d9f564b9dfeadc24e234c656c8185f17cc6c5b25e295</hash>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>051b45254ead093c5278bfd85ec940493351cafdffa33a550d2ece3ab5548ee0</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
          <hash>ef7a703843efec593adc13bd8b4d97b27101703d8602ee861c9911fd1a4f8f83</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>051b45254ead093c5278bfd85ec940493351cafdffa33a550d2ece3ab5548ee0</hash>
+         <file>mcc_generated_files\eusart2.c</file>
+         <hash>83b6924748e8523f5627d9f564b9dfeadc24e234c656c8185f17cc6c5b25e295</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\eusart2.h</file>
@@ -13094,19 +13090,19 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mtouch\mtouch_button.c</file>
-         <hash>2f6e28416a38238b0656c2a96dc78b9a219a0e8e39d47a9bc31642d089b6c64e</hash>
+         <hash>21d7cec113777db2f3fe19271181dc1d98272f5df0f31b40ad9705216db193a3</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mtouch\mtouch.c</file>
          <hash>7c026bc278dbe5e2b7e1d09d32ea3d92ce47b5f730eb6257656b5973d9dbead0</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\mcc.c</file>
-         <hash>9ae3505e820521f78a9f6b65a4e5fbf3fc56df1b70b5f1c9c0056b720f93e355</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
          <hash>74006707c9e35e115ac9c0d3f2d807b1fca2c38db389d0ee3828afa4b014ee73</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.c</file>
+         <hash>9ae3505e820521f78a9f6b65a4e5fbf3fc56df1b70b5f1c9c0056b720f93e355</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mtouch\mtouch.h</file>

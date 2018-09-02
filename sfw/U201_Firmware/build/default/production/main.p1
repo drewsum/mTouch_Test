@@ -12,6 +12,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1391 . . . ]
 "30210
 [v _PORTBbits `VS1391 ~T0 @X0 0 e@3978 ]
+"74 main.c
+[c E17389 0 1 2 3 4 .. ]
+[n E17389 mtouch_button_names Button0 Button1 Button2 Button3 Button4  ]
+"138 mcc_generated_files/mtouch/mtouch_button.h
+[v _MTOUCH_Button_isPressed `(uc ~T0 @X0 0 ef1`E17389 ]
+"29043 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
+[s S1350 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1350 . LATF0 LATF1 LATF2 LATF3 LATF4 LATF5 LATF6 LATF7 ]
+"29053
+[s S1351 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1351 . LF0 LF1 LF2 LF3 LF4 LF5 LF6 LF7 ]
+"29042
+[u S1349 `S1350 1 `S1351 1 ]
+[n S1349 . . . ]
+"29064
+[v _LATFbits `VS1349 ~T0 @X0 0 e@3966 ]
+"195 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 [p mainexit ]
 "71 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
@@ -32,6 +50,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1980 . . . . ]
 "40517
 [v _INTCONbits `VS1980 ~T0 @X0 0 e@4082 ]
+[v F17405 `(v ~T0 @X0 0 tf1`E17389 ]
+"122 mcc_generated_files/mtouch/mtouch_button.h
+[v _MTOUCH_Button_SetPressedCallback `(v ~T0 @X0 0 ef1`*F17405 ]
 "117 ring_buffer_interface.h
 [v _printResetMessage `(v ~T0 @X0 0 ef ]
 "40
@@ -40,22 +61,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ringBufferPull `(v ~T0 @X0 0 ef ]
 "53 mcc_generated_files/mtouch/mtouch.h
 [v _MTOUCH_Service_Mainloop `(uc ~T0 @X0 0 ef ]
-"29043 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18lf67k40.h
-[s S1350 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1350 . LATF0 LATF1 LATF2 LATF3 LATF4 LATF5 LATF6 LATF7 ]
-"29053
-[s S1351 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1351 . LF0 LF1 LF2 LF3 LF4 LF5 LF6 LF7 ]
-"29042
-[u S1349 `S1350 1 `S1351 1 ]
-[n S1349 . . . ]
-"29064
-[v _LATFbits `VS1349 ~T0 @X0 0 e@3966 ]
-"101 main.c
-[c E17389 0 1 2 3 4 .. ]
-[n E17389 mtouch_button_names Button0 Button1 Button2 Button3 Button4  ]
-"141 mcc_generated_files/mtouch/mtouch_button.h
-[v _MTOUCH_Button_State_Get `(uc ~T0 @X0 0 ef1`E17389 ]
 "43 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
@@ -16309,108 +16314,185 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `i
 ]
 [; ;main.c: 56: volatile bit USB_DTR = 0;
-"58
+"59
 [v _DTR_Callback `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 58: void DTR_Callback(void) {
+[; ;main.c: 59: void DTR_Callback(void) {
 [e :U _DTR_Callback ]
 [f ]
-[; ;main.c: 60: if(PORTBbits.RB2 == 1) {
-"60
+[; ;main.c: 61: if(PORTBbits.RB2 == 1) {
+"61
 [e $ ! == -> . . _PORTBbits 0 2 `i -> 1 `i 2017  ]
 {
-[; ;main.c: 61: USB_DTR = 1;
-"61
-[e = _USB_DTR -> -> 1 `i `b ]
+[; ;main.c: 62: USB_DTR = 1;
 "62
+[e = _USB_DTR -> -> 1 `i `b ]
+"63
 }
-[; ;main.c: 62: }
+[; ;main.c: 63: }
 [e $U 2018  ]
-"64
-[e :U 2017 ]
-[; ;main.c: 64: else {
-{
-[; ;main.c: 65: USB_DTR = 0;
 "65
-[e = _USB_DTR -> -> 0 `i `b ]
+[e :U 2017 ]
+[; ;main.c: 65: else {
+{
+[; ;main.c: 66: USB_DTR = 0;
 "66
+[e = _USB_DTR -> -> 0 `i `b ]
+"67
 }
 [e :U 2018 ]
-[; ;main.c: 66: }
-[; ;main.c: 68: }
-"68
+[; ;main.c: 67: }
+[; ;main.c: 69: }
+"69
 [e :UE 2016 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
-"73
-[v _main `(v ~T0 @X0 1 ef ]
-"74
+"72
+[v _mTouchCallback `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 73: void main(void)
-[; ;main.c: 74: {
-[e :U _main ]
+[; ;main.c: 72: void mTouchCallback(void) {
+[e :U _mTouchCallback ]
 [f ]
-[; ;main.c: 76: SYSTEM_Initialize();
+[; ;main.c: 74: if (MTOUCH_Button_isPressed(Button0)) {
+"74
+[e $ ! != -> ( _MTOUCH_Button_isPressed (1 . `E17389 0 `i -> -> -> 0 `i `uc `i 2020  ]
+{
+[; ;main.c: 75: LATFbits.LATF0 = !LATFbits.LATF0;
+"75
+[e = . . _LATFbits 0 0 -> -> ! != -> . . _LATFbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;main.c: 76: printf("    Button 0 has been pressed\n\r");
 "76
-[e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 79: IOCBF2_SetInterruptHandler(DTR_Callback);
-"79
-[e ( _IOCBF2_SetInterruptHandler (1 &U _DTR_Callback ]
-[; ;main.c: 82: (INTCONbits.GIEH = 1);
-"82
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;main.c: 85: (INTCONbits.GIEL = 1);
-"85
-[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-[; ;main.c: 88: printResetMessage();
-"88
-[e ( _printResetMessage ..  ]
-[; ;main.c: 90: while (1)
-"90
-[e :U 2021 ]
-[; ;main.c: 91: {
-"91
-{
-[; ;main.c: 93: if (eusart2RxStringReady) {
-"93
-[e $ ! _eusart2RxStringReady 2023  ]
-{
-[; ;main.c: 94: ringBufferPull();
-"94
-[e ( _ringBufferPull ..  ]
-"95
-}
-[e :U 2023 ]
-[; ;main.c: 95: }
-[; ;main.c: 98: MTOUCH_Service_Mainloop();
-"98
-[e ( _MTOUCH_Service_Mainloop ..  ]
-[; ;main.c: 101: LATFbits.LATF0 = ~MTOUCH_Button_State_Get(Button0);
-"101
-[e = . . _LATFbits 0 0 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 0 `i `uc ]
-[; ;main.c: 102: LATFbits.LATF1 = ~MTOUCH_Button_State_Get(Button1);
-"102
-[e = . . _LATFbits 0 1 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 1 `i `uc ]
-[; ;main.c: 103: LATFbits.LATF2 = ~MTOUCH_Button_State_Get(Button2);
-"103
-[e = . . _LATFbits 0 2 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 2 `i `uc ]
-[; ;main.c: 104: LATFbits.LATF3 = ~MTOUCH_Button_State_Get(Button3);
-"104
-[e = . . _LATFbits 0 3 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 3 `i `uc ]
-[; ;main.c: 105: LATFbits.LATF4 = ~MTOUCH_Button_State_Get(Button4);
-"105
-[e = . . _LATFbits 0 4 -> ~ -> ( _MTOUCH_Button_State_Get (1 . `E17389 4 `i `uc ]
-[; ;main.c: 131: __nop();
-"131
-[e ( ___nop ..  ]
-"133
+[e ( _printf :s 1C ]
+"77
 }
 [e :U 2020 ]
-"90
-[e $U 2021  ]
+[; ;main.c: 77: }
+[; ;main.c: 79: if (MTOUCH_Button_isPressed(Button1)) {
+"79
+[e $ ! != -> ( _MTOUCH_Button_isPressed (1 . `E17389 1 `i -> -> -> 0 `i `uc `i 2021  ]
+{
+[; ;main.c: 80: LATFbits.LATF1 = !LATFbits.LATF1;
+"80
+[e = . . _LATFbits 0 1 -> -> ! != -> . . _LATFbits 0 1 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;main.c: 81: printf("    Button 1 has been pressed\n\r");
+"81
+[e ( _printf :s 2C ]
+"82
+}
+[e :U 2021 ]
+[; ;main.c: 82: }
+[; ;main.c: 84: if (MTOUCH_Button_isPressed(Button2)) {
+"84
+[e $ ! != -> ( _MTOUCH_Button_isPressed (1 . `E17389 2 `i -> -> -> 0 `i `uc `i 2022  ]
+{
+[; ;main.c: 85: LATFbits.LATF2 = !LATFbits.LATF2;
+"85
+[e = . . _LATFbits 0 2 -> -> ! != -> . . _LATFbits 0 2 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;main.c: 86: printf("    Button 2 has been pressed\n\r");
+"86
+[e ( _printf :s 3C ]
+"87
+}
 [e :U 2022 ]
-[; ;main.c: 133: }
-[; ;main.c: 134: }
-"134
+[; ;main.c: 87: }
+[; ;main.c: 89: if (MTOUCH_Button_isPressed(Button3)) {
+"89
+[e $ ! != -> ( _MTOUCH_Button_isPressed (1 . `E17389 3 `i -> -> -> 0 `i `uc `i 2023  ]
+{
+[; ;main.c: 90: LATFbits.LATF3 = !LATFbits.LATF3;
+"90
+[e = . . _LATFbits 0 3 -> -> ! != -> . . _LATFbits 0 3 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;main.c: 91: printf("    Button 3 has been pressed\n\r");
+"91
+[e ( _printf :s 4C ]
+"92
+}
+[e :U 2023 ]
+[; ;main.c: 92: }
+[; ;main.c: 94: if (MTOUCH_Button_isPressed(Button4)) {
+"94
+[e $ ! != -> ( _MTOUCH_Button_isPressed (1 . `E17389 4 `i -> -> -> 0 `i `uc `i 2024  ]
+{
+[; ;main.c: 95: LATFbits.LATF4 = !LATFbits.LATF4;
+"95
+[e = . . _LATFbits 0 4 -> -> ! != -> . . _LATFbits 0 4 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;main.c: 96: printf("    Button 4 has been pressed\n\r");
+"96
+[e ( _printf :s 5C ]
+"98
+}
+[e :U 2024 ]
+[; ;main.c: 98: }
+[; ;main.c: 100: }
+"100
 [e :UE 2019 ]
 }
+[v $root$_main `(v ~T0 @X0 0 e ]
+"105
+[v _main `(v ~T0 @X0 1 ef ]
+"106
+{
+[; ;main.c: 105: void main(void)
+[; ;main.c: 106: {
+[e :U _main ]
+[f ]
+[; ;main.c: 108: SYSTEM_Initialize();
+"108
+[e ( _SYSTEM_Initialize ..  ]
+[; ;main.c: 111: IOCBF2_SetInterruptHandler(DTR_Callback);
+"111
+[e ( _IOCBF2_SetInterruptHandler (1 &U _DTR_Callback ]
+[; ;main.c: 114: (INTCONbits.GIEH = 1);
+"114
+[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
+[; ;main.c: 117: (INTCONbits.GIEL = 1);
+"117
+[e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
+[; ;main.c: 120: MTOUCH_Button_SetPressedCallback(mTouchCallback);
+"120
+[e ( _MTOUCH_Button_SetPressedCallback (1 -> &U _mTouchCallback `*F17405 ]
+[; ;main.c: 123: DTR_Callback();
+"123
+[e ( _DTR_Callback ..  ]
+[; ;main.c: 126: printResetMessage();
+"126
+[e ( _printResetMessage ..  ]
+[; ;main.c: 128: while (1)
+"128
+[e :U 2027 ]
+[; ;main.c: 129: {
+"129
+{
+[; ;main.c: 131: if (eusart2RxStringReady) {
+"131
+[e $ ! _eusart2RxStringReady 2029  ]
+{
+[; ;main.c: 132: ringBufferPull();
+"132
+[e ( _ringBufferPull ..  ]
+"133
+}
+[e :U 2029 ]
+[; ;main.c: 133: }
+[; ;main.c: 136: MTOUCH_Service_Mainloop();
+"136
+[e ( _MTOUCH_Service_Mainloop ..  ]
+[; ;main.c: 139: __nop();
+"139
+[e ( ___nop ..  ]
+"141
+}
+[e :U 2026 ]
+"128
+[e $U 2027  ]
+[e :U 2028 ]
+[; ;main.c: 141: }
+[; ;main.c: 142: }
+"142
+[e :UE 2025 ]
+}
+[p f _printf 8388608 ]
+[a 5C 32 32 32 32 66 117 116 116 111 110 32 52 32 104 97 115 32 98 101 101 110 32 112 114 101 115 115 101 100 10 13 0 ]
+[a 4C 32 32 32 32 66 117 116 116 111 110 32 51 32 104 97 115 32 98 101 101 110 32 112 114 101 115 115 101 100 10 13 0 ]
+[a 3C 32 32 32 32 66 117 116 116 111 110 32 50 32 104 97 115 32 98 101 101 110 32 112 114 101 115 115 101 100 10 13 0 ]
+[a 2C 32 32 32 32 66 117 116 116 111 110 32 49 32 104 97 115 32 98 101 101 110 32 112 114 101 115 115 101 100 10 13 0 ]
+[a 1C 32 32 32 32 66 117 116 116 111 110 32 48 32 104 97 115 32 98 101 101 110 32 112 114 101 115 115 101 100 10 13 0 ]

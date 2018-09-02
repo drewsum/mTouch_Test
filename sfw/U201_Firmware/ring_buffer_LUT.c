@@ -39,7 +39,7 @@ void ringBufferLUT(char * line) {
             // Get some space on terminal
             printf("\n\r");
 
-            printf("LATF = 0xFF\n\r");
+            printf("    LATF = 0xFF\n\r");
 
             // Get some space on terminal
             printf("\n\r");
